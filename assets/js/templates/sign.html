@@ -1,0 +1,86 @@
+<div class="sign-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b sign_header">
+
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">签到</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<div class="ui-txt-white ui-txt-center ui-margin-b-20 sign_container">
+
+							<div class="ui-row f20 ui-txt-line-height-40 sign_day" data-signday="2">
+									已经签到<%=signed_count%>天
+							</div>
+
+							<div class="ui-row f14 ui-txt-line-height-25 integrals" data-integrals="10">
+									获取积分 +<%=points%>
+							</div>
+
+							<div class="ui-all-whitespace ui-row f12 day_list">
+
+									<span class="ui-col-20 item <%=(monday==1 ? 'active': '')%>">
+											<span class="day_name">周一</span>
+									</span>
+
+									<span class="ui-col-20 item <%=(tuesday==1 ? 'active': '')%>">
+											<span class="day_name">周二</span>
+									</span>
+
+									<span class="ui-col-20 item <%=(wednesday==1 ? 'active': '')%>">
+											<span class="day_name">周三</span>
+									</span>
+
+									<span class="ui-col-20 item <%=(thursday==1 ? 'active': '')%>">
+											<span class="day_name">周四</span>
+									</span>
+
+									<span class="ui-col-20 item <%=(friday==1 ? 'active': '')%>">
+											<span class="day_name">周五</span>
+									</span>
+
+									<span class="ui-col-20 item <%=(saturday==1 ? 'active': '')%>">
+											<span class="day_name">周六</span>
+									</span>
+
+									<span class="ui-col-20 item <%=(sunday==1 ? 'active': '')%>">
+											<span class="day_name">周日</span>
+									</span>
+
+
+							</div>
+							<%
+								if(has_signed ==1){
+							%>
+								<div class="ui-txt-line-height-40 ui-border-radius-25 btn_sign">今日已签到</div>
+							<%	}else{%>
+								<div class="ui-txt-line-height-40 ui-border-radius-25 btn_sign to_sign" style="background-color:red">立即签到</div>
+							<%	
+								} 
+							%>
+							
+
+					</div>
+
+					<div class="ui-all-whitespace bg_white sign_rule">
+
+							<h1 class="ui-txt-line-height-40">规则说明</h1>
+
+							<h3 class="ui-txt-line-height-30">
+									<%=rules%>
+							</h3>
+							<!-- <h3 class="ui-txt-line-height-30">
+									1.fdslfsdfdlsfjdsjflkdssflsdfdslfsdfdlsfjdsjflkdssflsd
+									fdslfsdfdlsfjdsjflkdssflsdfdslfsdfdlsfjdsjflkdssflsd
+							</h3>
+							<h3 class="ui-txt-line-height-30">2.fdslfsdfdlsfjdsjflkdssflsd</h3>
+							<h3 class="ui-txt-line-height-30">3.fdslfsdfdlsfjdsjflkdssflsd</h3> -->
+					</div>
+
+			</section>
+
+	</section>
+</div>

@@ -1,0 +1,92 @@
+<div class="past-announced-css">
+
+		<header class="ui-header ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();"></i>
+				<h1 class="ui-txt-default">往期揭晓</h1>
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block">
+
+						<!--<div class="ui-all-whitespace bg_fd7a44 ui-txt-white ui-txt-line-height-30 ui-margin-b-20">-->
+						<!--期号：-->
+						<!--<span class="ongoing_activity_no">314324324</span>-->
+						<!--即将揭晓，祝您好运...-->
+						<!--</div>-->
+
+						<div class="past_announced_list">
+
+
+						</div>
+
+
+				</section>
+
+		</section>
+</div>
+
+<script id="past_announced_item" type="text/template">
+
+		<%
+		if(data&&data.length>0){
+		_.each(data,function(item){
+
+		%>
+
+		<div class="ui-margin-b-20 past_announced_item">
+
+				<div class="ui-row bg_fff4ee clr_fd7a44 ui-all-whitespace ui-txt-line-height-24 f14">
+						期号：
+						<span class="activity_no">
+								<%=item.date_sn%>
+						</span>
+						(揭晓时间:
+						<span>
+								<%=item.reward_time%>
+						</span>
+						)
+				</div>
+
+				<div class="winner_info bg_white ui-all-whitespace">
+
+						<div class="user_head_img">
+								<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png"
+										 data-echo="<%=item.avatar%>">
+						</div>
+
+						<div class="ui-txt-line-height-25 prize_info">
+
+								<div class="ui-row">
+										<span class="ui-txt-muted">幸运之星：</span>
+										<span class="winner_name">
+												<%=item.winner%>
+										</span>
+								</div>
+
+								<div class="ui-row">
+										<span class="ui-txt-muted">参与人数：</span>
+										<span class="participants_count">
+												<%=item.joined_count%>
+												人次</span>
+								</div>
+
+								<div class="ui-row">
+										<span class="ui-txt-muted">幸运号码：</span>
+										<span class="winner_no">
+												<%=item.reward_sn%>
+										</span>
+								</div>
+
+						</div>
+
+				</div>
+
+		</div>
+		<%
+		})
+		}
+		%>
+</script>

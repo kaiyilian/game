@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>注册</title>
+
+		<!--frozenUI-->
+		<link href="../../assets/css/plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<!-- -->
+        <link type="text/css" rel="stylesheet" href="../../assets/css/weui.min.css">
+        <link type="text/css" rel="stylesheet" href="../../assets/css/public.css">
+		<!--公共css-->
+		<link href="../../assets/css/public/common.css" rel="stylesheet">
+	    <link href="../../assets/css/public/font.css" rel="stylesheet">
+	    <link href="../../assets/css/public/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../assets/css/public.css" rel="stylesheet">
+		<link href="../../assets/css/register.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="head_name">注册</h1>
+</header>
+
+<section class="ui-container register_container">
+
+		<section class="pwd_container">
+
+				<div class="mxep_block bg_white">
+
+						<div  class="ui-input ui-border-radius user_verification_code">
+								<input id="password" type="password" class="ui-txt-center" name="" value=""
+											 placeholder="请输入6-15位密码" maxlength="15">
+						</div>
+
+						<div  class="ui-input ui-border-radius user_verification_code">
+								<input id="repeat" type="password" class="ui-txt-center" name="" value=""
+											 placeholder="请输入6-15位密码" maxlength="15">
+						</div>
+
+				</div>
+
+				<div class="mxep_block ui-justify ui-whitespace">
+
+						<div class="ui-row ui-txt-center">
+
+								<button id="btn-register" class="ui-col ui-btn-lg ui-btn-danger f16 btn_sub">
+										完成
+								</button>
+
+						</div>
+
+				</div>
+
+		</section>
+
+</section>
+<script>
+    var stopMain = true;
+</script>
+<script src="../../assets/js/require.min.js" data-main="../../assets/js/main.js" ></script>
+<script type="text/javascript">
+    requirejs(['views/register/registPwd']);
+</script>
+
+</body>
+</html>

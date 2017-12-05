@@ -1,0 +1,45 @@
+<div class="bind_phone_step1">
+	<header class="ui-header ui-header-positive ui-border-b">
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="head_name">绑定手机号</h1>
+	</header>
+
+	<section class="ui-container phone_bind_container">
+
+			<section class="phone_container">
+
+					<div class="mxep_block bg_white">
+							<p class="ui-txt-muted ui-row f14">为了验证身份，我们将会发送验证码到你的手机</p>
+
+							<div class="ui-input ui-border-radius user_phone">
+									<input type="text" class="ui-txt-muted ui-txt-center pnone_number" name="" value=""
+												 placeholder="请输入手机号"
+												 maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')">
+							</div>
+
+					</div>
+
+					<div class="mxep_block ui-justify ui-whitespace">
+
+							<div class="ui-row ui-txt-center">
+
+									<button class="ui-col ui-btn-lg ui-btn-danger f16 btn_verification_code">
+											获取验证码
+									</button>
+
+							</div>
+
+							<p class="ui-row">
+									<label class="ui-checkbox is_agree">
+											<input type="checkbox" name="checkbox">
+									</label>
+									我已阅读并同意
+									<a class="user_agreement">用户协议</a>
+							</p>
+
+					</div>
+
+			</section>
+
+	</section>
+<div>

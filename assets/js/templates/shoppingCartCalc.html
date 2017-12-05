@@ -1,0 +1,124 @@
+<div class="shoppingCart-Calc-css">
+		<header class="ui-header ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();"></i>
+				<h1 class="ui-txt-default name">购物车结算</h1>
+
+		</header>
+
+		<footer class="ui-footer ui-footer-positive bg_white pd-lr-15 ui-txt-line-height-56 footer_shopping_cart">
+
+				<span class="ui-txt-default actual_money">应付金额：</span>
+		<span class="ui-txt-pink ui-txt-bold f18 real_pay_price" data-price="88">
+				88梦想币
+		</span>
+
+				<div class="bg-orange ui-txt-white ui-border-radius-3 btn_submit">
+						提交订单
+				</div>
+
+		</footer>
+
+		<section class="ui-container ui-content cart_calc_container">
+
+				
+
+		</section>
+</div>
+<script id="cart_calc_item" type="text/template">
+	<section class="mxep_block">
+
+			<div class="bg_white pd-20-15 ui-margin-b-20" style="padding-top: 0;">
+
+			<span class="ui-row ui-txt-line-height-50">
+
+					<span class="ui-col ui-col-30">商品合计</span>
+
+					<span class="ui-col ui-col-40 good_total_count" data-count="3">
+							共
+							<span class="ui-txt-bold f18"><%=total%></span>
+							件
+					</span>
+
+					<span class="ui-col ui-col-30 good_total_price" data-price="70">
+							<%=total_price%>梦想币
+					</span>
+
+			</span>
+
+					<div class="bg-ffefe7 pd-5-15">
+
+							<div class="ui-row clr-orange ui-txt-line-height-50 ui-txt-bold">
+									注：请确认如下订单明细
+							</div>
+
+							<ul class="ui-list ui-txt-line-height-36 bg-ffefe7 order_list">
+								<%
+									if(carts && carts.length > 0) {
+									_.each(carts,function(item){
+
+								%>
+									<li>
+
+											<div class="ui-nowrap good_name">
+													<%=item.name%>
+											</div>
+
+											<div class="attend_count" data-count="5">
+													<%=item.quantity%>人次
+											</div>
+
+									</li>
+								<%});
+								}%>
+
+							</ul>
+
+					</div>
+
+			</div>
+
+			<div class="bg_white ui-whitespace ui-margin-b-20 ui-txt-line-height-50">
+
+					<div class="ui-border-b ui-arrowlink ui-row choose_package">
+
+							<span>红包</span>
+					<span class="f_right pd-r-30 package_item package_item_choose" style="display:none" data-package_id="1">
+							<!-- 已使用1张 节省40梦想币 -->
+					</span>
+
+					</div>
+
+					<div class="ui-row">
+
+							<span>其他抵扣</span>
+							<span class="f_right">暂无</span>
+
+					</div>
+
+			</div>
+
+			<div class="bg_white ui-all-whitespace ui-margin-b-20 ui-txt-line-height-30">
+
+					<div class="ui-row">
+
+							商品合计
+					<span class="f_right ui-txt-pink good_total_price" data-price="70">
+							70梦想币
+					</span>
+
+					</div>
+
+					<div class="ui-row">
+
+							折扣合计
+					<span class="f_right ui-txt-pink discount_total_price" data-price="2">
+						-	2梦想币
+					</span>
+
+					</div>
+
+			</div>
+
+	</section>
+</script>

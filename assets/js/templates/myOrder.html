@@ -1,0 +1,171 @@
+<div class="my-order-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">购买记录</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<div class="ui-tab">
+
+							<ul class="ui-tab-nav ui-border-b ui-margin-b-20">
+									<li class="current">全部</li>
+									<li>待付款</li>
+									<li>待发货</li>
+									<li>待收货</li>
+							</ul>
+
+							<ul class="ui-tab-content" style="width:400%">
+									<li class="current">
+
+											<ul class="ui-list order_list order_all">
+
+													
+
+											</ul>
+
+									</li>
+
+									<li>
+
+											<ul class="ui-list order_list order_be_pay">
+
+													
+
+											</ul>
+
+									</li>
+
+									<li>
+
+											<ul class="ui-list order_list order_be_send">
+
+													
+
+											</ul>
+
+									</li>
+
+									<li>
+
+											<ul class="ui-list order_list order_be_receive">
+
+													
+
+											</ul>
+
+									</li>
+
+							</ul>
+
+					</div>
+
+			</section>
+
+	</section>
+</div>
+<script id="order_list_item" type="text/template">
+<%
+	if(data && data.length > 0) {
+	_.each(data,function(item){
+%>
+		<li class="bg_white ui-margin-b-20 ui-whitespace order_item" data-orderid="<%=item.order_id%>">
+
+			<div class="ui-row ui-txt-line-height-50">
+					<span class="order_time">
+							<%=item.create_time%>
+					</span>
+
+					<span class="order_status clr-orange f_right">
+						<%if(item.status == 1){%>
+							待支付
+						<%}%>
+
+						<%if(item.status == 20){%>
+							待发货
+						<%}%>
+
+						<%if(item.status == 21){%>
+							待收货
+						<%}%>
+						
+						<%if(item.status == -1){%>
+							已取消
+						<%}%>
+
+						<%if(item.status == 100){%>
+							交易完成
+						<%}%>
+					</span>
+
+			</div>
+
+			<div class="order_info ui-border-tb display-webkit-box" >
+
+					<div class="good_img">
+							<!-- <span style="background-image: url(http://placeholder.qiniudn.com/190x284)"></span> -->
+							<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=item.thumb%>">
+					</div>
+
+					<div class="good_info">
+
+							<div class="ui-nowrap-multi good_name">
+									<%=item.name%>
+							</div>
+
+							<div class="ui-row ui-txt-line-height-30 ui-margin-t">
+									<span class="good_price" data-price="333">￥<%=(item.price).toFixed(2)%></span>
+									<span class="f_right good_count" data-count="12">x<%=item.quantity%></span>
+							</div>
+					</div>
+
+			</div>
+
+			<div class="ui-row ui-txt-line-height-50">
+
+					<span class="good_count" data-count="2">共<%=item.quantity%>件商品</span>
+
+					<span class="f_right total_money" data-price="7000">
+							合计：￥<%=(item.price).toFixed(2)%>
+					</span>
+			</div>
+
+			<div class="ui-row btn_list" data-orderid="<%=item.order_id%>">
+				<%if(item.status == 1){%><!-- 待支付 -->
+					<div class="btn btn_cancel ui-txt-muted cancel_order">
+							取消订单
+					</div>
+
+					<div class="btn btn_pay pay_money_now">
+							立刻付款
+					</div>
+				<%}%>
+
+				<%if(item.status == 20){%><!-- 待发货 -->
+				<%}%>
+					
+				<%if(item.status == 21){%><!-- 待收货 -->
+					<!-- <div class="btn btn_cancel ui-txt-muted">
+							取消订单
+					</div> -->
+
+					<div class="btn btn_pay confirm_receipt" style="float:right">
+							确认收货
+					</div>
+				<%}%>
+
+				<%if(item.status == -1 || item.status==100){%><!-- 已取消 -->
+					<div class="btn btn_cancel ui-txt-muted delete_order" style="width:100%">
+							删除订单
+					</div> 
+				<%}%>
+			</div>
+
+		</li>
+<%});
+}%>
+</script>

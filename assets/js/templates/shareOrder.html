@@ -1,0 +1,86 @@
+
+<div class="share-order-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">晒单分享</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<div class="bg_white ui-whitespace-15-25 ui-margin-b-20">
+
+							<div class="ui-row display-webkit-box user_info_container">
+
+									<div class="good_img">
+											
+											<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=thumb%>">
+									</div>
+
+									<div class="user_info pd-t-15">
+
+											<div class="ui-txt-line-height-25 ui-nowrap-multi good_name">
+													<%=name%>
+											</div>
+
+											<div class="ui-txt-line-height-30 ui-margin-t ui-txt-grey-6 f14 ui-row activity_no"
+													 data-activity_no="343243432432">
+													本期期号：<%=date_sn%>
+											</div>
+
+									</div>
+
+							</div>
+
+							<div class="bg-ffefe7 pd-10-15 ui-margin-b-20 f14 remark">
+									<textarea class="ui-textarea ui-txt-line-height-25 ui-txt-grey-6"
+														placeholder="告诉更多的朋友。。。。。（8-1000字）"
+														maxlength="1000"></textarea>
+							</div>
+							
+
+					</div>
+
+					<div class="bg_white ui-whitespace-15-25 display-webkit-box share_order_img_list">
+							<div class="img_add"></div>
+					</div>
+
+					<div class="btn_submit ui-txt-line-height-44 ui-txt-center ui-txt-white
+					ui-width-8 bg-orange ui-border-radius-3">提交
+					</div>
+
+
+			</section>
+
+	</section>
+	<form id= "uploadForm" style="display:none">  
+     <!--  <p >指定文件名： <input type="text" name="image" value= ""/></p >   -->
+      <p class="upload_form_p">上传文件： <!-- <input type="file" name="image"/> --></p>  
+      <!-- <input type="button" value="上传" onclick="doUpload()" />  -->
+      <input type="button" value="上传" class="do_upload" />  
+	</form>  
+</div>
+<script type="text/javascript">
+	function doUpload() {  
+		console.log(123);
+	     var formData = new FormData($( "#uploadForm" )[0]);  
+	     $.ajax({  
+	          url: 'http://mxep:91/mxep/upload' ,  
+	          type: 'POST',  
+	          data: formData,  
+	          async: false,  
+	          cache: false,  
+	          contentType: false,  
+	          processData: false,  
+	          success: function (returndata) {  
+	              alert(returndata);  
+	          },  
+	          error: function (returndata) {  
+	              alert(returndata);  
+	          }  
+	     });  
+	} 
+</script>

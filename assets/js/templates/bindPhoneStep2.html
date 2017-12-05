@@ -1,0 +1,41 @@
+<div class="bind_phone_step1">
+	<header class="ui-header ui-header-positive ui-border-b">
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="head_name">绑定手机号</h1>
+	</header>
+
+	<section class="ui-container phone_bind_container">
+
+			<section class="code_container">
+
+					<div class="mxep_block bg_white">
+							<p class="ui-txt-muted ui-row f14">
+									<span>短信验证码已发送至：</span>
+									<span class="phone_number">131********</span>
+							</p>
+
+							<div class="ui-input ui-border-radius user_verification_code">
+									<input type="text" class="ui-txt-muted verification_code" name="" value=""
+												 placeholder="请输入验证码"
+												 maxlength="6" onkeyup="this.value=this.value.replace(/\D/g,'')">
+									<span class="ui-txt-red btn_countdown">60s后重新获取</span>
+							</div>
+
+					</div>
+
+					<div class="mxep_block ui-justify ui-whitespace">
+
+							<div class="ui-row ui-txt-center">
+
+									<button class="ui-col ui-btn-lg ui-btn-danger f16 btn_next">
+											下一步
+									</button>
+
+							</div>
+
+					</div>
+
+			</section>
+
+	</section>
+</div>

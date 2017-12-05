@@ -1,0 +1,108 @@
+
+<div class="share-order-detail-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">晒单详情</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<div class="bg_white ui-whitespace">
+
+							<div class="ui-row display-webkit-box user_info_container">
+
+									<div class="user_head_img">
+											<!-- <img src="assets/image/34.png"> -->
+											<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=avatar%>" >
+									</div>
+
+									<div class="user_info pd-t-15">
+
+											<div class="ui-txt-line-height-30 user_nickname">
+													<%=member_name%>
+											</div>
+
+											<div class="ui-txt-line-height-20 ui-txt-muted f14 share_time">
+													<%=create_time%>
+											</div>
+
+									</div>
+
+							</div>
+
+							<div class="bg-ffefe7 ui-margin-b-20 ui-all-whitespace ui-txt-line-height-25 f14 winner_info">
+
+									<span class="ui-row">
+
+											<span class="ui-txt-grey-6">获得奖品：</span>
+											<span class="good_name">
+													<%=goods_name%>
+											</span>
+
+									</span>
+
+									<span class="ui-row">
+
+											<span class="ui-txt-grey-6">参与期号：</span>
+											<span class="activity_no">
+													<%=date_sn%>
+											</span>
+
+									</span>
+
+									<span class="ui-row">
+
+											<span class="ui-txt-grey-6">本期参与：</span>
+											<span class="attend_count" data-count="3">
+													<%=join_count%>
+											</span>
+
+									</span>
+
+									<span class="ui-row">
+
+											<span class="ui-txt-grey-6">中奖号码：</span>
+											<span class="prize_no">
+													<%=reward_sn%>
+											</span>
+
+									</span>
+
+									<span class="ui-row">
+
+											<span class="ui-txt-grey-6">揭晓时间：</span>
+											<span class="announced_time">
+													<%=reward_time%>
+											</span>
+
+									</span>
+
+							</div>
+
+							<div class="ui-row ui-txt-grey-6 ui-txt-line-height-25 f14 remark">
+									<%=desc%>
+							</div>
+
+							<div class="ui-row share_img_list">
+								<% _.each(pictures,function(picture){%>
+									<div class="img_item ui-margin-b">
+											<!-- <img src="http://placeholder.qiniudn.com/190x284"> -->
+											<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=picture%>" >
+									</div>
+								<%});%>
+
+
+
+
+							</div>
+
+					</div>
+
+			</section>
+
+	</section>
+</div>

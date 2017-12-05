@@ -1,0 +1,259 @@
+<div class="discount-good-list-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+				<h1 class="ui-txt-default name">秒杀</h1>
+
+		</header>
+
+		<section class="ui-container ui-content discount_good_list">
+
+				<section class="mxep_block activity_info_container">
+						<div class="flash_goods_info_contain">
+
+						</div>
+						<ul class="ui-list  ui-border-tb good_list flash_goods_contain">
+
+
+							<!-- <li class="ui-border-t panic_buying_end" data-id="1">
+=======
+								<li class="ui-border-t panic_buying_end" data-id="1">
+>>>>>>> c9827ade8d1dbf34c476e15844afa77d600c953f
+
+										<div class="ui-list-img">
+												<span class="good_img"
+															style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+												<span class="ui-txt-center f12 ui-txt-white icon_good_sold_out"></span>
+										</div>
+
+										<div class="ui-list-info">
+
+												<h4 class="ui-nowrap-multi f14 good_name">这是标题，加ui-nowrap可以超出长度截断</h4>
+
+												<div class="ui-txt-line-height-30  good_price">
+													<span class="f18 ui-txt-bold good_deal_price">
+															￥3600
+													</span>
+
+													<span class="f14 ui-txt-muted good_marketed_price">
+															省
+															￥1200
+													</span>
+
+												</div>
+
+												<div class="f12 ui-txt-line-height-25 discount_number_of_people">
+
+														<span class="spn_item enough">人数已满足</span>
+
+													<span class="spn_item lack" style="display: none;">
+															已有
+															<label>10</label>
+															人差
+															<label>5</label>
+															人
+													</span>
+
+												</div>
+
+												<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+											 btn_panic_buying">立即抢购
+												</div>
+
+										</div>
+								</li>
+
+								<li class="ui-border-t" data-id="2">
+
+										<div class="ui-list-img">
+												<span class="good_img"
+															style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+										</div>
+
+										<div class="ui-list-info">
+
+												<h4 class="ui-nowrap-multi f14 good_name">这是标题，加ui-nowrap可以超出长度截断</h4>
+
+												<div class="ui-txt-line-height-30  good_price">
+													<span class="f18 ui-txt-bold good_deal_price">
+															￥3600
+													</span>
+
+													<span class="f14 ui-txt-muted good_marketed_price">
+															省
+															￥1200
+													</span>
+
+												</div>
+
+												<div class="f12 ui-txt-line-height-25 discount_number_of_people">
+
+													<span class="spn_item lack">
+															已有
+															<label>10</label>
+															人差
+															<label>5</label>
+															人
+													</span>
+
+												</div>
+
+												<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+											 btn_panic_buying">立即抢购
+												</div>
+
+<<<<<<< HEAD
+									</div>
+							</li> -->
+
+
+						</ul>
+
+				</section>
+
+		</section>
+</div>
+<script id="flash_goods_info_item" type="text/template">
+		<div class="ui-all-whitespace ui-margin-b-20 activity_rule" style="">
+
+				<h1 class="ui-txt-white ui-txt-line-height-50">抢购资格说明</h1>
+
+				<div class="ui-txt-line-height-20 ui-txt-white-9 f14 ui-margin-b">
+						<% if(description){
+						if (description.indexOf("\n") >= 0) {
+						var description = description.replace(/\n/g, "<br/>");
+						}
+						%>
+						<%=description%>
+						<%}%>
+				</div>
+
+		</div>
+
+		<div class="bg_white activity_time_container">
+
+				<div class="swiper-container ui-txt-center activity_time_list">
+						<div class="swiper-wrapper">
+								<%
+								if(sections && sections.length > 0) {
+								var id = 0;
+								_.each(sections,function(item){
+								%>
+								<div class="swiper-slide <%=(item.label==section ? 'active':'')%>" data-starttime="<%=item.start_time%>"
+										 data-endtime="%=item.end_time%" data-id="<%=id%>">
+
+										<div class="item">
+												<div class="ui-txt-line-height-25 f16 activity_time"><%=item.label%></div>
+												<div class="ui-txt-muted ui-txt-line-height-20 f12 activity_status"><%=(item.status==1 ? '即将开始':
+														(item.status == 2 ? '抢购中' : '已结束'))%>
+												</div>
+										</div>
+
+								</div>
+								<%
+								id++;
+								});
+								}%>
+
+
+						</div>
+				</div>
+
+				<div class="ui-row ui-txt-center ui-txt-white ui-txt-line-height-40 bg-pink discount_good_list_time">
+						<%=((seStatus=sections[0].status)==1 ? '距开始': (seStatus == 2 ? '距结束' : '已结束'))%>
+						<span class="count_down time_count_down" data-currenttime="<%=sections[0].start_time%>"
+									data-starttime="<%=sections[0].start_time%>" data-endtime="<%=sections[0].start_time%>"></span>
+				</div>
+
+		</div>
+</script>
+
+<script id="flash_goods_item" type="text/template">
+		<%
+		if(typeof(flash_goods) != "undefined" && flash_goods.length > 0) {
+		_.each(flash_goods,function(item){
+		var short = item.min_reservation - item.reservation_count;
+		var percentage = (item.reservation_count/item.min_reservation*100).toFixed(0) + "%";
+		%>
+		<li class="ui-border-t " data-id="<%=item.id%>" data-label="<%=label%>">
+
+				<div class="ui-list-img">
+						<!-- <span class="good_img" style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span> -->
+						<img class="echo_img" src="../../assets/image/icon/ico_public_shoppingcart@2x.png"
+								 data-echo="<%=item.thumb%>">
+						<!-- 卖光 -->
+						<%
+						if(item.status==5){
+						%>
+						<span class="ui-txt-center f12 ui-txt-white icon_good_sold_out"></span>
+						<%
+						}
+						%>
+
+				</div>
+
+				<div class="ui-list-info" data-id="<%=item.id%>" data-label="<%=label%>">
+
+						<h4 class="ui-nowrap-multi f14 good_name"><%=item.name%></h4>
+
+						<div class="ui-txt-line-height-30  good_price">
+						<span class="f18 ui-txt-bold good_deal_price">
+								￥<%=item.flash_price%>
+						</span>
+
+						<span class="f14 ui-txt-muted good_marketed_price">
+								省
+								￥<%=item.save_price%>
+						</span>
+
+						</div>
+
+						<div class="f12 ui-txt-line-height-25 discount_number_of_people">
+								<% if(short<=0){%>
+								<span class="spn_item enough"></span>
+								<span class="txt">人数已满足</span>
+								<%}else{%>
+								<span class="spn_item lack" style="width:<%=percentage%>"></span>
+
+
+								<span class="txt">
+										已有
+								<label><%=item.reservation_count%></label>
+								人差
+								<label><%=short%></label>
+								人
+								</span>
+
+
+								<%}%>
+
+
+						</div>
+						<%if(item.status==1){%><!-- 1:开放抢购权 -->
+						<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+					 	btn_panic_buying get_right_to_buy"><%=item.prepay%>梦想币获取抢购权
+								<%}else if(item.status==2){%><!-- 2:已经获取抢购权 -->
+								<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+						btn_panic_notbuying">等待抢购开始
+										<%}else if(item.status==3){%><!-- 3:允许抢购 -->
+										<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+						btn_panic_buying to_panic_buy">立即抢购
+												<%}else if(item.status==4){%><!-- 4:不允许抢购 -->
+												<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+						btn_panic_notbuying">立即抢购
+														<%}else if(item.status==5){%><!-- 5:卖光 -->
+														<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+						btn_panic_notbuying">立即抢购
+																<%}else if(item.status==6){%><!-- 6:已经结束 -->
+																<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+						btn_panic_notbuying">已结束
+																		<%}%>
+																		<!-- <div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+																		 btn_panic_buying">立即抢购 -->
+																</div>
+
+														</div>
+		</li>
+		<%});
+		}%>
+</script>

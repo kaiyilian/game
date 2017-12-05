@@ -1,0 +1,82 @@
+
+<div class="special-good-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+			<!-- <i class="ui-icon-return go_back" style="color:#333;"></i> -->
+			<h1 class="ui-txt-default name">精选商品</h1>
+			<i class="ico_img icon_shopping_cart to_shopping_cart">
+					<div class="ui-badge shopping_cart_good_count">0</div>
+			</i>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block good_list_container">
+
+					<div class="ui-row ui-whitespace ui-txt-line-height-50 good_list_txt">
+
+							<span class="f_left">
+									共<span class="special_good_count">0</span>件商品
+							</span>
+
+							<span class="ui-txt-red-1 f_right batch_add_shoppingcart">全部加入清单</span>
+
+					</div>
+
+					<ul class="ui-list ui-list-active ui-list-cover ui-border-tb good_list">
+
+					</ul>
+
+			</section>
+
+	</section>
+</div>
+<script id="special_good_item" type="text/template">
+
+  <% if(_.size(data) > 0) {
+       _.each(data,function(item){
+       var percentage = (item.target - item.remain)/item.target*100 + "%";
+       
+   %>
+<li class="ui-border-t announced_good_list" data-id="<%=item.id%>">
+		<div class="ui-list-img">
+				<!-- <span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span> -->
+				<span style="background-image:url(<%=item.thumb%>)"></span>
+				<span class="ui-txt-center f12 ui-txt-white special_offer_area "><%=item.label%></span>
+		</div>
+
+		<div class="ui-list-info" data-id="<%=item.id%>">
+				<h4 class="ui-nowrap-multi f14 good_name"><%=item.name%></h4>
+
+				<div class="good_crowd-funding_process">
+
+						<div class="ui-progress">
+								<!-- <span style="width:50%"></span> -->
+								<span style="width:<%=percentage%>"></span>
+						</div>
+
+						<div class="ui-row f12 ui-txt-muted good_crowd-funding_count">
+
+								<span class="total_css" style="float:left">
+										总需
+										<span class="good_total_count"><%=item.target%></span>
+								</span>
+
+								<span class="residue_css" style="float:right">
+										剩余
+										<span class="good_surplus_count"><%=item.remain%></span>
+								</span>
+
+						</div>
+
+				</div>
+
+				<i class="ico_img icon_shopping_cart add_shopping_cart"></i>
+		</div>
+	</li>
+
+	<%})}%>
+
+</script>

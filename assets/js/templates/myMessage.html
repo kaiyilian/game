@@ -1,0 +1,110 @@
+
+
+
+<div class="my-message-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">我的消息</h1>
+
+	</header>
+
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<ul class="ui-list ui-list-pure message_list">
+
+							
+
+					</ul>
+
+			</section>
+
+	</section>
+</div>
+<script id="message_list_item" type="text/template">
+	<% if(_.size(data) > 0) {
+       _.each(data,function(item){
+    %>
+		<li class="ui-margin-b message_item ui-font-css">
+
+				<div class="ui-txt-center ui-txt-line-height-30 f14 ui-txt-muted message_time" >
+						<%=item.create_time%>
+				</div>
+
+				<div class="bg_white ui-all-whitespace message_info">
+
+						<div class="ui-txt-line-height-40 ui-txt-bold message_title">
+								<%=item.title%>
+						</div>
+
+						<div class="ui-txt-line-height-30 ui-margin-b  f14 ui-txt-grey-6 message_content">
+								<%=item.content%>
+						</div>
+
+						<div class="ui-arrowlink ui-border-t f14 ui-txt-pink ui-txt-line-height-40 to_message_info" data-href="<%=item.link%>">
+								查看详情
+						</div>
+
+				</div>
+
+		</li>
+	<%});
+	}%>
+
+</script>
+
+
+
+<!-- 
+<li class="ui-margin-b message_item ui-font-css">
+
+									<div class="ui-txt-center ui-txt-line-height-30 f14 ui-txt-muted message_time" >
+											08-20 15:30
+									</div>
+
+									<div class="bg_white ui-all-whitespace message_info">
+
+											<div class="ui-txt-line-height-40 ui-txt-bold message_title">
+													您参与的夺宝即将揭晓
+											</div>
+
+											<div class="ui-txt-line-height-30 ui-margin-b  f14 ui-txt-grey-6 message_content">
+													您参与的夺宝即将揭晓您参与的夺宝即将揭晓您参与的夺宝即将揭晓
+													您参与的夺宝即将揭晓您参与的夺宝即将揭晓
+											</div>
+
+											<div class="ui-arrowlink ui-border-t f14 ui-txt-pink ui-txt-line-height-40">
+													查看详情
+											</div>
+
+									</div>
+
+							</li>
+
+							<li class="ui-margin-b message_item ui-font-css">
+
+									<div class="ui-txt-center ui-txt-line-height-30 f14 ui-txt-muted message_time">
+											08-20 15:30
+									</div>
+
+									<div class="bg_white ui-all-whitespace message_info">
+
+											<div class="ui-txt-line-height-40 ui-txt-bold message_title">
+													您参与的夺宝即将揭晓
+											</div>
+
+											<div class="ui-txt-line-height-30 ui-margin-b  f14 ui-txt-grey-6 message_content">
+													您参与的夺宝即将揭晓您参与的夺宝即将揭晓您参与的夺宝即将揭晓
+													您参与的夺宝即将揭晓您参与的夺宝即将揭晓
+											</div>
+
+											<div class="ui-arrowlink ui-border-t f14 ui-txt-pink ui-txt-line-height-40">
+													查看详情
+											</div>
+
+									</div>
+
+							</li> -->

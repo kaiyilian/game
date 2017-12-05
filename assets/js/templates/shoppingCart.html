@@ -1,0 +1,167 @@
+<div class="shopping-cart-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+				<i class="ui-icon-return" onclick="history.back();"></i>
+				<h1 class="ui-txt-default name">购物清单</h1>
+				<div class="shopping_cart_modify">编辑</div>
+		</header>
+		<section class="ui-container ui-content">
+				<section class="mxep_block mxep_block_empty not_shopping">
+						<div class="mxep_block pd-20-15 f14">
+								<div class="ui-margin-tb ui-txt-center icon_img">
+										<img src="assets/image/shopping_cart/img_list_default@2x.png">
+								</div>
+								<div class="ui-row ui-txt-center ui-txt-line-height-25">
+										您还没有清单哦！
+								</div>
+								<div class="bg-orange ui-txt-white ui-txt-line-height-30 ui-txt-center
+                         ui-border-radius-3 btn_go">
+										去逛逛
+								</div>
+						</div>
+						<div class="mxep_block ui-margin-b-20">
+								<div class="ui-row ui-txt-center ui-txt-line-height-25 txt">
+										热门推荐
+								</div>
+								<ul class="ui-grid-halve announced_good_list_cart">
+										
+								</ul>
+						</div>
+				</section>
+				<section class="mxep_block mxep_block_bottom already_shopping shopping_cart_contain"
+								 style="margin-bottom: 140px;">
+
+				</section>
+		</section>
+		<div class="ui-dialog">
+				<div class="ui-dialog-cnt">
+						<div class="ui-dialog-bd">
+								<div>
+										<h4>标题</h4>
+										<div>内容</div>
+								</div>
+						</div>
+						<div class="ui-dialog-ft ui-btn-group">
+								<button type="button" data-role="button" class="select" id="dialogButton<%=i%>">关闭</button>
+						</div>
+				</div>
+		</div>
+</div>
+
+<script id="shopping_cart_item" type="text/template">
+
+		<ul class="ui-list shopping_cart_list" >
+				<% if(_.size(carts) > 0) {
+				_.each(carts,function(item){
+				%>
+				<li class="ui-whitespace ui-border-b" data-auctionid="<%=item.auction_id%>">
+						<div class="ui-list-img" style="width: 100px;height: 100px;">
+
+								
+
+								<img style="width:100%;height:100%" src="<%=item.thumb%>"  >
+
+								
+						</div>
+						<div class="ui-list-info">
+								<div class="ui-nowrap-multi ui-txt-line-height-25 good_name">
+										<%=item.name%>
+								</div>
+								<div class="ui-row margin-tb-5 f14 ui-txt-grey-6 ui-txt-line-height-20 attend_count"
+										 data-surplus_count="<%=item.remain%>" data-quantity="<%=item.quantity%>">
+										总需
+										<span class="total_attend_count"><%=item.target%></span>
+										人次，剩余
+										<span class="surplus_attend_count"><%=item.remain%></span>
+								</div>
+								<!--  <input class="good_count" data-auctionid="<%=item.auction_id%>" disabled> -->
+								<input class="good_count shopping_cart_count" data-auctionid="<%=item.auction_id%>">
+						</div>
+				</li>
+				<%})}%>
+
+		</ul>
+		<div class="bg_white ui-row pd-5-15 good_statistics">
+				<div class="ui-row ui-txt-line-height-30">
+						共
+						<span class="total_count"> <%=total%></span>
+						件商品，
+						总计
+            <span class="ui-txt-pink f18 ui-txt-bold total_price" data-count="<%=total_price%>">
+                   <%=total_price%>梦想币
+            </span>
+				</div>
+				<div class="ui-row f12 ui-txt-grey-6 ui-txt-line-height-20">
+						夺宝有风险，参加须谨慎
+				</div>
+				<div class="bg-orange ui-txt-white ui-txt-line-height-30 btn_calc">
+						结算
+				</div>
+		</div>
+		<div class="bg_white ui-row pd-5-15 good_operate">
+				<div class="choose_all">
+						<i class="ui-icon-unchecked"></i>
+						全选
+				</div>
+				<div class="bg-orange ui-txt-white ui-txt-line-height-30 btn_del">
+						删除
+				</div>
+		</div>
+</script>
+<script id="announced_good_item_cart" type="text/template">
+	
+	<%
+		if(data && data.length > 0) {
+		_.each(data,function(item){
+		var percentage = (item.sale_count/item.target*100).toFixed(0) + "%";
+		%>
+		<li class="" data-id="<%=item.id%>">
+				<div class="bg_white ui-grid-item" data-id="<%=item.id%>">
+
+						<div class="ui-grid-trisect-img">
+
+								<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=item.thumb%>">
+								<%if(item.label == "十元商品"){%>
+									<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area ten"><%=item.label%></span>
+								<%}else if(item.label=="百元商品"){
+								%>
+								<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area "><%=item.label%></span>
+										
+								<%
+								}
+								else if(item.label=="一元商品"){
+								%>
+
+								<%
+								}
+								%>
+								
+						</div>
+
+						<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name" style="height:60px">
+								<%=item.name%>
+						</div>
+
+						<div class="good_process">
+								<div class="ui-row ui-txt-line-height-25 f14">
+										<span class="ui-txt-muted">揭晓进度</span>
+										<span class="ui-txt-red-1" data-process="50"><%=percentage%></span>
+								</div>
+								<div class="ui-progress">
+										<span style="width:<%=percentage%>"></span>
+								</div>
+						</div>
+
+						<div class="icon_shopping_cart add_to_shopping_cart">
+								<img src="../../assets/image/ico_public_shoppingcart@2x.png">
+						</div>
+
+				</div>
+		</li>
+		<% });
+		}%>
+</script>
+<style>
+		.spinner {
+				float:none ;
+		}
+</style>

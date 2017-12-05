@@ -1,0 +1,427 @@
+ <div class="prize_record_css">
+	<header class="ui-header ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">中奖明细</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block prize_detail_container">
+
+					
+
+			</section>
+
+	</section>
+<script id="prize_detail_info" type="text/template">
+	
+	<div class="bg_white ui-whitespace ui-margin-b-20 prize_process_container">
+
+			<div class="ui-txt-line-height-40 ui-border-b">
+					奖品跟踪动态
+			</div>
+
+			<ul class="ui-list ui-txt-line-height-50 default_process">
+
+					<li class="is_ok" data-status="1">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+									获得奖品
+
+									<div class="status_info f14 f_right">
+
+											<div class="clr-grey-6 time">
+													<%=reward_time%>
+											</div>
+
+									</div>
+
+							</div>
+
+					</li>
+
+					<li class="is_ok" data-status="2">
+							<i class="icon"></i>
+							<div class="ui-border-b list_info">
+								<%if(receive_type == 0){%> <!-- 0 待兑奖 1 领取奖品 2 转卖 -->
+									确认信息
+								<%} else if(receive_type == 1){
+									if(status < 21){%>
+									确认收货地址
+								<%}else{%>
+									确认信息
+								<%}%>
+
+								<%} else if(receive_type == 2){%>
+									转卖确认
+								<%}%>	
+								<div class="status_info f14 f_right">
+										<%if(receive_type == 0){%>
+											<div class="btn_list">
+											
+													<div class="btn_item bg-pink btn_resell_now">
+															转卖
+													</div>
+
+													<div class="btn_item bg-orange btn_get">
+															立即领取
+													</div>											
+											</div>
+										<%} else{%>
+											<div class="clr-grey-6 time">
+													<%=confirm_time%>
+											</div>
+										<%}%>
+									</div>
+
+							</div>
+
+					</li>
+
+					<li data-status="3" class="<%=(receive_type != 0 ? 'is_ok' : '')%>">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+								<%if(receive_type==1){%>
+									商品派发
+									<div class="status_info f14 f_right">
+										<%if(status < 21){%>
+											<div class="txt_prize_send">
+													等待派发...
+											</div>
+										<%}else {%>
+											<div class="clr-grey-6 time">
+													<%=distribute_time%>
+											</div>
+										<%}%>
+									</div>
+								<%} else if(receive_type ==0){%> 
+									商品派发
+								<%} else if(receive_type==2){
+
+									if(status < 10){%>
+									<%}else if(status == 10){%>
+									等待交易
+									<div class="status_info f14 f_right">
+
+											<div class="btn_list">
+
+													<div class="btn_item bg-orange tak_back">
+															收回
+													</div>
+
+											</div>
+
+									</div>
+									<%}else{%>	
+											等待交易
+											<div class="status_info f14 f_right">
+												<div class="clr-grey-6 time">
+															<%=transaction_time%>
+													</div>
+											</div>
+									<%}%>			
+								<%}%>
+
+							</div>
+
+					</li>
+					<% 	var isShow = 0;
+						if(receive_type==1 && status >= 21){
+							isShow = 1;
+						}
+						if(receive_type==2 && status >=11){
+							isShow = 1;
+						}
+					%>
+					<li data-status="4" class="<%=(isShow == 1 ? 'is_ok' : '')%>">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+								<%if(receive_type == 0){%>
+									确认收货
+								<%}%>
+
+								<%if(receive_type == 1){%>
+									确认收货
+
+									<div class="status_info f14 f_right">
+										<%if(status == 21){%>
+											<div class="btn_list">
+													<div class="btn_item bg-orange confirm_receipt">
+															确认收货
+													</div>
+											</div>
+										<%}%>
+
+										<%if(status > 21){%>
+											<div class="clr-grey-6 time">
+															<%=receipt_time%>
+													</div>
+										<%}%>
+
+									</div>
+								<%}%>
+
+								<%if(receive_type == 2){%>
+									确认到账
+									<div class="status_info f14 f_right">
+									<%if(status == 11){%>
+											<div class="btn_list">
+												<div class="txt_prize_send">
+														等待转账到账户
+												</div>
+													
+											</div>
+									<%}%>
+									<%if(status == 12){%>
+											<div class="btn_list">
+													<div class="btn_item bg-orange btn_confirm_receive">
+															确认收账
+													</div>
+											</div>
+									<%}%>
+
+									<%if(status > 12){%>
+											<div class="clr-grey-6 time">
+															<%=pay_time%>
+													</div>
+									<%}%>
+
+									</div>
+									
+									
+								<%}%>
+
+							</div>
+
+					</li>
+
+					<li data-status="5" class="<%=(status == 100 ? 'is_ok' : '')%>">
+							<i class="icon"></i>
+
+							<div class="list_info">
+									完成
+
+									<div class="status_info f14 f_right">
+										<% if(status ==100 && is_shared == 0){%>
+											<div class="btn_list">
+													<div class="btn_item bg-blue prize_detail_share_order">
+															晒单分享
+													</div>
+											</div>
+										<%}%>
+											
+
+									</div>
+
+							</div>
+
+					</li>
+
+			</ul>
+			<!-- resell_process -->
+			<ul class="ui-list ui-txt-line-height-50 resell_process">
+
+					<li class="is_ok" data-status="1">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+									获得奖品
+
+									<div class="status_info f14 f_right">
+
+											<div class="time">
+													2016-04-12 21:11:32
+											</div>
+
+									</div>
+
+							</div>
+
+					</li>
+
+					<li class="is_ok" data-status="2">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+									转卖确认
+
+									<div class="status_info f14 f_right">
+
+											<div class="time">
+													2016-04-13 21:11:32
+											</div>
+
+									</div>
+
+							</div>
+
+					</li>
+
+					<li data-status="3">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+									等待交易
+
+									<div class="status_info f14 f_right">
+
+											<div class="btn_list">
+
+													<div class="btn_item bg-orange">
+															收回
+													</div>
+
+											</div>
+
+									</div>
+
+							</div>
+
+					</li>
+
+					<li data-status="4">
+							<i class="icon"></i>
+
+							<div class="ui-border-b list_info">
+									确认到帐
+
+									<div class="status_info f14 f_right">
+
+											<div class="btn_list">
+													<div class="btn_item bg-orange">
+															确认到帐
+													</div>
+											</div>
+
+									</div>
+
+							</div>
+
+					</li>
+
+					<li data-status="5">
+							<i class="icon"></i>
+
+							<div class="list_info">
+									完成
+
+									<div class="status_info f14 f_right">
+
+											<div class="btn_list">
+													<div class="btn_item bg-blue">
+															晒单分享
+													</div>
+											</div>
+
+									</div>
+
+							</div>
+
+					</li>
+
+			</ul>
+
+	</div>
+
+	<div class="bg_white ui-whitespace ui-margin-b-20 Alipay_account_container">
+
+			<div class="ui-txt-line-height-40 ui-border-b">
+					转账账户信息
+			</div>
+
+	</div>
+
+	<div class="bg_white ui-whitespace ui-margin-b-20 user_address_container">
+
+			<div class="ui-txt-line-height-40 ui-border-b">
+					收货信息
+			</div>
+			<%if(typeof(address_id)!="undefined"){%>
+			<div class="user_address_info pd-tb-10" data-addressid="1">
+
+					<div class="ui-row ui-txt-line-height-40">
+							<span class="user_name"><%=consignee%></span>
+							<span class="user_phone"><%=mobile%></span>
+					</div>
+
+					<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 user_address">
+							地址： <%=province_name%><%=city_name%><%=district_name%><%=street%>
+					</div>
+
+			</div>
+			<%} else{%>
+				<div class="prompt_info_by_not_get">
+				<div class="ui-row">
+					恭喜您获取
+					<span class="good_name">
+						<%=name%>
+					</span>
+					,请尽快完善收货地址。
+				</div>
+			<div class="ui-row">
+				提醒：您也可以通过商品转卖换取现金
+			</div>
+			</div>
+			<%}%>
+			
+
+	</div>
+
+	<div class="bg_white ui-whitespace ui-margin-b-20 good_info_container">
+
+			<div class="ui-txt-line-height-40 ui-border-b">
+					商品信息
+			</div>
+
+			<div class="pd-tb-10 display-webkit-box">
+
+					<div class="good_img">
+							<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=thumb%>">
+					</div>
+
+					<div class="good_info f14">
+
+							<div class="ui-nowrap-multi good_name">
+									<%=name%>
+							</div>
+
+							<div class="winner_info ui-txt-line-height-20 pd-tb-10">
+
+									<div class="ui-row">
+											本期期号：
+											<span class="announced_no"><%=date_sn%></span>
+									</div>
+
+									<div class="ui-row">
+											幸运号码：
+											<span class="prize_no"><%=reward_sn%></span>
+									</div>
+
+									<div class="ui-row">
+											本期参与：
+											<span class="attend_count" data-count="4"><%=join_count%>人次</span>
+									</div>
+
+									<div class="ui-row">
+											揭晓时间：
+											<span class="announced_time">
+													<%=reward_time %>
+											</span>
+									</div>
+
+
+							</div>
+
+					</div>
+
+			</div>
+
+	</div>
+
+</script>
+</div>

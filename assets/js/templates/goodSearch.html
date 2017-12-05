@@ -1,0 +1,162 @@
+
+<div class="good-search-css">
+	<header class="ui-header ui-header-positive ui-border-b">
+
+			<div class="ui-searchbar-wrap ui-border-b focus bg_white">
+
+					<div class="ui-searchbar ui-border-radius bg-grey-body">
+							<i class="ui-icon-search ui-txt-grey-4"></i>
+							<!--<div class="ui-searchbar-text">商品名称</div>-->
+							<form action="#" onsubmit="return false;" class="ui-searchbar-input">
+									<input value="" type="search" placeholder="商品名称" class="search_name">
+							</form>
+							<i class="ui-icon-close ui-txt-grey-4"></i>
+					</div>
+
+					<button class="ui-searchbar-cancel">取消</button>
+
+					<i class="icon_shopping_cart to_shopping_cart">
+							<div class="ui-badge shopping_cart_good_count">0</div>
+					</i>
+			</div>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block hot_search_container">
+
+					<div class="ui-txt-muted ui-txt-line-height-30 hot_search_txt">
+							<i class="icon_hot"></i>
+							热门搜索
+					</div>
+
+					<div class="ui-label-list ui-txt-line-height-25 f12 hot_search_txt_list ">
+							<!-- <label class="ui-label">金庸</label>
+							<label class="ui-label">功夫</label>
+							<label class="ui-label">悬疑</label>
+							<label class="ui-label">盗墓笔记</label>
+							<label class="ui-label">欢乐谷</label> -->
+					</div>
+
+			</section>
+
+			<section class="mxep_block lately_search_container" >
+
+					<div class="ui-txt-muted ui-txt-line-height-30 lately_search_txt">
+							<i class="icon_lately"></i>
+							最近搜索
+					</div>
+
+					<div class="ui-row ui-txt-red-1 ui-txt-line-height-50 ui-txt-center f14 history_none has_no_history">
+							暂无搜索历史
+					</div>
+
+					<div class="ui-label-list ui-txt-line-height-25 f12 lately_search_txt_list ">
+							
+							<!-- <label class="ui-label">功夫</label>
+							<label class="ui-label">悬疑</label>
+							<label class="ui-label">盗墓笔记</label>
+							<label class="ui-label">欢乐谷</label> -->
+					</div>
+
+					<div class="ui-txt-red-1 ui-txt-line-height-30 f14 clear_history" >
+							<i class="icon_clear"></i>
+							清除历史记录
+					</div>
+
+			</section>
+
+			<section class="mxep_block good_search_result">
+
+					<div class="ui-row ui-whitespace ui-txt-line-height-50 good_search_result_txt">
+
+							<span class="f_left">
+									共<span class="good_search_result_number">0</span>件商品
+							</span>
+
+							<span class="ui-txt-red-1 f_right all_to_shopping_cart">全部加入清单</span>
+
+					</div>
+
+					<ul class="ui-list ui-list-active ui-list-cover ui-border-tb good_list">
+
+							
+
+					</ul>
+
+			</section>
+
+	</section>
+</div>
+<script id="hot_search_item" type="text/template">
+	<% if(result && result.length>0){
+		_.each(result, function(item){
+	%>
+		<label class="ui-label hot_search"><%=item.keywords%></label>
+	<%
+		});
+		}
+	%>
+
+</script>
+
+<script id="history_search_item" type="text/template">
+	<% if(result && result.length>0){
+		_.each(result, function(item){
+	%>
+		<label class="ui-label history_search"><%=item.keywords%></label>
+	<%
+		});
+		}
+	%>
+
+</script>
+<script id="good_list_item" type="text/template">
+<% if(data && data.length>0){
+		_.each(data, function(item){
+		var percentage = ((item.target-item.remain)/item.target*100) + "%";
+		console.log(1);
+	%>
+
+	<li class="ui-border-t announced_good_list" data-id="<%=item.id%>">
+			<div class="ui-list-img">
+					<span style="background-image:url(<%=item.thumb%>)"></span>
+					
+					<span class="ui-txt-center f12 ui-txt-white special_offer_area "><%=item.label%></span>
+			</div>
+
+			<div class="ui-list-info" data-id="<%=item.id%>">
+					<h4 class="ui-nowrap-multi f14 good_name"><%=item.name%></h4>
+
+					<div class="good_crowd-funding_process">
+
+							<div class="ui-progress">
+									<span style="width:<%=percentage%>"></span>
+							</div>
+
+							<div class="ui-row f12 ui-txt-muted good_crowd-funding_count">
+
+									<span class="">
+											总需
+											<span class="good_total_count"><%=item.target%></span>
+									</span>
+
+									<span>
+											剩余
+											<span class="good_surplus_count"><%=item.remain%></span>
+									</span>
+
+							</div>
+
+					</div>
+
+					<i class="ico_img icon_shopping_cart add_to_shopping_cart"></i>
+			</div>
+	</li>
+<%
+		});
+		}
+	%>
+
+</script>

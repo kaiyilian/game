@@ -1,0 +1,80 @@
+
+<div class="recharge-record-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">充值记录</h1>
+			<div class="btn_recharge">充值</div>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<ul class="recharge_record">
+
+							<li class="bg_white ui-position-relative ui-all-whitespace ui-txt-bold ui-margin-b-20">
+
+									<div class="ui-txt-line-height-30 recharge_source">
+											支付宝充值
+									</div>
+
+									<div class="ui-txt-line-height-20 f14 ui-txt-muted recharge_time">
+											2015-03-12 11:02:32
+									</div>
+
+									<div class="ui-txt-line-height-40 recharge_status active" data-pay="0">已付款</div>
+
+									<div class="f18 recharge_count" data-count="40">40元</div>
+
+							</li>
+
+							<li class="bg_white ui-position-relative ui-all-whitespace ui-txt-bold ui-margin-b-20">
+
+									<div class="ui-txt-line-height-30 recharge_source">
+											支付宝充值
+									</div>
+
+									<div class="ui-txt-line-height-20 f14 ui-txt-muted recharge_time">
+											2015-03-12 11:02:32
+									</div>
+
+									<div class="ui-txt-line-height-40 recharge_status" data-pay="1">
+											未付款，待处理
+									</div>
+
+									<div class="f18 recharge_count" data-count="40">40元</div>
+
+							</li>
+
+					</ul>
+
+			</section>
+
+	</section>
+</div>
+<script id="recharge_record_item" type="text/template">
+  <% if(_.size(data) > 0) {
+       _.each(data,function(item){
+       
+   %>
+	<li class="bg_white ui-position-relative ui-all-whitespace ui-txt-bold ui-margin-b-20">
+
+			<div class="ui-txt-line-height-30 recharge_source">
+					支付宝充值
+			</div>
+
+			<div class="ui-txt-line-height-20 f14 ui-txt-muted recharge_time">
+					2015-03-12 11:02:32
+			</div>
+
+			<div class="ui-txt-line-height-40 recharge_status active" data-pay="0">已付款</div>
+
+			<div class="f18 recharge_count" data-count="40">40元</div>
+
+	</li>
+	<%});
+	}%>
+
+</script>

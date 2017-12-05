@@ -1,0 +1,179 @@
+
+<div class="order-confirm-css">
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+		<h1 class="ui-txt-default name">确认订单</h1>
+
+</header>
+
+<footer class="ui-footer bg_white">
+
+		<div class="ui-whitespace ui-border-t">
+
+		    <span class=" ui-txt-line-height-56">
+		    		<span>应付金额：</span>
+		    		<span class="ui-txt-pink confirm_actual_money">￥234</span>
+		    </span>
+
+				<div class="bg-orange ui-txt-white btn_pay">确认支付</div>
+
+		</div>
+</footer>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="bg_white ui-margin-b-20 ui-all-whitespace user_address_info" data-address="1">
+
+						
+						<div class="ui-row ui-txt-line-height-40 ">
+								<span class="user_phone" style="text-alige:center">+添加收获地址</span>
+						</div>
+
+				</div>
+
+				<div class="bg_white ui-margin-b-20 ui-all-whitespace good-info">
+
+						
+
+				</div>
+				<div class="order_settlement_container">
+					<div class="bg_white ui-margin-b-20 ui-all-whitespace discount_list">
+
+						<div class="ui-row ui-txt-line-height-44 ui-border-b choose_coupon">
+
+								<span class="">红包</span>
+								<span class="f_right f14 ui-txt-muted" style="margin-right: 35px;">
+										<span>你没有使用红包</span>
+										<span class="coupon_name">去使用</span>
+								</span>
+								<i class="ui-icon-arrow"></i>
+
+						</div>
+
+						<div class="ui-row ui-txt-line-height-44 ">
+
+								<span class="">其他抵扣</span>
+								<span class="f_right f14 ui-txt-muted">
+										已提前支付10梦想币
+								</span>
+
+						</div>
+
+				</div>
+
+	<div class="bg_white ui-margin-b-20 ui-all-whitespace ">
+
+			<div class="ui-row ui-txt-line-height-30 ">
+
+					<span class="">商品合计</span>
+					<span class="f_right ui-txt-pink good_total_price" data-price="244">
+							￥244
+					</span>
+
+			</div>
+
+			<div class="ui-row ui-txt-line-height-30 ">
+
+					<span class="">折扣合计</span>
+					<span class="f_right ui-txt-pink discount_total_price" data-price="144">
+							- ￥144
+					</span>
+
+			</div>
+
+	</div>
+				</div>
+
+		</section>
+
+</section>
+</div>
+<script id="user_address_item" type="text/template">
+
+	<div class="ui-row ui-txt-line-height-40 user_address_id" data-id="<%=id%>">
+			<span class="user_name"><%=consignee%></span>
+			<span class="user_phone"><%=mobile%></span>
+			<%if(is_default == 1){%>
+				<span class="f12 spn_bg_orange txt_default">默认</span>
+			<%}%>
+			
+	</div>
+
+	<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 user_address has_address">
+			<%=street%>
+	</div>
+
+</script>
+<script id="order_settlement_item" type="text/template">
+	<div class="bg_white ui-margin-b-20 ui-all-whitespace discount_list">
+
+		<div class="ui-row ui-txt-line-height-44 ui-border-b choose_coupon">
+
+				<span class="">红包</span>
+				<span class="f_right f14 ui-txt-muted" style="margin-right: 35px;">
+					<%if(coupon_free_money > 0){%>
+							<span>已使用一张</span>
+						<span class="coupon_name">节省<%=coupon_free_money%>梦想币</span>
+					<%}%>
+						
+				</span>
+				<i class="ui-icon-arrow"></i>
+
+		</div>
+
+		<div class="ui-row ui-txt-line-height-44 ">
+		<%if(typeof(prepay_money)!= "undefined"){%>
+				<span class="">其他抵扣</span>
+				<span class="f_right f14 ui-txt-muted">
+						已提前支付<%=prepay_money%>梦想币
+				</span>
+		<%}%>
+				
+
+		</div>
+
+	</div>
+
+	<div class="bg_white ui-margin-b-20 ui-all-whitespace ">
+
+			<div class="ui-row ui-txt-line-height-30 ">
+
+					<span class="">商品合计</span>
+					<span class="f_right ui-txt-pink good_total_price" data-price="244">
+							￥<%=(total_money).toFixed(2)%>
+					</span>
+
+			</div>
+
+			<div class="ui-row ui-txt-line-height-30 ">
+
+					<span class="">折扣合计</span>
+					<span class="f_right ui-txt-pink discount_total_price" data-price="144">
+							- ￥<%=(free_money).toFixed(2)%>
+					</span>
+
+			</div>
+
+	</div>
+
+</script>
+
+<script id="good-info-item" type="text/template">
+	<div class="good_img">
+		<img class="echo_img" src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=thumb%>" >
+
+	</div>
+
+	<div class="good_info">
+
+		<div class="ui-nowrap-multi ui-txt-line-height-24 ui-margin-t-20 good_name">
+				<%=name%>
+		</div>
+
+		<input class="good_count buy_count" disabled />
+
+	</div>
+</script>

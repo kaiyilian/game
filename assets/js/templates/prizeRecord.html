@@ -1,0 +1,101 @@
+
+<div class="prize_record_css">
+	<header class="ui-header ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">中奖记录</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<ul class="ui-list prize_list">
+
+					</ul>
+
+			</section>
+
+	</section>
+</div>
+<script id="prize_record_item" type="text/template">
+	<%if(_.size(data) > 0) {
+       _.each(data,function(item){
+       var percentage = (item.target - item.remain)/item.target*100 + "%";
+       
+   %>
+		<li class="bg_white pd-10-15 ui-margin-b-20 ui-border-b" data-id="<%=item.order_id%>">
+
+			<div class="display-webkit-box good_info ">
+
+					<div class="ui-list-img">
+							<!-- <span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span> -->
+							<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=item.thumb%>">
+					</div>
+
+					<div class="ui-list-info">
+
+							<div class="ui-nowrap-multi good_name">
+									<%=item.name%>
+							</div>
+
+							<div class="pd-tb-10 ui-txt-line-height-20 f14 clr-grey-6 prize_info">
+
+									<div class="ui-row">
+											本期期号：
+											<span class="announced_no"><%=item.date_sn%></span>
+									</div>
+
+									<div class="ui-row">
+											幸运号码：
+											<span class="ui-txt-pink prize_no"><%=item.reward_sn%></span>
+									</div>
+
+									<div class="ui-row">
+											本期参与：
+											<span class="attend_count" data-count="4"><%=item.join_count%>人次</span>
+									</div>
+
+									<div class="ui-row">
+											揭晓时间：
+											<span class="announced_time">
+													<%=item.reward_time%>
+											</span>
+									</div>
+
+							</div>
+
+					</div>
+
+			</div>
+
+			<div class="ui-row ui-border-t pd-t-10 btn_list" data-auction_id="<%=item.auction_id%>"   data-id="<%=item.order_id%>" data-platform_discount="<%=item.platform_discount%>">
+					<%if(item.status == 3){%><!-- status等于3，显示《转卖》和《立即领取》按钮 -->
+						<div class="btn_item bg-orange btn_get">立即领取</div>
+						<div class="btn_item bg-pink btn_resell">转卖</div>
+						
+					<%} else if(item.status == 10){%><!-- status等于10，显示《收回转卖》按钮 -->
+					<div class="btn_item bg-pink btn_take_back">收回转卖</div>
+					<%}else if(item.status == 12){%><!-- status等于12，显示《确认收帐》按钮 -->
+					<div class="btn_item bg-pink btn_confir_receive">确认收账</div>
+					<%} else if(item.status == 20){%><!-- status等于20，显示“等待奖品派发” -->
+						<div class="btn_item btn_prize_send">请等待派发奖品</div>
+					<%}else if(item.status == 21){%><!-- status等于21，显示《确认收货》和《再次购买》按钮 -->
+						<div class="btn_item bg-orange btn_confirm_receipt">确认收货</div>
+						<div class="btn_item bg-pink btn_next_buy">再次购买</div>
+					<%} else if(item.status == 100 && item.is_shared == 0){%>
+						<!-- status等于100和is_shared等于0，显示《晒单分享》按钮 -->
+						
+						<div class="btn_item bg-pink btn_next_buy">再次购买</div>
+						<div class="btn_item bg-blue btn_share_order">晒单分享</div>
+					<%} else if(item.status == 100){%>
+						<div class="btn_item bg-pink btn_to_next_buy">再次购买</div>
+					<%}%>
+			</div>
+
+		</li>
+	<%});
+	}%>
+
+</script>

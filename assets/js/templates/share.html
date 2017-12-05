@@ -1,0 +1,81 @@
+
+<div class="share-css">
+
+		<header class="ui-header ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+				<h1 class="ui-txt-default name">晒单分享</h1>
+				<!--<i class="ico_img icon_camera"></i>-->
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block">
+
+						<div class="share_order_list">
+
+
+
+						</div>
+
+				</section>
+
+		</section>
+
+</div>
+<script id="share_orders_item" type="text/template">
+		<% if(_.size(data) > 0) {
+		_.each(data,function(item){
+		%>
+		<div class="bg_white share_order_item" data-id=<%=item.id%>>
+
+				<div class="ui-row ui-txt-line-height-50 user_info">
+
+					<span class="user_head_img f_left">
+							<!-- <img src="assets/image/34.png"> -->
+							<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=item.avatar%>" >
+					</span>
+
+						<span class="user_nickname"><%=item.member_name%></span>
+
+						<span class="ui-txt-muted f12 f_right share_time"><%=item.create_time%></span>
+
+				</div>
+
+				<div class="ui-row ui-nowrap ui-txt-grey-4 ui-txt-line-height-20 f14 good_name">
+						<%=item.goods_name%>
+				</div>
+
+				<div class="ui-row ui-txt-grey-4 ui-txt-line-height-20 f14">
+						<span>期号：</span>
+						<span class="activity_no"><%=item.date_sn%></span>
+				</div>
+
+				<div class="ui-row ui-txt-grey-6 ui-txt-line-height-20 f14 remark">
+						<%=item.desc%>
+				</div>
+
+				<div class="ui-row">
+
+						<ul class="ui-grid-trisect share_img_list">
+								<% _.each(item.pictures,function(picture){%>
+								<li>
+										<div class="ui-grid-trisect-img">
+												<!-- <img src="http://placeholder.qiniudn.com/190x284"> -->
+												<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=picture%>" >
+										</div>
+								</li>
+
+								<%})%>
+
+						</ul>
+
+				</div>
+
+		</div>
+		<%});
+		}%>
+
+
+</script>

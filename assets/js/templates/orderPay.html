@@ -1,0 +1,70 @@
+
+
+
+<div class="order-pay-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+			<h1 class="ui-txt-default name">支付订单</h1>
+
+	</header>
+
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<div class="ui-all-whitespace bg-fff9f3 ui-margin-b-20">
+
+							<div class="ui-row f16 ui-txt-line-height-30 ui-txt-clr-ff6e2b">订单提交成功，只差最后一步支付了！</div>
+							<div class="ui-row f14 ui-txt-line-height-20">
+									
+									若取消支付，该笔订单将会被取消，请尽快完成支付！
+
+							</div>
+
+					</div>
+
+					<div class="bg_white ui-margin-b-20 ui-all-whitespace f14 ui-txt-line-height-25">
+
+							<div class="ui-row">
+									<span class="ui-txt-muted">订单号：</span>
+									<span class="order_no"><%=order_sn%></span>
+							</div>
+
+							<div class="ui-row">
+									<span class="ui-txt-muted">应付金额：</span>
+									<span class="order_pay"><%=need_pay%>梦想币</span>
+							</div>
+
+					</div>
+
+					<div class="bg_white ui-margin-b-20 ui-all-whitespace f14 ui-txt-line-height-25">
+
+							<div class="ui-row">梦想币余额支付</div>
+
+							<div class="ui-row ui-txt-grey-6">
+									<span class="">余额</span>
+									<span class="mxb_balance"><%=balance%>梦想币</span>
+									<%if((need_pay - balance) > 0){
+									%>
+										<span class="balance_not_enough ui-txt-clr-ff6e2b f12">
+											（余额不足，请
+											<span class="btn_recharge">充值</span>
+											）
+									</span>
+									<%}%>
+									
+							</div>
+
+					</div>
+
+					<div class="bg-ff6e2b ui-txt-white ui-txt-center ui-txt-line-height-40
+					ui-margin-tb ui-width-8 ui-border-radius-3  btn_order_pay">
+							确认支付
+					</div>
+
+			</section>
+
+	</section>
+</div>

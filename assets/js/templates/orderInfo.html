@@ -1,0 +1,181 @@
+<div class="order-info-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">订单详情</h1>
+
+	</header>
+
+	<footer class="ui-footer bg_white">
+
+			<div class="btn_list display-webkit-box" data-orderid="<%=order_id%>">
+				<%if(status == 1){%>
+					<div class="btn btn_cancel cancel_order">订单取消</div>
+
+					<div class="btn btn_pay pay_money_now">立即付款</div>
+				<%}%>
+
+				<%if(status == 21){%>
+
+					<div class="btn btn_pay to_confirm_receipt" style="display:right">确认收货</div>
+				<%}%>
+
+				<%if(status == -1){%>
+
+					<div class="btn btn_cancel ui-txt-muted delete_order" style="width:100%">删除订单</div>
+				<%}%>
+
+				<%if(status == 100){%>
+
+					<div class="btn btn_cancel ui-txt-muted delete_order" style="width:100%">删除订单</div>
+				<%}%>
+					
+
+			</div>
+
+	</footer>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<div class="bg-orange ui-all-whitespace ui-margin-b-20  ui-txt-white ">
+							<%
+								var style ;
+								var message;
+							if(status == 1){
+								
+								style = "待支付";
+								mesasage = "支付时间结束后，订单将会被取消，请尽快完成支付！";
+
+							}
+
+							if(status == 20){
+								style = "已付款，待发货";
+								mesasage = "订单已付款，请等待第三方平台发货！";
+							}
+
+							if(status == 21){
+								style = "等待确认收货";
+								mesasage = "订购商品已发货，等待物流公司送货，请保持收货手机号畅通！";
+							}
+							
+							if(status == -1){
+								style = "订单取消";
+								mesasage = "订单已关闭";
+							}
+
+							if(status == 100){
+								style = "交易成功";
+								mesasage ="感谢您在梦想e拍购物，欢迎您再次光临！";
+							}
+							%>
+
+							<div class="order_status ui-txt-line-height-36 f18">
+								<%=style%>
+							</div>
+							<div class="ui-row ui-txt-line-height-25 f14">
+									<span class="time_count_down" data-time="2016-10-25 00:00:00"></span>
+									<%=mesasage%>
+							</div>
+
+					</div>
+
+					<div class="bg_white ui-all-whitespace ui-margin-b-20 ui-position-relative user_address_info">
+
+							<div class="ui-row ui-txt-line-height-40">
+									<span class="user_name"><%=consignee%></span>
+									<span class="user_phone"><%=mobile%></span>
+							</div>
+
+							<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 user_address">
+									<%=province_name%><%=city_name%><%=district_name%>  <%=street%>
+							</div>
+
+					</div>
+
+					<div class="bg_white ui-whitespace ui-margin-b-20 good_info_container">
+
+							<div class="ui-row ui-txt-line-height-40">商品信息</div>
+
+							<div class="ui-border-t good_list">
+									<div class="good_item display-webkit-box">
+
+											<div class="good_img">
+													<!-- span style="background-image: url(http://placeholder.qiniudn.com/190x284)"></span> -->
+													<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=thumb%>">
+											</div>
+
+											<div class="good_info">
+
+													<div class="ui-nowrap-multi good_name">
+															<%=name%>
+													</div>
+
+													<div class="ui-row ui-txt-line-height-30 ui-margin-t">
+															<span class="good_price" data-price="333">￥<%=price.toFixed(2)%></span>
+															<span class="f_right good_count" data-count="12">x<%=quantity%></span>
+													</div>
+
+											</div>
+
+									</div>
+
+									<!-- <div class="good_item display-webkit-box">
+
+											<div class="good_img">
+													<span style="background-image: url(http://placeholder.qiniudn.com/190x284)"></span>
+											</div>
+
+											<div class="good_info">
+
+													<div class="ui-nowrap-multi good_name">
+															商品名称商品名称商品名称商品名称
+															商品名称商品名称
+													</div>
+
+													<div class="ui-row ui-txt-line-height-30 ui-margin-t">
+															<span class="good_price" data-price="333">￥333.00</span>
+															<span class="f_right good_count" data-count="12">x12</span>
+													</div>
+
+											</div>
+
+									</div> -->
+
+							</div>
+
+					</div>
+
+					<div class="bg_white ui-whitespace ui-margin-b-20 ui-txt-line-height-40">
+
+							<div class="ui-row ui-border-b">
+									<span>应付总额</span>
+									<span class="f_right real_pay" data-price="7000">￥<%=actual_money.toFixed(2)%></span>
+							</div>
+
+							<div class="ui-row">
+									<span>商品总价</span>
+									<span class="f_right ui-txt-grey-6 total_price" data-price="7000">￥<%=total_price.toFixed(2)%></span>
+							</div>
+
+					</div>
+
+					<div class="bg_white ui-whitespace ui-margin-b-20 ui-txt-line-height-30">
+
+							<div class="ui-row">
+									<span>订单编号：</span>
+									<span class="order_no"><%=order_sn%></span>
+							</div>
+
+							<div class="ui-row">
+									<span>下单时间：</span>
+									<span class="order_time"><%=create_time%></span>
+							</div>
+
+					</div>
+
+			</section>
+
+	</section>
+</div>

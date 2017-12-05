@@ -1,0 +1,347 @@
+<div class="duobao-info-css">
+
+		<section class="ui-container ui-content duobao_info_container" style="padding-bottom: 50px;">
+
+
+		</section>
+</div>
+
+<script id="duobao_info_item" type="text/template">
+
+		<section class="mxep_block">
+
+				<div class="icon_line">
+						<i class="ui-icon-return" onclick="history.back();"></i>
+						<i class="ui-icon-shoppingCart">
+								<div class="ui-badge shopping_cart_good_count">0</div>
+						</i>
+						<i class="ui-icon-share duobao_info_show"></i>
+				</div>
+
+				<div class="swiper-container good_img_list">
+						<div class="swiper-wrapper">
+								<%
+								if(pictures && pictures.length > 0) {
+								_.each(pictures,function(item){
+
+								%>
+								<div class="swiper-slide">
+
+										<span class="item">
+												<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=item%>" style="width:100%; height:100%">
+										</span>
+
+								</div>
+								<%});
+								}%>
+
+
+								<!-- 如果需要分页器 -->
+								<div class="swiper-pagination"></div>
+
+						</div>
+				</div>
+
+		</section>
+
+		<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20">
+
+				<div class="bg_white good_name">
+						<%=name%>
+				</div>
+
+				<div class="ui-row announced_status_container" data-status="<%=status%>">
+
+						<div class="ui-row ui-margin-tb announced_status announced_not_start_info">
+
+								<div class="ui-row ui-margin-b ui-txt-line-height-25 ui-txt-bold unit_price"
+										 data-unit_price="10">
+										<%=price%>
+										梦想币/人次
+								</div>
+
+								<div class="ui-row f14 ui-txt-line-height-30">
+										<span>本期期号：</span>
+										<span class="current_announced_no">
+												<%=date_sn%>
+										</span>
+								</div>
+
+								<div class="ui-row announced_process_container">
+										<div class="ui-progress">
+
+
+												<%
+												var percent=(target-remain)/target*100+"%";
+												%>
+												<span style="width:<%=percent%>"></span>
+										</div>
+								</div>
+
+								<div class="ui-row f14 ui-txt-line-height-30 participant_container">
+										<span class="total_participant" data-count="<%=target%>">
+												总需
+												<%=target%>
+												人次
+										</span>
+										<span class="f_right surplus_participant" data-count="<%=remain%>">
+												剩余
+												<%=remain%>
+										</span>
+								</div>
+
+						</div>
+
+				</div>
+
+				<div class="ui-row user_status_container">
+
+
+						<div class="ui-row ui-all-whitespace user_status not_login">
+								<span class="clr_login btn_login">登录</span>
+								以查看您的夺宝号
+						</div>
+
+						<%
+						if(sns.length==0){
+						%>
+						<div class="ui-row ui-all-whitespace user_status not_attend">
+								您还未参与，试一下，万一中了呢？
+						</div>
+						<%
+						}
+						else{
+						%>
+						<div class="ui-row ui-all-whitespace user_status attended">
+
+								<div class="ui-row">
+										<span>您参与了：</span>
+												<span class="attend_count">
+														<%=joined_count%>人次
+												</span>
+								</div>
+
+								<div class="ui-row" style="position: relative;overflow: initial;">
+								<span>夺宝号码：</span>
+
+								<%
+								for (var i = 0; i < 2; i++) {
+								var item = sns[i];
+								%>
+								<span class="personal_no">
+								<%=item%>
+								</span>
+								<%
+								}
+								%>
+
+								<%
+								if(sns.length>2){
+								%>
+								<span class="bg_fd7a44 btn_search_all">查看全部</span>
+								<%
+								}
+								%>
+
+								</div>
+
+						</div>
+						<%
+						}
+						%>
+
+
+				</div>
+
+		</section>
+
+		<%
+		if(support_buy==1){    //1 支持原价购买 0 不支持原价购买
+		%>
+		<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20 buy_full_price_container">
+
+				<div class="ui-row ui-txt-line-height-40 ui-txt-muted ui-border-b">
+						还可以这么买
+				</div>
+
+				<div class="ui-row ui-txt-line-height-30 ui-margin-t">
+						全价购买，无需等待，价格优惠
+				</div>
+
+				<div class="ui-row ui-txt-line-height-30 ui-txt-bold good_price" data-price="<%=goods_price%>">
+						￥
+						<%=goods_price%>
+				</div>
+
+				<div class="ui-txt-line-height-30 bg_fd7a44 ui-txt-white ui-border-radius-3
+				 ui-txt-center btn_full_purchase" data-goodid="<%=goods_id%>">
+						全价购买
+				</div>
+
+		</section>
+		<%
+
+		}
+		%>
+
+
+		<section class="mxep_block bg_white ui-margin-b-20">
+
+				<ul class="ui-list ui-list-link other_list">
+
+						<li class="" data-href="imgTxtDetail">
+								<div class="ui-avatar">
+										<span style="background-image:url('assets/image/announced/img_details_image@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap name">图文详情</h4>
+								</div>
+						</li>
+
+						<li class="" data-id="2" data-href="pastAnnounced">
+								<div class="ui-avatar">
+										<span style="background-image:url('assets/image/announced/img_details_ever@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap name">往期揭晓</h4>
+								</div>
+						</li>
+
+						<li class="" data-id="3" data-href="share">
+								<div class="ui-avatar">
+										<span style="background-image:url('assets/image/announced/img_details_share@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap name">晒单分享</h4>
+								</div>
+						</li>
+
+				</ul>
+
+		</section>
+
+		<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20">
+
+				<div class="ui-row ui-txt-line-height-40 ui-border-b">
+						<span>所有参与记录</span>
+						<span class="f_right f14 begin_time">
+								<%=begin_time%>
+								开始
+						</span>
+				</div>
+
+				<ul class="ui-list attend_record_list">
+
+				</ul>
+
+		</section>
+
+		<section class="mxep_block bg_white ui-all-whitespace announced_operate">
+
+				<!--夺宝人数未满，揭晓未开始-->
+				<div class="ui-row ui-txt-line-height-24 ui-txt-white announced_not_start">
+
+						<div class="bg_fd7a44 ui-border-radius-3 f_left btn_buy">
+								立刻购买
+						</div>
+
+						<div class="bg-pink ui-border-radius-3 f_right btn_join_list">
+								加入清单
+						</div>
+				</div>
+
+		</section>
+
+		<section class="modal">
+
+				<div class="modal-container ui-all-whitespace">
+
+						<div class="modal-header ui-border-b">
+								<div class="ui-txt-line-height-40 unit_price" data-price="<%=price%>">
+										<%=price%>
+										梦想币/人次
+								</div>
+								<i class="ui-icon-close remove"></i>
+						</div>
+
+						<div class="modal-body">
+
+								<div class="ui-row ui-txt-line-height-36">
+										<span class="">参与人次</span>
+										<input class="spinner_buy_count">
+								</div>
+
+								<div class="ui-margin-tb attend_count_list">
+										<span class="item active">5</span>
+										<span class="item">20</span>
+										<span class="item">50</span>
+										<span class="item">100</span>
+								</div>
+
+								<div class="ui-row ui-txt-line-height-40">
+										<span class="ui-txt-muted">总计：</span>
+										<span class="total_price">10梦想币</span>
+								</div>
+
+						</div>
+
+						<div class="modal-footer ui-border-t">
+								<div class="ui-txt-white bg-orange ui-txt-center ui-txt-line-height-40
+								 btn_sure">
+										立即购买
+								</div>
+						</div>
+
+				</div>
+
+		</section>
+
+
+</script>
+
+<script id="attend_record_item" type="text/template">
+
+		<%
+		if(data&&data.length>0){
+		_.each(data,function(item){
+		%>
+		<li class="">
+				<div class="ui-avatar">
+						<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png"
+								 data-echo="<%=item.avatar%>">
+				</div>
+				<div class="ui-list-info">
+						<div class="ui-nowrap ui-txt-line-height-25 user_name">
+								<%=item.nickname%>
+						</div>
+						<div class="ui-txt-muted f14 ui-txt-line-height-20 attend_info">
+								<span>您参与了</span>
+								<span class="clr_fd7a44 attend_count">
+										<%=item.joined_count%>
+								</span>
+								<span>人次</span>
+								<span class="attend_time">
+										<%=item.joined_time%>
+								</span>
+						</div>
+				</div>
+		</li>
+		<%
+		})
+		}
+		%>
+
+
+</script>
+
+<style>
+		.weui_dialog_bd {
+				max-height: 300px;
+				overflow-y: auto;
+		}
+
+		.weui_dialog_bd span {
+				display: inline-block;
+				margin-right: 5px;
+		}
+</style>

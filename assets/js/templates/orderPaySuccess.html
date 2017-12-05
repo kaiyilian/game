@@ -1,0 +1,112 @@
+<style>
+		.icon_success {
+				width: 60px;
+				height: 60px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+		}
+
+		.btn_list .btn {
+				background-color: #ff5265;
+				margin: 0 10px;
+				line-height: 36px;
+				border-radius: 2px;
+		}
+
+		.ui-dialog-bd {
+				max-height: 300px;
+				overflow-y: auto;
+		}
+
+		.ui-dialog-bd span {
+				display: inline-block;
+				margin-right: 5px;
+		}
+</style>
+<section class="ui-container ui-content">
+
+		<section class="mxep_block bg_white pd-b-10 ui-margin-b-20">
+
+				<div class="ui-row pd-t-30 pd-b-10 ui-txt-center">
+						<img src="/assets/image/1.png" class="icon_success">
+						<div class="ui-txt-line-height-30 f20">订单支付成功</div>
+						<div class="ui-txt-line-height-24 f12">请等待系统为您揭晓！</div>
+
+				</div>
+
+				<div class="ui-row-flex ui-whitespace ui-txt-center ui-txt-white btn_list">
+
+						<div class="ui-col ui-col btn btn_continue">继续逛逛</div>
+						<div class="ui-col ui-col btn btn_announced_record">夺宝记录</div>
+						<div class="ui-col ui-col btn btn_buy_record">购买记录</div>
+
+				</div>
+
+		</section>
+
+		<section class="mxep_block bg_white announced_record">
+
+		</section>
+
+</section>
+
+<script id="announced_record_item" type="text/template">
+
+
+		<div class="ui-all-whitespace ui-txt-line-height-30 bg-ffefe7 clr-orange">
+				成功参与
+				<span class="good_total_count"><%=goods_num%></span>
+				件商品，共
+				<span class="attend_total_count"><%=join_count%></span>
+				人次
+		</div>
+
+		<div class="announced_record_list">
+				<%
+				if(auctions && auctions.length > 0) {
+				_.each(auctions,function(item){
+				%>
+				<div class="ui-all-whitespace announced_record_item">
+
+						<div class="ui-row">
+								<span class="good_name"><%=item.name%></span>
+								<span class="f_right attend_count"><%=item.join_count%>人次</span>
+						</div>
+
+						<div class="ui-row f14 ui-txt-grey-6">
+								<span>参与期号：</span>
+								<span class="data_sn"><%=item.date_sn%></span>
+						</div>
+
+						<div class="ui-row f14 ui-txt-grey-6">
+								<span>夺宝号码：</span>
+
+								<%
+								if(item.sns.length>3){
+								%>
+											<span class="announced_no more">
+													<%=item.sns[0]+"，"+item.sns[1]+"，"+item.sns[2]+"......"%>
+											</span>
+								<span class="ui-txt-pink f_right btn_all">查看全部</span>
+
+								<%
+								}
+								else{
+								%>
+								<span class="announced_no">
+										<%=item.sns%>
+								</span>
+								<%
+								}
+								%>
+
+						</div>
+
+				</div>
+				<%});
+				}%>
+		</div>
+
+
+</script>

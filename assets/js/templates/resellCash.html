@@ -1,0 +1,164 @@
+<div class="resell_cash_css">
+		<header class="ui-header ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();"></i>
+				<h1 class="ui-txt-default name">转卖变现</h1>
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block">
+
+						<div class="ui-position-relative bg-orange ui-whitespace-10-25 pd-l-50 ui-margin-b-20
+					ui-txt-white f14 ui-txt-line-height-25">
+
+								<i class="icon_info"></i>
+								幸运商品可直接按照7折扣直接转卖给平台或按照一定折扣上架平台出售，
+								交易成功后系统会打款到所填写的账号！（上架平台出售若1周内无买家购买，
+								将自动下架并发货！）
+
+						</div>
+
+						<div class="bg_white pd-lr-15 ui-margin-b-20 ui-txt-line-height-50 good_info_container">
+
+								<div class="ui-row ui-border-b display-webkit-box resell_cash_good_container">
+
+
+								</div>
+
+								<div class="ui-row ui-border-b ui-arrowlink">
+										<span>选择出售方式</span>
+
+									<span class="f_right margin-r-30 resell_method">
+
+											<select id="sale_type">
+													<option value="1">上架平台转卖买家</option>
+													<option value="2">直接转卖给平台</option>
+											</select>
+
+									</span>
+
+								</div>
+
+								<div class="ui-row ui-border-b">
+										<span>商品原价</span>
+
+									<span class="f_right good_original_price" data-price="7000">
+											￥7000
+									</span>
+								</div>
+
+								<div class="ui-row ui-border-b">
+										<span>折扣(折)</span>
+
+									<span class="f_right good_discount_container" data-discount="7.5">
+											<div class="good_discount_mess" style="text-align: right;">建议折扣：7.5</div>
+
+											<input type="text"  placeholder="建议折扣：7.5" maxlength="3"
+														 class="ui-input good_discount"
+														 style="text-align: right;height:30px;"
+														 onkeyup="if(isNaN(value))execCommand('undo')">
+
+									</span>
+								</div>
+
+								<div class="ui-row">
+										<span>最终售价</span>
+
+									<span class="f_right good_real_price" data-price="7000">
+											￥5000
+									</span>
+								</div>
+
+						</div>
+
+						<div class="bg_white pd-lr-15 ui-margin-b-20 ui-txt-line-height-50 alipay_container">
+
+								<div class="ui-row ui-border-b ui-txt-bold">
+										转账账户填写
+								</div>
+
+								<div class="ui-row ui-border-b">
+
+										<span>选择转账平台</span>
+
+									<span class="f_right">
+											支付宝
+									</span>
+
+								</div>
+
+								<div class="ui-row ui-border-b">
+
+										<span>账号</span>
+
+									<span class="f_right user_account">
+
+											<input class="ui-input account" placeholder="请输入支付宝账号">
+
+									</span>
+
+								</div>
+
+								<div class="ui-row ui-border-b">
+
+										<span>姓名</span>
+
+									<span class="f_right user_name">
+
+											<input class="ui-input" placeholder="请输入账号所属人姓名">
+
+									</span>
+
+								</div>
+
+								<div class="ui-row">
+
+										<span>金额</span>
+
+									<span class="f_right money" data-price="4500">
+											￥4500
+									</span>
+
+								</div>
+
+
+						</div>
+
+						<div class="bg-pink margin-tb-20 ui-width-8 ui-txt-white ui-txt-line-height-40 ui-txt-center confirm_resell">
+								确认转卖
+						</div>
+
+				</section>
+
+		</section>
+
+		<div class="ui-dialog">
+				<div class="ui-dialog-cnt">
+						<div class="ui-dialog-bd">
+								<div>
+										<h4>标题</h4>
+										<div>内容</div>
+								</div>
+						</div>
+						<div class="ui-dialog-ft ui-btn-group">
+								<button type="button" data-role="button" class="select"
+												id="dialogButton<%=i%>">关闭
+								</button>
+						</div>
+				</div>
+		</div>
+</div>
+<script id="resell_cash_good_item" type="text/template">
+
+
+		<div class="good_img">
+				<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=thumb%>">
+		</div>
+
+		<div class="ui-margin-t-20 ui-nowrap-multi ui-txt-line-height-25 good_name">
+				<%=name%>
+		</div>
+
+</script>

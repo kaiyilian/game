@@ -1,0 +1,89 @@
+
+<div class="my-integral-css">
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-whitespace-15-25 ui-position-relative bg-fd7a44 ui-txt-white">
+
+						<i class="ui-icon-return" onclick="history.back();"></i>
+						<i class="icon-rule"></i>
+
+						<div class="ui-txt-center ui-margin-b-30">我的积分</div>
+
+						<div class="ui-row ui-txt-line-height-30 f18 account_integration">
+								梦想积分
+						</div>
+
+						<div class="ui-row ui-txt-line-height-40 f24 ui-txt-bold ui-margin-b integral_balance">
+								0
+						</div>
+
+						<div class="ui-row f14">
+								可兑换梦想币或参加活动
+						</div>
+
+						<div class="bg_white ui-txt-clr-ff6e2b ui-border-radius-3 ui-txt-center
+						ui-txt-line-height-36 btn_exchange_mxb">
+								兑换梦想币
+						</div>
+
+				</div>
+
+				<div class="ui-tab">
+						<ul class="ui-tab-nav ui-border-b ui-margin-b-20 integral_operate_type">
+								<li class="current">
+										收入记录
+								</li>
+								<li>
+										支出记录
+								</li>
+						</ul>
+						<ul class="ui-tab-content" style="width:200%">
+								<li class="current">
+										<ul class="income_record">
+
+												
+										</ul>
+
+								</li>
+								<li>
+										<ul class="use_record">
+
+												
+										</ul>
+
+								</li>
+
+
+						</ul>
+				</div>
+
+		</section>
+
+</section>
+</div>
+<script id="income_record_item" type="text/template">
+	<%
+		if(data && data.length>0){
+			_.each(data, function(item){
+	%>
+		<li class="bg_white ui-all-whitespace ui-margin-b">
+
+			<div class="ui-txt-line-height-30 income_source ui-nowrap-width_my">
+					<%=item.remark%>
+			</div>
+
+			<div class="ui-txt-line-height-20 f14 ui-txt-muted income_time">
+					<%=item.create_time%>
+			</div>
+
+			<div class="f18 income_count" data-count="40"><%=(data.recordType == 1 ? '+' : '-')%><%=item.points%></div>
+
+		</li>
+	<%		
+		});
+		}
+	%>
+	
+</script>

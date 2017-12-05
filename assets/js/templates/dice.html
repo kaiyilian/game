@@ -1,0 +1,301 @@
+<div class="dice-css">
+
+	<section class="ui-container ui-content">
+
+		<section class="mxep_block bg_fd7a44" style="height:calc(100%);margin:0;padding-bottom: 20px;">
+
+			<div class="ui-position-relative ui-txt-white">
+
+				<div class="icon_line">
+					<i class="ui-icon-return" onclick="history.back();"></i>
+					<div class="ui-txt-center txt_dice">投骰子</div>
+				</div>
+
+				<div class="time_down" style="display: none;"></div>
+
+				<div class="box">
+					<img src="assets/image/game/ysz/1.png" class="prize_points">
+				</div>
+
+				<div class="ui-row row_1">
+
+					<div class="ui-row ui-row-flex ui-txt-center ui-txt-line-height-36 f16
+										chooseBigAndSmall">
+
+						<div class="ui-col ui-col" data-size="2" data-img="small">
+							<img src="assets/image/game/ysz/small.png">
+							<div>1~3为小</div>
+						</div>
+
+						<div class="ui-col ui-col" data-size="1" data-img="big">
+							<img src="assets/image/game/ysz/big.png">
+							<div>4~6为大</div>
+						</div>
+
+					</div>
+
+					<div class="ui-row ui-row-flex ui-txt-center ui-txt-line-height-30 chooseBase">
+
+						<!--<%-->
+						<!--if(dice_chips&&dice_chips.length>0){-->
+						<!--_.each(dice_chips,function(item){-->
+						<!--%>-->
+						<!--<div class="ui-col ui-col item" data-value="<%=item.value%>">-->
+						<!--<%=item.name%>-->
+						<!--</div>-->
+						<!--<%-->
+						<!--});-->
+						<!--}-->
+						<!--%>-->
+
+					</div>
+
+				</div>
+
+				<div class="integral_container">
+					<span>当前积分：</span>
+					<span class="user_integral">100000</span>
+				</div>
+
+				<div class="ui-row row_2 display-webkit-box ui-txt-center">
+
+					<span style="width:60px;">下注：</span>
+										<span class="bet_base">
+												<input class="ui-input" placeholder="请选择或输入倍数" maxlength="6"
+													   onkeyup="this.value=this.value.replace(/\D/g,'')">
+										</span>
+
+										<span class="multiples_container">
+												<span>x</span>
+												<span class="multiples">2</span>
+												<span class="multiples_count">0</span>
+										</span>
+
+										<span class="choose_multiples">
+												倍数
+												<ul class="multiples_list">
+													<li>2</li>
+													<li>5</li>
+													<li>10</li>
+												</ul>
+										</span>
+
+				</div>
+
+				<div class="ui-row-flex btn_list">
+
+					<div class="ui-col ui-col">
+						<div class="item btn_reset active">重置</div>
+					</div>
+
+					<div class="ui-col ui-col">
+						<div class="item btn_push active">投入</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+	</section>
+
+</div>
+
+<style>
+		.dice-css {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: calc(100%);
+		}
+
+		.dice-css .txt_dice {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				line-height: 55px;
+		}
+
+		.dice-css .bg_fd7a44 {
+				background-color: #fd7a44;
+		}
+
+		.dice-css .icon_line {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				left: 0;
+				height: 50px;
+				/*display: none;*/
+				z-index: 2;
+		}
+
+		.dice-css .ui-icon-return {
+				color: #fff;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				z-index: 5;
+		}
+
+		.dice-css .ui-icon-share {
+				position: absolute;
+				right: 5px;
+				top: 5px;
+				color: #fff;
+		}
+
+		.dice-css .time_down {
+				position: absolute;
+				right: 15px;
+				top: 20px;
+				font-size: 22px;
+				z-index: 2;
+		}
+
+		.dice-css .box {
+				width: 100%;
+				/*height: calc(100%);*/
+				background: url("assets/image/game/ysz/diverge@2X.png") no-repeat;
+				background-size: 100% 100%;
+				-webkit-box-align: center; /*上下居中*/
+				display: -webkit-box;
+				-webkit-box-pack: center; /*左右居中*/
+				position: relative;
+				top: -20px;
+		}
+
+		.dice-css .box img {
+				/*display: block;*/
+				width: 105px;
+				height: 124px;
+				/*margin: auto;*/
+		}
+
+		.dice-css .row_1 {
+				width: 90%;
+				margin: auto;
+				background-color: #fe6222;
+				padding: 5px 8px;
+				border-radius: 5px;
+				position: relative;
+				top: -20px;
+		}
+
+		.dice-css .chooseBigAndSmall img {
+				width: 80px;
+				height: 80px;
+				display: block;
+				margin: auto;
+		}
+
+		.dice-css .chooseBase {
+				margin: 8px 0;
+		}
+
+		.dice-css .chooseBase .item {
+				background-color: #ca0b0e;
+				border-radius: 30px;
+				margin: 0 5px;
+		}
+
+		.dice-css .integral_container {
+				line-height: 32px;
+				background-color: rgba(0, 0, 0, 0.2);
+				text-align: center;
+				/*margin: 0 auto;*/
+				border-radius: 3px;
+				padding: 0 5px;
+				position: relative;
+				top: 0;
+				margin: 0 auto 10px;
+				width: 50%;
+				min-width: 180px;
+		}
+
+		.dice-css .integral_container span {
+				display: inline-block;
+		}
+
+		.dice-css .integral_container span:first-child {
+				float: left;
+		}
+
+		.dice-css .row_2 {
+				position: relative;
+				width: 300px;
+				margin: 0 auto;
+				background-color: rgba(0, 0, 0, 0.2);
+				line-height: 40px;
+				top: 0;
+				overflow: inherit;
+		}
+
+		.dice-css .row_2 span {
+				display: block;
+		}
+
+		.dice-css .row_2 span.bet_base {
+				width: 150px;
+				height: 40px;
+		}
+
+		.dice-css .row_2 span.bet_base input {
+				color: #fff;
+		}
+
+		.dice-css .row_2 .multiples_container {
+				display: -webkit-box !important;
+				position: relative;
+				width: 55px;
+				border-left: 1px solid;
+				border-right: 1px solid;
+				padding: 0 18px 0 10px;
+		}
+
+		.dice-css .row_2 .multiples_container .multiples {
+				width: 22px;
+		}
+
+		.dice-css .row_2 .multiples_container .multiples_count {
+				position: absolute;
+				top: -10px;
+				right: 4px;
+		}
+
+		.dice-css .row_2 .choose_multiples {
+				position: relative;
+				width: 35px;
+				height: 40px;
+				overflow: inherit;
+		}
+
+		.dice-css .row_2 .choose_multiples ul.multiples_list {
+				position: absolute;
+				top: -120px;
+				width: 35px;
+				background-color: rgba(0, 0, 0, 0.8);
+				display: none;
+		}
+
+		.dice-css .btn_list {
+				margin-top: 10px;
+		}
+
+		.dice-css .btn_list .item {
+				width: 100px;
+				margin: 0 auto;
+				border-radius: 30px;
+				background-color: #888888;
+				text-align: center;
+				line-height: 36px;
+		}
+
+		.dice-css .btn_list .item.active {
+				background-color: #f14d0c;
+		}
+
+</style>
+

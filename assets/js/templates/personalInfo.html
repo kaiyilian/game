@@ -1,0 +1,88 @@
+<div class="personal-info-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+				<!-- <i class="ui-icon-return category-good-back" onclick="history.back();"></i> -->
+				<i class="ui-icon-return category-good-back go_back"></i>
+				<h1 class="ui-txt-default name">个人信息</h1>
+
+		</header>
+
+
+		<section class="ui-container ui-content">
+
+				<form id="uploadForm">
+
+						<!--<input type="file" id="img" name="img" accept="image/*">-->
+
+				</form>
+
+				<section class="mxep_block personal_info_contain">
+
+
+
+
+				</section>
+
+		</section>
+</div>
+<form id= "personUploadForm" style="display:none">  
+      <p class="upload_form_p">上传文件： </p>  
+      
+      <input type="button" value="上传" class="do_upload" />  
+	</form>  
+<script id="personal_info_list" type="text/template">
+		<div class="ui-arrowlink ui-margin-b-20 ui-all-whitespace bg-orange ui-txt-white user_head_img_container" style="background-color: white;">
+
+				<span class="ui-txt-line-height-50 ">头像</span>
+		<span class="f_right user_head_img">
+			<!-- <img src="assets/image/34.png"> -->
+			<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=avatar%>">
+		</span>
+
+		</div>
+
+		<ul class="ui-list ui-list-link ui-margin-b-20 ui-txt-line-height-50">
+
+				<!-- <li class="ui-border-b">
+						<span>ID</span>
+						<span class="f_right">320913</span>
+				</li> -->
+
+				<li class="ui-border-b nickname_container">
+						<span>昵称</span>
+						<span class="f_right"><%=nick_name%></span>
+				</li>
+
+				<li class="ui-border-b user_sex_container">
+						<span>性别</span>
+						<span class="f_right user_sex"><%=(gender==0 ? '未知': (gender==1 ? '男':'女'))%></span>
+				</li>
+
+				<li class="user_pwd_container">
+						<span>修改密码</span>
+				</li>
+
+		</ul>
+
+		<div class="ui-arrowlink ui-margin-b-20 ui-all-whitespace ui-txt-line-height-36 bg_white">
+				<span>手机号绑定</span>
+
+				<span class="f_right user_phone to_bind_phone" data-is_bind="0"><%=(mobile ? mobile:'未绑定')%></span>
+		</div>
+
+		<section class="modal">
+
+				<div class="modal-container">
+
+						<div class="modal-body">
+
+								<div class="item man">男</div>
+								<div class="item woman">女</div>
+
+						</div>
+
+
+		</section>
+
+
+</script>

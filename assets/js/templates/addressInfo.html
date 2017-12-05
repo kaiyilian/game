@@ -1,0 +1,88 @@
+<div class="address_info_css">
+		<header class="ui-header ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+				<h1 class="ui-txt-default name">地址信息</h1>
+				<span class="ui-txt-grey-6  btn_save">保存</span>
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block ">
+
+						<ul class="ui-list bg_white address_info">
+
+								<li class="ui-txt-line-height-50 ">
+										<div class="txt">
+												收货人
+										</div>
+										<div class=" ui-txt-info">
+												<input type="text" class="ui-input ui-txt-grey-6 consignee address_name" maxlength="12"
+															 placeholder="需与身份证上面的姓名一致">
+										</div>
+
+								</li>
+
+								<li class="ui-txt-line-height-50">
+										<div class="txt">
+												手机号
+										</div>
+										<div class=" ui-txt-info">
+												<input type="text" class="ui-input ui-txt-grey-6 consignee address_phone"
+															 placeholder="国内收货人手机号码">
+										</div>
+
+								</li>
+
+								<li class="ui-txt-line-height-50">
+										<div class="txt">
+												所在地区
+										</div>
+										<div class=" ui-txt-info">
+												<!--<input type="text" class="ui-input ui-txt-grey-6 consignee" placeholder="省、市、区">-->
+												<select id="provinceId" class="area-select">
+														<option value="">省</option>
+												</select>
+												<select id="cityId" class="area-select">
+														<option value="">市</option>
+												</select>
+												<select id="districtId" class="area-select">
+														<option value="">区</option>
+												</select>
+
+												<!--<i class="ui-icon-arrow"></i>-->
+										</div>
+
+								</li>
+
+								<li class="ui-txt-line-height-50">
+										<div class="txt">
+												详细地址
+										</div>
+										<div class="ui-txt-info">
+
+												<textarea class="ui-txt-grey-6 ui-textarea ui-txt-line-height-30 address_street"
+																	placeholder="请输入详细地址"></textarea>
+
+										</div>
+
+								</li>
+
+						</ul>
+
+						<div class="ui-row ui-margin-t bg_white ui-txt-line-height-50 ui-whitespace" style="position: relative;">
+
+								<p>设置为默认地址</p>
+								<label class="ui-switch">
+										<input class="check_box" type="checkbox">
+								</label>
+
+						</div>
+
+						<div class="btn_del" style="display:none">删除</div>
+
+				</section>
+
+		</section>
+</div>

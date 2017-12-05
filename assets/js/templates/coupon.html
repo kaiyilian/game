@@ -1,0 +1,47 @@
+
+<div class="coupon_css">
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">红包</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<ul class="ui-list package_list">						
+				</ul>
+
+		</section>
+
+</section>
+</div>
+<script id="package_list_item" type="text/template">
+<%_.each(data,function(item){%>
+	<li data-id="<%=item.id%>">
+		<div class="ui-txt-white left_side">
+				<span class="price"><%=item.denomination%></span>
+				元
+		</div>
+
+		<div class="ui-list-info f14 clr-grey-6 pd-l-15">
+
+				<div class="package_name f20 ui-txt-default ui-txt-bold">
+						<%=item.title%>
+				</div>
+
+				<div class="package_validity">
+						<%=item.start_date%>至<%=item.end_date%>
+				</div>
+
+				<div class="ui-row">
+						全场通用，全价购除外
+				</div>
+		</div>
+	</li>
+<%})%>
+	
+
+</script>

@@ -1,0 +1,236 @@
+<div class="my-announced-record-css">
+
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+				<h1 class="ui-txt-default name">夺宝记录</h1>
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block">
+
+						<div class="ui-tab">
+
+								<ul class="ui-tab-nav ui-border-b">
+										<li class="current">全部</li>
+										<li>进行中</li>
+										<li>已揭晓</li>
+								</ul>
+
+								<ul class="ui-tab-content" style="width:300%">
+										<li class="current">
+
+												<ul class="ui-list announced_all">
+
+
+												</ul>
+
+										</li>
+
+										<li>
+
+												<ul class="ui-list announced_ongoing">
+
+
+												</ul>
+
+										</li>
+
+										<li>
+
+												<ul class="ui-list announced_end">
+
+
+												</ul>
+
+										</li>
+								</ul>
+
+						</div>
+
+				</section>
+
+		</section>
+</div>
+
+<script id="announced_item" type="text/template">
+
+		<%
+		if(data&&data.length>0){
+		_.each(data,function(item){
+		%>
+
+		<li class="bg_white ui-all-whitespace ui-margin-b-20 myannounced_record_list"
+				data-auction_id="<%=item.auction_id%>"
+				data-auction_date_id="<%=item.auction_date_id%>"
+		>
+
+				<%
+				if(item.reward_status==0){    <!--进行中-->
+				%>
+				<div class="ui-border-b display-webkit-box list-container announced_not_start">
+						<%
+						}
+						else{        <!--揭晓中、已揭晓-->
+						%>
+						<div class="ui-border-b display-webkit-box list-container announced_started">
+								<%
+								}
+								%>
+
+								<div class="list-img">
+										<div class="good_img">
+												<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png"
+														 data-echo="<%=item.thumb%>">
+										</div>
+								<span class="ui-txt-center ui-txt-white ui-txt-bold special_offer_area ">
+										<%=item.label%>
+								</span>
+								</div>
+
+								<div class="list-info ui-txt-line-height-20 f14">
+
+										<div class="ui-nowrap-multi f16 good_name">
+												<%=item.name%>
+										</div>
+
+										<%
+										if(item.reward_status==0){    <!--进行中-->
+										var percent=(item.target-item.remain)/item.target*100+'%';
+										%>
+
+										<div class="ui-row">
+												本期期号：
+										<span class="activity_no">
+												<%=item.date_sn%>
+										</span>
+										</div>
+
+										<div class="ui-row">
+												<div class="ui-progress">
+														<span style="width:<%=percent%>"></span>
+												</div>
+										</div>
+
+										<div class="ui-row ui-txt-grey-6">
+										<span class="total_participant" data-count="<%=item.target%>">
+												总需
+												<%=item.target%>
+												人次
+										</span>
+										<span class="f_right lacking_participant" data-count="<%=item.remain%>">
+												还剩
+										<%=item.remain%>
+										</span>
+										</div>
+
+										<%
+										}
+										else if(item.reward_status==1){    <!--揭晓中-->
+										%>
+										<div class="ui-row">
+												本期期号：
+										<span class="activity_no">
+												<%=item.date_sn%>
+										</span>
+										</div>
+
+										<div class="ui-row">
+												总需人数：
+										<span class="total_participant" data-count="<%=item.target%>">
+												<%=item.target%>
+										</span>
+										</div>
+
+										<div class="ui-row bg-ffefe7 ui-margin-tb ui-all-whitespace ui-txt-clr-ff6e2b
+																			ui-txt-bold f18 ui-txt-line-height-30">
+												揭晓倒计时：
+										<span class="activity_count_down"
+													data-current_time="<%=item.current_time%>"
+													data-reward_time="<%=item.reward_time%>"
+										></span>
+										</div>
+										<%
+										}
+										else if(item.reward_status>1){    <!--已揭晓-->
+										%>
+
+										<div class="ui-row ui-all-whitespace ui-margin-tb bg-ffefe7 f14 winner_info">
+
+												<div class="ui-row">
+														本期期号：
+												<span class="activity_no">
+														<%=item.date_sn%>
+												</span>
+												</div>
+
+												<div class="ui-row">
+														总需人数：
+												<span class="total_participant" data-count="<%=item.target%>">
+															<%=item.target%>
+												</span>
+												</div>
+
+												<div class="ui-row">
+														幸运之星：
+												<span class="winner_name">
+															<%=item.winner.nickname%>
+												</span>
+												</div>
+
+												<div class="ui-row">
+														参与次数：
+												<span class="attend_count" data-count="2">
+														<%=item.winner.join_count%>
+												</span>
+												</div>
+
+												<div class="ui-row">
+														幸运号码：
+												<span class="winning_no">
+														<%=item.winner.reward_sn%>
+												</span>
+												</div>
+
+										</div>
+
+										<%
+										}
+										%>
+
+								</div>
+
+						</div>
+
+						<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+						<span class="attend_count" data-count="<%=item.join_count%>">
+								本次参与
+								<%=item.join_count%>
+								人次
+						</span>
+
+								<span class="ui-txt-pink btn_detail" data-order_id="<%=item.order_id%>">查看详情</span>
+
+								<%
+								if(item.reward_status==0){    <!--进行中-->
+								%>
+								<div class="btn btn_add">追加</div>
+								<%
+								}
+								else{
+								%>
+								<div class="btn btn_buy_again">再次购买</div>
+								<%
+								}
+								%>
+						</div>
+
+		</li>
+		<%
+		})
+		}
+		%>
+</script>

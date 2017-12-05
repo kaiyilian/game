@@ -1,0 +1,96 @@
+
+<div class="address-manage-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();" style="color:#333;"></i>
+			<h1 class="ui-txt-default name">选择收货地址</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<ul class=" user_address_list">
+
+							<!-- <li class="bg_white ui-all-whitespace ui-margin-b-20 active" data-id="address_1">
+
+									<div class="ui-row ui-txt-line-height-40">
+											<span class="user_name">发撒发生的</span>
+											<span class="user_phone">13123435678</span>
+											<span class="f12 spn_bg_orange txt_default">默认</span>
+									</div>
+
+									<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 ui-width-8 user_address">
+											发撒发生的发撒发生的发撒发生的发撒发生的发撒发生的
+											发撒发生的发撒发生的发撒发生的发撒发生的发撒发生的
+									</div>
+
+									<i class="ui-icon-checked address_choose" ></i>
+
+									<i class="icon_address_modify"></i>
+							</li>
+
+							<li class="bg_white ui-all-whitespace ui-margin-b-20 " data-id="address_2">
+
+									<div class="ui-row ui-txt-line-height-40">
+											<span class="user_name">发撒发生的</span>
+											<span class="user_phone">13123435678</span>
+											<span class="f12 spn_bg_orange txt_default">默认</span>
+									</div>
+
+									<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 ui-width-8 user_address">
+											发撒发生的发撒发生的发撒发生的发撒发生的发撒发生的
+											发撒发生的发撒发生的发撒发生的发撒发生的发撒发生的
+									</div>
+
+									<i class="ui-icon-unchecked address_choose" "></i>
+
+									<i class="icon_address_modify" ></i>
+							</li> -->
+
+					</ul>
+
+					<div class="ui-row ui-txt-line-height-30 address_add">
+							<label>新增收货地址</label>
+					</div>
+
+			</section>
+
+	</section>
+</div>
+<script id="address_list_item" type="text/template">
+	
+	<% if(_.size(data) > 0) {
+       _.each(data,function(item){
+       console.log(1);
+   %>
+   		<li class="bg_white ui-all-whitespace ui-margin-b-20 <%=(item.is_default==1 ? 'active' : '')%>" data-id="<%=item.id%>">
+
+				<div class="ui-row ui-txt-line-height-40">
+						<span class="user_name"><%=item.consignee%></span>
+						<span class="user_phone"><%=item.mobile%></span>
+						<%if(item.is_default == 1){%>
+							<span class="f12 spn_bg_orange txt_default">默认</span>
+						<%}%>
+						
+				</div>
+
+				<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 ui-width-8 user_address">
+						<%=item.street%>
+				</div>
+
+				<%if(item.is_default == 1){%>
+					<i class="ui-icon-checked address_choose" data-id="<%=item.id%>"></i>
+				<%} else{%>
+
+					<i class="ui-icon-unchecked address_choose" data-id="<%=item.id%>"></i>
+				<%}%>
+				
+
+				<i class="icon_address_modify"></i>
+		</li>
+   <%});
+   }
+   %>
+</script>

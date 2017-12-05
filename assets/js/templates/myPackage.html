@@ -1,0 +1,95 @@
+	
+
+<div class="my-package-css">
+	<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">我的红包</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-tab">
+
+						<ul class="ui-tab-nav ui-border-b">
+								<li class="current">可使用</li>
+								<li>已使用</li>
+								<li>已失效</li>
+						</ul>
+
+						<ul class="ui-tab-content" style="width:300%">
+
+								<li class="current">
+
+										<ul class="ui-list package_list package_not_use">
+
+
+										</ul>
+
+								</li>
+
+								<li>
+
+										<ul class="ui-list package_list package_used">
+
+
+										</ul>
+
+								</li>
+
+								<li>
+
+										<ul class="ui-list package_list package_invalid">
+
+
+										</ul>
+
+								</li>
+						</ul>
+
+				</div>
+
+		</section>
+
+</section>
+
+</div>
+
+<script id="package_item" type="text/template">
+	<%
+		if(data && data.length>0){
+			_.each(data, function(item){
+	%>
+		<li>
+			<div class="ui-txt-white left_side">
+					<span class="price">1</span>
+					元
+			</div>
+
+			<div class="ui-list-info f14 clr-grey-6 pd-l-15">
+
+					<div class="package_name f20 ui-txt-default ui-txt-bold">
+							<%=item.title%>
+					</div>
+
+					<div class="package_validity">
+							<%=item.start_date%>至<%=item.end_date%>
+					</div>
+
+					<div class="ui-row">
+							全场通用，全价购除外
+					</div>
+
+			</div>
+
+
+		</li>
+    <%		
+		});
+		}
+	%>
+
+</script>

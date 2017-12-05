@@ -1,0 +1,60 @@
+<div class="wish-list-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();"></i>
+				<h1 class="ui-txt-default name">心愿单</h1>
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block">
+
+						<div class="wish_list">
+
+								
+
+						</div>
+
+						<div class="ui-txt-center ui-txt-white ui-txt-line-height-44 ui-border-radius-3
+					ui-width-8 btn_my_wish">撰写我的心愿
+						</div>
+
+				</section>
+
+		</section>
+</div>
+
+<script id="wish_item" type="text/template">
+
+		<%
+		if(data&&data.length>0){
+		_.each(data,function(item){
+		%>
+
+		<div class="wish_item ui-margin-b-20 bg_white ui-all-whitespace ui-txt-line-height-30"
+				 data-id="<%=item.id%>">
+
+				<div class="wish_name">
+						<%=item.name%>
+				</div>
+				<div class="wish_desc">
+						<%=item.short_intro%>
+				</div>
+
+				<div class="ui-row-flex ui-margin-tb wish_img_list" data-pics="<%=item.pictures%>">
+
+				</div>
+
+				<div class="ui-txt-line-height-25 f14 ui-txt-muted release_time">
+						发布于
+						<%=item.create_time%>
+				</div>
+
+		</div>
+
+		<%
+		});
+		}
+		%>
+</script>

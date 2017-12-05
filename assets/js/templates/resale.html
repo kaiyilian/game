@@ -1,0 +1,63 @@
+
+<div class="resale_css">
+	<header class="ui-header ui-header-positive ui-border-b">
+
+			<i class="ui-icon-return" onclick="history.back();"></i>
+			<h1 class="ui-txt-default name">转卖商城</h1>
+
+	</header>
+
+	<section class="ui-container ui-content">
+
+			<section class="mxep_block">
+
+					<ul class="ui-list  ui-border-tb good_list">
+
+							
+
+					</ul>
+
+			</section>
+
+	</section>
+</div>
+<script id="resale_item" type="text/template">
+	<%
+		if(data && data.length > 0) {
+		_.each(data,function(item){
+		%>
+			<li class="ui-border-b resale_info" data-id="<%=item.resale_id%>">
+
+									<div class="ui-list-img">
+											<span class="good_img"
+														style="background-image:url(<%=item.thumb%>)"></span>
+									</div>
+
+									<div class="ui-list-info">
+
+											<h4 class="ui-nowrap-multi f14 good_name"><%=item.goods_name%></h4>
+
+											<div class="ui-txt-line-height-30 good_price">
+													<span class="f18 ui-txt-bold good_deal_price">
+															￥<%=item.price%>
+													</span>
+
+													<span class="f14 ui-txt-muted good_marketed_price">
+															省
+															￥<%=item.save_money%>
+													</span>
+
+											</div>
+
+											<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+											 btn_buy resale_to_buy" data-id="<%=item.resale_id%>" data-goods_id="<%=item.goods_id%>">
+													立即购买
+											</div>
+
+									</div>
+							</li>
+
+		<% });
+		}%>
+
+</script>

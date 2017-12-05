@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>登录</title>
+        <!--frozenUI-->
+        <link href="../../assets/css/plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+        <!--swiper 轮播图-->
+        <link href="../../assets/css/plugins/Swiper-3.1.0/dist/css/swiper.min.css" rel="stylesheet">
+        <!-- -->
+        <!-- <link type="text/css" rel="stylesheet" href="../../assets/css/css/reset.css")> -->
+        <link type="text/css" rel="stylesheet" href="../../assets/css/weui.min.css">
+        <!--公共css-->
+        <link href="../../assets/css/public/common.css" rel="stylesheet">
+        <link href="../../assets/css/public/font.css" rel="stylesheet">
+        <link href="../../assets/css/public/background.css" rel="stylesheet">
+        <!-- <script src="../js/mxep.js"></script> -->
+        <!--本页面-->
+        <!-- <link href="../css/login.css" rel="stylesheet"> -->
+        <link href="../../assets/css/public.css" rel="stylesheet">
+        
+        <link href="../../assets/css/login.css" rel="stylesheet">
+</head>
+<body style="cursor: pointer">
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+        <i class="ui-icon-return" onclick="history.back();"></i>
+        <h1 class="">登录</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+        <section class="mxep_block">
+
+                <div class="user_login_info bg_white f14 ui-margin-b-20">
+
+                        <div class="ui-row ui-all-whitespace ui-border-b">
+                                <span class="ico_img icon_phone"></span>
+                                <span class="user_account">
+                                        <input id="mobile" class="ui-input" maxlength="11" placeholder="手机号">
+                                </span>
+                        </div>
+
+                        <div class="ui-row ui-all-whitespace">
+                                <span class="ico_img icon_pwd"></span>
+                                <span class="user_account_pwd">
+                                        <input id="password" class="ui-input" maxlength="16" placeholder="账号密码" type="password">
+                                </span>
+                        </div>
+
+                </div>
+
+                <div class="ui-width-8 ui-txt-line-height-44 ui-border-radius-3 ui-txt-white bg-pink
+                 ui-txt-center btn_login">
+                        登录
+                </div>
+                <div class="ui-width-8 ui-txt-line-height-44 ui-border-radius-3 ui-txt-white bg-grey-3
+                 ui-txt-center btn_register">
+                        手机号注册
+                </div>
+        </section>
+
+</section>
+
+<script type="text/javascript">
+    var stopMain = true;
+</script>
+<script src="../../assets/js/require.min.js" data-main="../../assets/js/main.js" ></script>
+<script type="text/javascript">
+    
+    requirejs(['views/login']);
+</script>
+</body>
+</html>

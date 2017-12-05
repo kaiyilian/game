@@ -1,0 +1,131 @@
+<div class="discount-good-info-css">
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block good_info_container" style="display: block;">
+
+						<div class="icon_line">
+								<i class="ui-icon-return" onclick="history.back();" style=""></i>
+								<i class="ui-icon-share"></i>
+						</div>
+
+						<div class="swiper-container good_img_list">
+								<div class="swiper-wrapper">
+										<%
+										if(pics && pics.length > 0) {
+										_.each(pics,function(item){
+
+										%>
+										<div class="swiper-slide">
+
+											<span class="item">
+													<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=item%>">
+											</span>
+
+										</div>
+										<%});
+										}%>
+								</div>
+								<!-- 如果需要分页器 -->
+								<div class="swiper-pagination"></div>
+						</div>
+
+						<div class="ui-all-whitespace bg_white ui-txt-line-height-24 ui-margin-b-20 good-info" data-id="<%=id%>"
+								 data-section="<%=section%>">
+
+								<h4 class="ui-nowrap-multi f16 good_name"><%=name%></h4>
+
+								<div class="good_price">
+
+									<span class="f16 ui-txt-line-height-30 good_deal_price">
+											<%=flash_price%> 梦想币
+									</span>
+
+										<div class="ui-row f12">
+
+												<span class="txt">秒杀</span>
+											<span class="ui-txt-muted">
+													比市场价省
+													<label><%=save_price%></label>
+													元
+											</span>
+
+										</div>
+
+								</div>
+
+								<div class="f12 ui-txt-line-height-25 discount_number_of_people">
+<% var short = (reservation_count/(min_reservation)*100).toFixed(0) + "%"%>
+										<% if((reservation_count-min_reservation)>=0){%>
+										<span class="spn_item enough">人数已满足</span>
+										<%}else{%>
+										<span class="spn_item lack" style="width:<%=short%>">
+											
+										</span>
+										<span class="txt">
+										已有
+											<label><%=reservation_count%></label>
+											人差
+											<label><%=(min_reservation - reservation_count)%></label>
+											人
+											</span>
+										<%}%>
+
+								</div>
+
+
+								<%if(status==1){%><!-- 1:开放抢购权 -->
+								<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+								 	btn_panic_buying get_right_to_buy"><%=prepay%>梦想币获取抢购权
+										<%}else if(status==2){%><!-- 2:已经获取抢购权 -->
+										<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+									btn_panic_notbuying">等待抢购开始
+												<%}else if(status==3){%><!-- 3:允许抢购 -->
+												<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+									btn_panic_buying to_panic_buy">立即抢购
+														<%}else if(status==4){%><!-- 4:不允许抢购 -->
+														<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+									btn_panic_notbuying">立即抢购
+																<%}else if(status==5){%><!-- 5:卖光 -->
+																<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+									btn_panic_notbuying">立即抢购
+																		<%}else if(status==6){%><!-- 6:已经结束 -->
+																		<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+									btn_panic_notbuying">已结束
+																				<%}%>
+																				<!-- <div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+																								 btn_panic_buying to_panic_buy">立即抢购
+																				</div> -->
+
+
+																		</div>
+																		<!-- <div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+																						btn_panic_buying btn_panic_buying_text">立即抢购 -->
+
+																		<div class="ui-all-whitespace ui-margin-b-20 bg_white activity_rule" style="">
+
+																				<h1 class=" ui-txt-line-height-50">抢购资格说明</h1>
+
+																				<div class="ui-txt-line-height-20  f14 ui-margin-b">
+																						<% if(rules){
+																						if (rules.indexOf("\n") >= 0) {
+																						var rules = rules.replace(/\n/g, "<br/>");
+																						}
+																						%>
+																						<%=rules%>
+																						<%}%>
+																				</div>
+
+																		</div>
+																		<div>
+																				<%=description%>
+																		</div>
+
+				</section>
+
+
+		</section>
+</div>
+
+<style>
+
+</style>

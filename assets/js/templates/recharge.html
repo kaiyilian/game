@@ -1,0 +1,96 @@
+<div class="recharge-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return category-good-back" onclick="history.back();"></i>
+				<h1 class="ui-txt-default name">充值</h1>
+
+		</header>
+
+		<footer class="ui-footer bg_white">
+
+				<span class="ui-txt-line-height-56 recharge_template_desc" style="margin-left:20px;">冲20 加送 1元</span>
+				<div class="ui-txt-center ui-txt-white bg-orange btn_pay">确认支付</div>
+
+		</footer>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block">
+
+						<div class="ui-position-relative ui-whitespace-10-25 bg-orange ui-txt-white
+					ui-txt-line-height-30" style="padding-left: 50px;">
+
+								<i class="icon_info"></i>
+								<%=rules%>
+								<!-- 支付1元人民币后，系统将充值成1梦想币，即1元=1梦想币。梦想币可用于购买
+								平台商品(全价商品除外)，充值的款项无法退回。 -->
+
+						</div>
+
+						<div class="ui-row">
+
+								<div class="ui-row ui-txt-line-height-50 ui-whitespace">
+										请选择充值金额
+								</div>
+
+								<div class="bg_white">
+
+										<ul class="ui-grid-trisect ui-txt-line-height-36 ui-txt-center money_list">
+												<%
+												if(templates && templates.length>0){
+												var i = 0;
+												_.each(templates,function(item){
+
+												%>
+												<li class="item <%=(i==0 ? 'active':'')%> " data-item="<%=i%>">
+														<div><%=item.money%></div>
+												</li>
+												<% i++;
+												});
+												}
+												%>
+
+												<li class="item btn_other">
+														<div>其他金额</div>
+												</li>
+
+										</ul>
+
+								</div>
+
+
+						</div>
+
+						<div class="ui-row">
+
+								<div class="ui-row ui-txt-line-height-50 ui-whitespace">
+										选择支付方式
+								</div>
+
+								<div class="bg_white">
+
+										<ul class="ui-list-pure ui-txt-line-height-36 ui-txt-center ">
+
+												<li class="weixin_pay" data-item="" style="padding-left: 15px;text-align: left;">
+
+														<div class="txt">
+																<div class="ui-txt-line-height-30">微信支付</div>
+																<div class="ui-txt-line-height-20 f14">微信支付 支持大额支付</div>
+														</div>
+
+														<div class="icon_choose">
+																<img src="assets/image/recharge/icon_checked.png">
+														</div>
+
+												</li>
+
+
+							</div>
+							
+					</div>
+
+
+				</section>
+
+		</section>
+</div>

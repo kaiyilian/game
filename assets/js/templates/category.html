@@ -1,0 +1,33 @@
+<div class="categor-page-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+
+				<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+				<h1 class="ui-txt-default">分类</h1>
+
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block bg_white ">
+
+						<ul class="ui-list ui-border-tb category_list">
+								<%_.each(data,function(item){console.log(1);%>
+
+								<li class="" data-id="<%=item.id%>">
+										<div class="ui-avatar">
+
+												<img src="assets/image/category/ico_sort_women@2x.png" data-echo="<%=item.icon%>">
+												<!-- <span style="background-image:url('<%=item.icon%>')"></span> -->
+
+										</div>
+										<div class="ui-list-info ui-border-t">
+												<h4 class="ui-nowrap category_name"><%=item.name%></h4>
+										</div>
+								</li>
+								<%})%>
+						</ul>
+
+				</section>
+
+		</section>
+</div>

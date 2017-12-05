@@ -1,0 +1,132 @@
+<div class="find-css">
+		<header class="ui-header ui-header-css ui-header-positive ui-border-b">
+				<h1 class="ui-txt-default name">发现</h1>
+		</header>
+
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block mxep_block_bottom">
+
+						<ul class="ui-list ui-list-link ui-margin-b-20 func_list">
+
+								<li class="" data-href="share">
+										<div class="ui-list-thumb">
+												<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+										</div>
+										<div class="ui-list-info">
+												<div class="ui-nowrap ui-txt-line-height-30">晒单分享</div>
+												<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+										</div>
+								</li>
+
+								<li class="" data-href="game_ysz">
+										<div class="ui-list-thumb">
+												<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+										</div>
+										<div class="ui-list-info">
+												<div class="ui-nowrap ui-txt-line-height-30">游戏一</div>
+												<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">
+														运气好的不要不要的，想不中都难！摇骰子
+												</div>
+										</div>
+								</li>
+
+								<li class="ui-border-t" data-href="game_csg">
+										<div class="ui-list-thumb">
+												<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+										</div>
+										<div class="ui-list-info">
+												<div class="ui-nowrap ui-txt-line-height-30">游戏二</div>
+												<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">
+														运气好的不要不要的，想不中都难！猜水果
+												</div>
+										</div>
+								</li>
+
+								<li class="ui-border-t" data-href="game_dzp">
+										<div class="ui-list-thumb">
+												<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+										</div>
+										<div class="ui-list-info">
+												<div class="ui-nowrap ui-txt-line-height-30">梦想转盘</div>
+												<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+										</div>
+								</li>
+
+								<li class="ui-border-t resell_store" data-href="resellStore">
+										<div class="ui-list-thumb">
+												<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+										</div>
+										<div class="ui-list-info">
+												<div class="ui-nowrap ui-txt-line-height-30">转卖商城</div>
+												<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+										</div>
+								</li>
+
+								<li class="ui-border-t go_wish" data-href="wishList">
+										<div class="ui-list-thumb">
+												<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+										</div>
+										<div class="ui-list-info">
+												<div class="ui-nowrap ui-txt-line-height-30">心愿单</div>
+												<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">
+														讲出你梦想中的商品
+												</div>
+										</div>
+								</li>
+
+						</ul>
+
+				</section>
+
+
+		</section>
+</div>
+
+
+<script id="find_func_item" type="text/template">
+
+		<%
+		if(data && data.length>0){
+		_.each(data, function(item){
+		%>
+		<li class="ui-border-t" data-href="<%=item.link%>">
+				<div class="ui-list-thumb">
+						<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png"
+								 data-echo="<%=item.icon%>">
+				</div>
+				<div class="ui-list-info">
+						<div class="ui-nowrap ui-txt-line-height-30">
+								<%=item.name%>
+						</div>
+						<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">
+								<%=item.remark%>
+						</div>
+				</div>
+		</li>
+		<%
+		});
+		}
+		%>
+</script>
+
+<style>
+		.func_list {
+				background-color: transparent;
+		}
+
+		.func_list li {
+				margin: 0;
+				background-color: #fff;
+				padding-left: 15px;;
+		}
+
+		.func_list li:first-child {
+				margin-bottom: 20px;
+		}
+
+		.func_list li img {
+				width: 100%;
+				height: 100%;
+		}
+</style>

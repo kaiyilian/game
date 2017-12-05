@@ -1,0 +1,143 @@
+<div class="announced-css">
+		<header class="ui-header  ui-header-css ui-header-positive ui-border-b">
+				<h1 class="ui-txt-default name">揭晓</h1>
+		</header>
+
+		<section class="ui-container ui-content mxep_block_bottom">
+
+				<section class="mxep_block">
+
+						<ul class="ui-grid-halve announced_good_list">
+
+						</ul>
+
+				</section>
+
+		</section>
+
+</div>
+
+<script id="announced_good_item" type="text/template">
+
+		<%
+		if(data && data.length>0){
+		_.each(data, function(item){
+		%>
+
+		<%
+		if(item.status==3){  <!--已揭晓-->
+		%>
+		<li class="activity_end" data-id="<%=item.auction_date_id%>" data-good_no="<%=item.auction_id%>"
+				data-status="<%=item.status%>">
+				<%
+				}
+				else{  <!--未揭晓，揭晓中-->
+				%>
+		<li class="" data-id="<%=item.auction_date_id%>" data-good_no="<%=item.auction_id%>"
+				data-status="<%=item.status%>">
+				<%
+				}
+				%>
+
+
+				<div class="bg_white ui-grid-item">
+
+						<div class="ui-grid-trisect-img">
+								<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png"
+										 data-echo="<%=item.thumb%>">
+
+								<%
+								if(item.label=="十元商品"){
+								%>
+								<i class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area ten">
+										<%=item.label%></i>
+								<%
+								}
+								else if(item.label=="百元商品"){
+								%>
+								<i class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area ">
+										<%=item.label%></i>
+								<%
+								}
+								else if(item.label=="一元商品"){
+								%>
+
+								<%
+								}
+								%>
+
+
+						</div>
+
+						<div class="ui-txt-line-height-25 ui-nowrap-multi good_name">
+								<%=item.name%>
+						</div>
+
+
+						<%
+						if(item.status==3){  <!--已揭晓-->
+						%>
+
+						<div class="f12 ui-margin-t-5 ui-txt-line-height-20 activity_result">
+
+								<div class="ui-row">
+										<span class="ui-col-40">期号：</span>
+										<span class="ui-col-60 data_no">
+												<%=item.date_sn%>
+										</span>
+								</div>
+
+								<div class="ui-row">
+										<span class="ui-col-40">幸运者：</span>
+										<span class="ui-col-60 winner_name">
+												<%=item.winner%>
+										</span>
+								</div>
+
+								<div class="ui-row">
+										<span class="ui-col-40">参与人次：</span>
+										<span class="ui-col-60 attend_count">
+												<%=item.joined_count%>
+										</span>
+								</div>
+
+								<div class="ui-row">
+										<span class="ui-col-40">揭晓时间：</span>
+										<span class="ui-col-60 announced_time">
+												<%=item.reward_time%>
+										</span>
+								</div>
+
+						</div>
+
+						<%
+						}
+						else{  <!--未揭晓，揭晓中-->
+						%>
+						<div class="info">
+
+								<div class="ui-txt-line-height-25 ui-txt-muted f14 ui-margin-b-5">
+										<span>期号：</span>
+										<span class="activity_no"><%=item.date_sn%></span>
+								</div>
+
+								<div class="ui-row">
+								<span class="ico_img f14 ui-txt-line-height-20" style="display: block;">
+										即将揭晓</span>
+								<span class="f20 ui-txt-bold ui-txt-red-1 ui-txt-line-height-36
+								count_down time_count_down" data-currenttime="<%=item.current_time%>"
+											data-starttime="" data-endtime="<%=item.reward_time%>" data-expiretime="<%=item.reward_time%>">12:13:11</span>
+								</div>
+						</div>
+						<%
+						}
+						%>
+
+
+				</div>
+		</li>
+		<%
+		});
+		}
+		%>
+</script>

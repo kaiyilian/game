@@ -1,0 +1,169 @@
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block ui-margin-b-20 ui-txt-center user_info_container">
+
+				<i class="ui-icon-set ui-txt-white"></i>
+				<i class="ui-icon-message"></i>
+
+				<div class="usser_info_contaniter">
+					
+				<div class="ui-margin-b-5 user_head_img">
+							<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png">
+						
+				</div>
+
+				<div class="ui-txt-line-height-30 ui-txt-white ui-margin-b f18 user_name">梦想e拍</div>
+
+				<div class="login">点击登录</div>
+
+				<div class="ui-row ui-txt-white personal_info">
+
+						<div class="ui-col-25 item" data-href="myMxb">
+								<div class="ui-txt-line-height-30 mxb_balance">0</div>
+								<div class="ui-txt-line-height-20 f14 ui-row">梦想币</div>
+						</div>
+
+						<div class="ui-col-25 item" data-href="myPackage">
+								<div class="ui-txt-line-height-30 package_count">0</div>
+								<div class="ui-txt-line-height-20 f14 ui-row">红包</div>
+						</div>
+
+						<div class="ui-col-25 item" data-href="myIntegral">
+								<div class="ui-txt-line-height-30 integral">0</div>
+								<div class="ui-txt-line-height-20 f14 ui-row">积分</div>
+						</div>
+
+						<div class="ui-col-25 item" data-href="recharge">
+								<div class="ico_img ui-txt-line-height-30 recharge"></div>
+								<div class="ui-txt-line-height-20 f14 ui-row">充值</div>
+						</div>
+
+					</div>
+				</div>
+
+		</section>
+
+		<section class="mxep_block">
+
+				<ul class="ui-list ui-list-link ui-margin-b-20">
+
+						<li class="ui-border-t" data-href="myAnnouncedRecord">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_duobao@2x.png')"></span>
+								</div>
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap">夺宝记录</h4>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="prizeRecord">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_zhongjiang@2x.png')"></span>
+								</div>
+								<div class="ui-list-info " >
+										<h4 class="ui-nowrap">中奖记录</h4>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="myOrder">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_buy@2x.png')"></span>
+								</div>
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap">购买记录</h4>
+								</div>
+						</li>
+
+				</ul>
+
+				<ul class="ui-list ui-list-link ui-margin-b-20">
+
+						<li class="ui-border-t" data-href="share">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_shaidan@2x.png')"></span>
+								</div>
+								<div class="ui-list-info" >
+										<h4 class="ui-nowrap">我的晒单</h4>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="rechargeRecord">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_chongzhi@2x.png')"></span>
+								</div>
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap">充值记录</h4>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="addressManage">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_address@2x.png')"></span>
+								</div>
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap">收货地址管理</h4>
+								</div>
+						</li>
+
+						<li class="ui-border-t contact_customer">
+								<div class="ui-list-thumb-s">
+										<span style="background-image:url('assets/image/my/ico_my_service@2x.png')"></span>
+								</div>
+								<div class="ui-list-info">
+										<span class="ui-nowrap">联系客服</span>
+
+										<span class="f_right" href="tel:021-87654321">0512-87654321</span>
+								</div>
+						</li>
+
+				</ul>
+
+				<div class="ui-row f14 ui-txt-muted ui-all-whitespace ui-margin-b-20 ui-margin-my-79">
+						申明：所有奖品抽奖活动与苹果公司(Apple Inc.)无关
+				</div>
+
+		</section>
+
+</section>
+<script id="user_info_item" type="text/template">
+	
+	<div class="ui-margin-b-5 user_head_img">
+			<%if(typeof(avatar)!=undefined){%>
+				<img src="../../assets/image/icon/ico_public_shoppingcart@2x.png" data-echo="<%=avatar%>">
+			<%} else{console.log(4);
+			console.log(avatar);%>
+				<img src="assets/image/34.png">
+			<%}%>
+			
+	</div>
+
+	<div class="ui-txt-line-height-30 ui-txt-white ui-margin-b f18 user_name"><%=(nick_name? nick_name:mobile)%></div>
+
+	<div class="login">点击登录</div>
+
+	<div class="ui-row ui-txt-white personal_info">
+
+			<div class="ui-col-25 item" data-href="myMxb">
+					<div class="ui-txt-line-height-30 mxb_balance"><%=balance%></div>
+					<div class="ui-txt-line-height-20 f14 ui-row">梦想币</div>
+			</div>
+
+			<div class="ui-col-25 item" data-href="myPackage">
+					<div class="ui-txt-line-height-30 package_count"><%=coupons_count%></div>
+					<div class="ui-txt-line-height-20 f14 ui-row">红包</div>
+			</div>
+
+			<div class="ui-col-25 item" data-href="myIntegral">
+					<div class="ui-txt-line-height-30 integral"><%=points%></div>
+					<div class="ui-txt-line-height-20 f14 ui-row">积分</div>
+			</div>
+
+			<div class="ui-col-25 item" data-href="recharge">
+					<div class="ico_img ui-txt-line-height-30 recharge"></div>
+					<div class="ui-txt-line-height-20 f14 ui-row">充值</div>
+			</div>
+
+	</div>
+</script>
+

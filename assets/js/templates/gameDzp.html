@@ -1,0 +1,303 @@
+<!-- 大转盘 -->
+<!--<link type="text/css" rel="stylesheet" href="../../assets/css/game/reset.css">-->
+
+<div class="game-dzp-css">
+		<section class="ui-container ui-content">
+
+				<section class="mxep_block bg_fdeee6 f16">
+
+						<div class="ui-position-relative bg-fd7a44 ui-txt-white"
+								 style="padding:10px 0 20px;">
+
+								<div class="icon_line">
+										<i class="ui-icon-return go_back" onclick="history.back()"></i>
+										<div class="ui-txt-center txt_mxzp" style="line-height:50px;">梦想转盘</div>
+										<i class="ui-icon-share"></i>
+								</div>
+
+
+								<div id="box" class="box">
+										<div class="outer KinerLottery KinerLotteryContent">
+												<img src="assets/image/game/dzp/lotteryContent.png">
+										</div>
+										<div class="inner KinerLotteryBtn start"></div>
+								</div>
+
+								<div class="my_dream_pieces">
+										我的梦想碎片
+								</div>
+
+						</div>
+
+						<div class="pd-10-15 ui-position-relative ">
+
+								<div class="prize_record_list_container">
+										<div class="txt ui-txt-line-height-40 ui-txt-center bg_fbba03 ui-txt-white">近期中奖记录</div>
+
+										<ul class="prize_record_list ui-txt-line-height-36 ui-txt-center bg_white">
+
+												<!--<li class="ui-border-b">-->
+												<!--<span>恭喜</span>-->
+												<!--<span class="winner_name">XXXXX</span>-->
+												<!--<span>获得</span>-->
+												<!--<span class="prize_name">食用油一瓶</span>-->
+												<!--</li>-->
+
+												<!--<li class="ui-border-b">-->
+												<!--<span>恭喜</span>-->
+												<!--<span class="winner_name">XXXXX</span>-->
+												<!--<span>获得</span>-->
+												<!--<span class="prize_name">食用油一瓶</span>-->
+												<!--</li>-->
+
+												<!--<li class="ui-border-b">-->
+												<!--<span>恭喜</span>-->
+												<!--<span class="winner_name">XXXXX</span>-->
+												<!--<span>获得</span>-->
+												<!--<span class="prize_name">食用油一瓶</span>-->
+												<!--</li>-->
+
+										</ul>
+								</div>
+
+						</div>
+
+						<div class="pd-10-15 ui-position-relative ">
+
+								<div class="txt game_rule_txt bg_fd7b44 ui-txt-white">
+										游戏规则
+								</div>
+
+								<ul class=" game_rule_list ui-txt-line-height-24 f14">
+
+										<li>
+												1.每次抽奖消耗500积分。
+										</li>
+
+										<li>
+												2.用户平台，每天可以2次免费抽奖。
+										</li>
+
+										<li>
+												3.中的积分，梦想币，立即充值到您的账户。
+										</li>
+
+										<li>
+												4.获得一定的商品碎片，可以兑换实物商品，兑换后请与平台联系。
+										</li>
+
+								</ul>
+
+						</div>
+
+
+				</section>
+
+		</section>
+</div>
+
+
+<style>
+		@charset "UTF-8";
+
+		html {
+				font-size: 20px;
+		}
+
+		@media only screen and (min-width: 401px) {
+				html {
+						font-size: 25px !important;
+				}
+		}
+
+		@media only screen and (min-width: 428px) {
+				html {
+						font-size: 26.75px !important;
+				}
+		}
+
+		@media only screen and (min-width: 481px) {
+				html {
+						font-size: 30px !important;
+				}
+		}
+
+		@media only screen and (min-width: 569px) {
+				html {
+						font-size: 35px !important;
+				}
+		}
+
+		@media only screen and (min-width: 641px) {
+				html {
+						font-size: 40px !important;
+				}
+		}
+
+		html, body {
+				padding: 0;
+				margin: 0;
+				background: #fffeea;
+				height: 100%;
+				font-size: 16px;
+		}
+
+		p, li, b, span, div, strong, h1, h2, h3, h4, h5, h6, a, ul {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				list-style: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+		}
+
+
+</style>
+
+<style>
+
+		.bg_fbba03 {
+				background-color: #fbba03;
+		}
+
+		.bg_fdeee6 {
+				background-color: #fdeee6;
+		}
+
+		.bg_fd7b44 {
+				background-color: #fd7a44;
+		}
+
+		.icon_line {
+				position: relative;
+				top: -10px;
+				left: 0;
+				width: 100%;
+				height: 50px;
+		}
+
+		.ui-icon-return {
+				color: #fff;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				z-index: 10;
+		}
+
+		.ui-icon-share {
+				position: absolute;
+				right: 5px;
+				top: 5px;
+				color: #fff;
+				z-index: 10;
+		}
+
+		.game-dzp-css .box {
+				position: relative;
+				width: 300px;
+				height: 300px;
+				margin: 0 auto;
+				/*position: absolute;*/
+				/*top: 50%;*/
+				/*left: 50%;*/
+				/*transform: translate(-50%, -50%);*/
+				/*-webkit-transform: translate(-50%, -50%);*/
+				/*-moz-transform: translate(-50%, -50%);*/
+				/*-ms-transform: translate(-50%, -50%);*/
+				/*-o-transform: translate(-50%, -50%);*/
+				overflow: hidden
+		}
+
+		.game-dzp-css .box .outer {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+		}
+
+		.game-dzp-css .box .outer img {
+				width: 100%;
+		}
+
+		.game-dzp-css .box .inner {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				z-index: 2;
+				background: url(assets/image/game/dzp/lotteryBtn.png) no-repeat;
+				background-size: auto 100px;
+		}
+
+		.game-dzp-css .box .inner.start:active {
+				-webkit-transform: translate(-50%, -50%) scale(.95);
+				-moz-transform: translate(-50%, -50%) scale(.95);
+				-ms-transform: translate(-50%, -50%) scale(.95);
+				-o-transform: translate(-50%, -50%) scale(.95);
+				transform: translate(-50%, -50%) scale(.95);
+		}
+
+		.game-dzp-css .box .inner.start {
+				background-position: 0 0;
+		}
+
+		.game-dzp-css .box .inner.no-start {
+				background-position: -100px 0;
+		}
+
+		.game-dzp-css .box .inner.completed {
+				background-position: -200px 0;
+		}
+
+		.my_dream_pieces {
+				background-color: #fbba03;
+				padding: 8px 12px;
+				border-radius: 30px;
+				width: 150px;
+				text-align: center;
+				margin: 10px auto;
+				display: none;
+		}
+
+		.prize_record_list {
+				min-height: 36px;
+				max-height: 200px;
+				overflow-y: auto;
+		}
+
+		.prize_record_list .winner_name,
+		.prize_record_list .prize_name {
+				color: #fd7a44;
+		}
+
+		.game_rule_txt {
+				/*display: block;*/
+				width: 120px;
+				padding: 5px 12px;
+				text-align: center;
+				border-radius: 30px;
+				margin-bottom: 10px;
+		}
+
+		.game_rule_list {
+				color: #666666;
+		}
+</style>
+
+
+
