@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>商品列表</title>
+
+		<script src="../../js/libs/jquery-2.1.1.min.js"></script>
+		<script src="../../js/libs/zepto.min.js"></script>
+		<!--<script src="../../js/libs/touch.js"></script>-->
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/category/good_list.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name"></h1>
+		<i class="ico_img icon_shopping_cart">
+				<div class="ui-badge shopping_cart_good_count">123</div>
+		</i>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block good_list_container">
+
+				<div class="ui-row ui-whitespace ui-txt-line-height-50 good_list_txt">
+
+						<span class="f_left">
+								共<span>30</span>件商品
+						</span>
+
+						<span class="ui-txt-red-1 f_right">全部加入清单</span>
+
+				</div>
+
+				<ul class="ui-list ui-list-active ui-list-cover ui-border-tb good_list">
+
+						<li class="ui-border-t">
+								<div class="ui-list-img">
+										<span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+										<span class="ui-txt-center f12 ui-txt-white special_offer_area ">十元专区</span>
+								</div>
+
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap-multi f14 good_name">这是标题，加ui-nowrap可以超出长度截断</h4>
+
+										<div class="good_crowd-funding_process">
+
+												<div class="ui-progress">
+														<span style="width:50%"></span>
+												</div>
+
+												<div class="ui-row f12 ui-txt-muted good_crowd-funding_count">
+
+														<span class="">
+																总需
+																<span class="good_total_count">2800</span>
+														</span>
+
+														<span>
+																剩余
+																<span class="good_surplus_count">1500</span>
+														</span>
+
+												</div>
+
+										</div>
+
+										<i class="ico_img icon_shopping_cart"></i>
+								</div>
+						</li>
+
+						<li class="ui-border-t">
+								<div class="ui-list-img">
+										<span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+								</div>
+
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap-multi f14 good_name">这是标题，加ui-nowrap可以超出长度截断</h4>
+
+										<div class="good_crowd-funding_process">
+
+												<div class="ui-progress">
+														<span style="width:50%"></span>
+												</div>
+
+												<div class="ui-row f12 ui-txt-muted good_crowd-funding_count">
+
+														<span class="">
+																总需
+																<span class="good_total_count">2800</span>
+														</span>
+
+														<span>
+																剩余
+																<span class="good_surplus_count">1500</span>
+														</span>
+
+												</div>
+
+										</div>
+
+										<i class="ico_img icon_shopping_cart"></i>
+								</div>
+						</li>
+
+						<li class="ui-border-t">
+								<div class="ui-list-img">
+										<span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+										<span class="ui-txt-center f12 ui-txt-white special_offer_area ">十元专区</span>
+								</div>
+
+								<div class="ui-list-info">
+										<h4 class="ui-nowrap-multi f14 good_name">这是标题，加ui-nowrap可以超出长度截断</h4>
+
+										<div class="good_crowd-funding_process">
+
+												<div class="ui-progress">
+														<span style="width:50%"></span>
+												</div>
+
+												<div class="ui-row f12 ui-txt-muted good_crowd-funding_count">
+
+														<span class="">
+																总需
+																<span class="good_total_count">2800</span>
+														</span>
+
+														<span>
+																剩余
+																<span class="good_surplus_count">1500</span>
+														</span>
+
+												</div>
+
+										</div>
+
+										<i class="ico_img icon_shopping_cart"></i>
+								</div>
+						</li>
+
+				</ul>
+
+		</section>
+
+</section>
+
+<script type="text/javascript">
+
+		$(function () {
+
+				getUrl();//获取地址栏 参数
+
+				//赋值 头部名称
+				var name = sessionStorage.getItem("name");
+				name = decodeURI(name);
+				$(".ui-header .name").html(name);
+
+		});
+
+		//获取地址栏 参数
+		var getUrl = function () {
+				var url = location.search;
+				if (url.indexOf("?") > -1) {
+						var params = url.substr(url.indexOf("?") + 1, url.length).split("&");
+
+						for (var i = 0; i < params.length; i++) {
+								var param = params[i].split("=");
+
+								sessionStorage.setItem(param[0], param[1]);
+
+						}
+				}
+		}
+
+</script>
+
+</body>
+</html>

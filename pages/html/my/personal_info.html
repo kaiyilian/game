@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>个人信息</title>
+
+		<!--<script src="../../js/libs/jquery-2.1.1.min.js"></script>-->
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/my/personal_info.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">个人信息</h1>
+
+</header>
+
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-arrowlink ui-margin-b-20 ui-all-whitespace bg-orange ui-txt-white user_head_img_container">
+
+						<span class="ui-txt-line-height-50 ">头像</span>
+						<span class="f_right user_head_img">
+								<img src="../../image/34.png">
+						</span>
+
+				</div>
+
+				<ul class="ui-list ui-list-link ui-margin-b-20 ui-txt-line-height-50">
+
+						<li class="ui-border-b">
+								<span>ID</span>
+								<span class="f_right">320913</span>
+						</li>
+
+						<li class="ui-border-b nickname_container">
+								<span>昵称</span>
+								<span class="f_right nickname">风花雪月</span>
+						</li>
+
+						<li class="ui-border-b user_sex_container">
+								<span>性别</span>
+								<span class="f_right">男</span>
+						</li>
+
+						<li class="user_pwd_container">
+								<span>修改密码</span>
+						</li>
+
+				</ul>
+
+				<div class="ui-arrowlink ui-margin-b-20 ui-all-whitespace ui-txt-line-height-36 bg_white">
+						<span>手机号绑定</span>
+
+						<span class="f_right user_phone" data-is_bind="0">未绑定</span>
+				</div>
+
+		</section>
+
+</section>
+
+<script>
+
+		$(function () {
+
+				//进入修改 昵称页面
+				$(".nickname_container").tap(function () {
+						location.href = "../personal_info/nickname.html";
+				});
+
+				//进入修改 密码页面
+				$(".user_pwd_container").tap(function () {
+						location.href = "../personal_info/pwd_modify.html";
+				});
+
+				//绑定手机号
+				$(".user_phone").tap(function () {
+						var is_bind = $(".user_phone").data("is_bind");//0 未绑定  1 已绑定
+						if (!is_bind)
+								location.href = "../phone_bind/step_1.html";
+				});
+		});
+
+</script>
+
+</body>
+</html>

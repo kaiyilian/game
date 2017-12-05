@@ -1,0 +1,274 @@
+
+.container {
+	position: relative;
+	width: 100%;
+	padding: 8px 10px;
+	line-height: 40px;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.container .head {
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	/*margin-bottom: 10px;*/
+}
+
+.container .head:before {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 20px;
+	left: 0;
+	top: 15px;
+	background-color: #2273b4;
+}
+
+.container .head .txt {
+	position: relative;
+	width: 100%;
+	padding-left: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.container .head .txtR {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	font-weight: bold;
+	font-size: 14px;
+	color: #2273b4;
+	cursor: pointer;
+}
+
+.container .head .txtR span {
+	display: block;
+	float: left;
+}
+
+.container .content {
+	position: relative;
+	width: 100%;
+	float: left;
+}
+
+.container .content .search_container {
+	position: relative;
+	width: 100%;
+	float: left;
+	min-height: 60px;
+	padding: 10px 0;
+}
+
+.container .content .search_container .item {
+	position: relative;
+	float: left;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	display: table;
+}
+
+.container .content .search_container .item span {
+	display: table-cell;
+	float: none;
+}
+
+.container .content .search_container .item .input-group-addon {
+	padding: 6px 8px;
+}
+
+.container .content .search_container .btn_list {
+	padding: 0;
+}
+
+.container .content .search_container .btn_list .btn {
+	margin: 2px 5px;
+}
+
+.container .content .upload_container {
+	position: relative;
+	width: 100%;
+	margin: 20px 0;
+	height: 40px;
+	border: 1px solid #F3F3F4;
+	border-radius: 3px;
+}
+
+.container .content .upload_container .file_path {
+	position: relative;
+	width: 100%;
+	padding: 0 210px 0 130px;
+}
+
+.container .content .upload_container .txt {
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 40px;
+	width: 100px;
+	text-align: center;
+	border-right: 1px solid #F3F3F4;
+}
+
+.container .content .upload_container .btn_list {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 210px;
+	line-height: 30px;
+}
+
+.container .content .upload_container .btn_list .btn {
+	position: relative;
+	margin-right: 5px;
+}
+
+.container .content .table_container {
+	position: relative;
+	width: 100%;
+	float: left;
+	padding: 10px 0;
+	/*min-height: 482px;*/
+}
+
+.container .content table {
+	font-size: 12px;
+}
+
+.container .content table td {
+	padding: 0;
+	height: 42px;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+
+.container .content table thead td.order_item {
+}
+
+.container .content table thead td.order_item .operate_sort {
+	position: absolute;
+	width: 8px;
+	/*height: 16px;*/
+	right: 5px;
+	top: 16px;
+}
+
+.container .content table thead td.order_item .operate_sort .icon_sort {
+	position: relative;
+	width: 8px;
+	height: 6px;
+}
+
+.container .content table thead td.order_item .operate_sort .icon_sort_reverse {
+	position: relative;
+	width: 8px;
+	height: 6px;
+	display: none;
+}
+
+.container .content table tbody tr td.isTrue,
+.container .content table tbody tr td.choose_item {
+	position: relative;
+	width: 42px !important;
+	cursor: pointer;
+}
+
+.container .content table tbody tr td.isTrue img,
+.container .content table tbody tr td.choose_item img {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	margin: 13px;
+}
+
+.container .content table tbody tr td select {
+	max-width: 100px;
+}
+
+.container .content table tbody tr.employee_item {
+	position: relative;
+	width: 100%;
+}
+
+.container .content table tbody tr.employee_item td {
+}
+
+.container .content table tbody tr.employee_item td.employee_no {
+	width: 50px;
+}
+
+.container .content table tbody tr.employee_item td.employee_name {
+	width: 100px;
+}
+
+.container .content table tbody tr.employee_item td.physical_examination .txt {
+	cursor: pointer;
+	color: #337ab7;
+}
+
+.container .content table tbody tr.employee_item .employee_operate {
+	width: 200px;
+}
+
+.container .content table tbody tr.employee_item .employee_operate span {
+	display: block;
+	float: left;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.container .foot {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background-color: #F5F5F6;
+	float: left;
+}
+
+.container .foot .choose_container {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.container .foot .choose_container img {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	float: left;
+	margin: 13px;
+}
+
+.container .foot .choose_container span {
+	display: block;
+	float: left;
+}
+
+.container .foot .btn {
+	position: relative;
+	margin: 5px 0;
+}
+
+.pagination > .active > a {
+	z-index: 2;
+	color: #fff;
+	cursor: default;
+	background-color: #428bca;
+	border-color: #428bca;
+}
+
+.pagination > li > a {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.428571429;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	color: #428bca;
+}

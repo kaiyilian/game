@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>特价商品详情</title>
+
+		<script src="../../js/libs/jquery-2.1.1.min.js"></script>
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--<script src="../../js/libs/touch.js"></script>-->
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--swiper 轮播图-->
+		<link href="../../plugins/Swiper-3.1.0/dist/css/swiper.min.css" rel="stylesheet">
+		<script src="../../plugins/Swiper-3.1.0/dist/js/swiper.min.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/discount/discount_good_info.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!--<header class="ui-header ui-header-positive ui-border-b">-->
+
+<!--<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>-->
+<!--<h1 class="ui-txt-default name">抢购</h1>-->
+
+<!--</header>-->
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block good_info_container" style="display: block;">
+
+				<i class="ui-icon-return" onclick="history.back();" style=""></i>
+				<i class="ui-icon-share"></i>
+
+				<div class="swiper-container good_img_list">
+						<div class="swiper-wrapper">
+
+								<div class="swiper-slide">
+
+										<span class="item">
+												<img src="../../image/1.png">
+										</span>
+
+								</div>
+
+								<div class="swiper-slide">
+
+										<span class="item">
+												<img src="../../image/2.png">
+										</span>
+
+								</div>
+
+								<div class="swiper-slide">
+
+										<span class="item">
+												<img src="../../image/3.png">
+										</span>
+
+								</div>
+
+								<!-- 如果需要分页器 -->
+								<div class="swiper-pagination"></div>
+
+						</div>
+				</div>
+
+				<div class="ui-all-whitespace bg_white ui-txt-line-height-24 ui-margin-b-20 good-info">
+
+						<h4 class="ui-nowrap-multi f16 good_name">这是标题，加ui-nowrap可以超出长度截断</h4>
+
+						<div class="good_price">
+
+								<span class="f16 ui-txt-line-height-30 good_deal_price">
+										3600 梦想币
+								</span>
+
+								<div class="ui-row f12">
+
+										<span class="txt">秒杀</span>
+										<span class="ui-txt-muted">
+												比市场价省
+												<label>2100</label>
+												元
+										</span>
+
+								</div>
+
+						</div>
+
+						<div class="f12 ui-txt-line-height-25 discount_number_of_people">
+
+								<span class="spn_item lack">
+										已有
+										<label>10</label>
+										人差
+										<label>5</label>
+										人
+								</span>
+
+						</div>
+
+						<div class="ui-txt-line-height-40 ui-txt-center ui-txt-white-9 ui-margin-t
+										 btn_panic_buying" onclick="panic_buying()">立即抢购
+						</div>
+
+				</div>
+
+				<div class="ui-all-whitespace ui-margin-b-20 bg_white activity_rule" style="">
+
+						<h1 class=" ui-txt-line-height-50">抢购资格说明</h1>
+
+						<div class="ui-txt-line-height-20  f14 ui-margin-b">
+								<div>1.抢购需在开抢前支付10梦想币获取抢购权；</div>
+								<div>2.未达到制定人数，取消该商品抢购，退还梦想币；</div>
+								<div>3.未抢购到商品退还梦想币；</div>
+						</div>
+
+				</div>
+
+
+		</section>
+
+
+</section>
+
+<script>
+
+		$(function () {
+
+				//商品 列表
+				var mySwiper = new Swiper('.good_img_list', {
+						initialSlide: 0,//设定初始化时slide的索引。
+						direction: 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+						speed: 300,//滑动速度，即slider自动滑动开始到结束的时间（单位ms）
+//						autoplay: 5000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
+						autoplayDisableOnInteraction: false,//用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+						grabCursor: true,//设置为true时，鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状。
+						setWrapperSize: true,//开启这个设定会在Wrapper上添加等于slides相加的宽高，在对flexbox布局的支持不是很好的浏览器中可能需要用到。
+						//上一个,下一个
+//								nextButton: '.swiper-button-next',
+//								prevButton: '.swiper-button-prev',
+						pagination: '.swiper-pagination',
+						//prevSlideMessage: 'Previous slide',
+						//nextSlideMessage: 'Next slide',
+						//firstSlideMessage: 'This is the first slide',
+						//lastSlideMessage: 'This is the last slide',
+						//paginationBulletMessage:'Go to slide {{index}}',
+						slidesOffsetBefore: 0,//设定slide与左边框的预设偏移量（单位px）。
+						slidesOffsetAfter: 0,//设定slide与右边框的预设偏移量（单位px）。
+						freeMode: false,//默认为false   false：一次滑一个 true：滑到哪里算哪里
+						freeModeSticky: true,//使得freeMode也能自动贴合。 滑动模式下也可以贴合
+						//slidesPerView: 3,//一页 显示的个数
+						effect: 'slide',//slide的切换效果，默认为"slide"（位移切换），"fade"（淡入）"cube"（方块）"coverflow"（3d流）。
+						loop: true,
+						//// 如果需要分页器
+//								pagination: '.swiper-pagination',
+						//// 如果需要前进后退按钮
+						//nextButton: '.swiper-button-next',
+						//prevButton: '.swiper-button-prev',
+						//// 如果需要滚动条
+						//scrollbar: '.swiper-scrollbar',
+				})
+
+		});
+
+		//立即抢购
+		var panic_buying = function () {
+				location.href = "../order/order_confirm.html"
+		}
+
+</script>
+
+
+</body>
+</html>

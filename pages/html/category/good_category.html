@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>分类</title>
+
+		<script src="../../js/libs/jquery-2.1.1.min.js"></script>
+		<script src="../../js/libs/zepto.min.js"></script>
+		<!--<script src="../../js/libs/touch.js"></script>-->
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/category/good_category.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+		<h1 class="ui-txt-default">分类</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block bg_white ">
+
+				<ul class="ui-list ui-border-tb category_list">
+
+						<li class="" data-id="1">
+								<div class="ui-avatar">
+										<span style="background-image:url('../../image/category/ico_sort_product@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap category_name">优选商品</h4>
+								</div>
+						</li>
+
+						<li class="" data-id="2">
+								<div class="ui-avatar">
+										<span style="background-image:url('../../image/category/ico_sort_phone@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap category_name">手机平板</h4>
+								</div>
+						</li>
+
+						<li class="" data-id="3">
+								<div class="ui-avatar">
+										<span style="background-image:url('../../image/category/ico_sort_computer@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap category_name">电脑办公</h4>
+								</div>
+						</li>
+
+						<li class="" data-id="4">
+								<div class="ui-avatar">
+										<span style="background-image:url('../../image/category/ico_sort_women@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap category_name">女性时尚</h4>
+								</div>
+						</li>
+
+						<li class="" data-id="5">
+								<div class="ui-avatar">
+										<span style="background-image:url('../../image/category/ico_sort_food@2x.png')"></span>
+								</div>
+								<div class="ui-list-info ui-border-t">
+										<h4 class="ui-nowrap category_name">美食天地</h4>
+								</div>
+						</li>
+
+				</ul>
+
+		</section>
+
+</section>
+
+<script type="text/javascript">
+
+		$(function () {
+				//查看具体 种类的 内容
+				$(".category_list").find("li").each(function () {
+						$(this).click(function () {
+
+								var id = $(this).attr("data-id");
+								var name = $(this).find(".category_name").html();
+								location.href = "good_list.html?name=" + name + "&id=" + id;
+
+						});
+				});
+		});
+
+</script>
+
+</body>
+</html>

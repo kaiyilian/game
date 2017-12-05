@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>夺宝记录</title>
+
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<script src="../../js/mxep.js"></script>
+		<!--本页面-->
+		<link href="../../css/announced/my_announced_record.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">夺宝记录</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-tab">
+
+						<ul class="ui-tab-nav ui-border-b">
+								<li class="current">全部</li>
+								<li>进行中</li>
+								<li>已揭晓</li>
+						</ul>
+
+						<ul class="ui-tab-content" style="width:300%">
+								<li class="current">
+
+										<ul class="ui-list announced_all">
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				<div class="ui-progress">
+																						<span style="width:50%"></span>
+																				</div>
+																		</div>
+
+																		<div class="ui-row ui-txt-grey-6">
+																				<span class="total_participant" data-count="2800">总需2800人次</span>
+																				<span class="f_right lacking_participant" data-count="1800">还剩1800</span>
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="1">本次参与 1人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_add">追加</div>
+																<!--<div class="btn btn_buy_again">再次购买</div>-->
+
+														</div>
+
+												</li>
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				总需人数：
+																				<span class="total_participant" data-count="3000">3000</span>
+																		</div>
+
+																		<div class="ui-row bg-ffefe7 ui-margin-tb ui-all-whitespace ui-txt-clr-ff6e2b
+																		ui-txt-bold f18 ui-txt-line-height-30">
+																				揭晓倒计时：
+																				<span class="activity_count_down" data-time="2016-09-28 00:00:00"></span>
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="1">本次参与 1人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_buy_again">再次购买</div>
+
+														</div>
+
+												</li>
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				总需人数：
+																				<span class="total_participant" data-count="3000">3000</span>
+																		</div>
+
+																		<div class="ui-row ui-all-whitespace ui-margin-tb bg-ffefe7 f14 winner_info">
+
+																				<div class="ui-row">
+																						幸运之星：
+																						<span class="winner_name">梦想者1号</span>
+																				</div>
+
+																				<div class="ui-row">
+																						参与次数：
+																						<span class="attend_count" data-count="2">2人次</span>
+																				</div>
+
+																				<div class="ui-row">
+																						幸运号码：
+																						<span class="winning_no">34324324234</span>
+																				</div>
+
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="10">本次参与 10人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_buy_again">再次购买</div>
+
+														</div>
+
+												</li>
+
+										</ul>
+
+								</li>
+
+								<li>
+
+										<ul class="ui-list announced_ongoing">
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				<div class="ui-progress">
+																						<span style="width:50%"></span>
+																				</div>
+																		</div>
+
+																		<div class="ui-row ui-txt-grey-6">
+																				<span class="total_participant" data-count="2800">总需2800人次</span>
+																				<span class="f_right lacking_participant" data-count="1800">还剩1800</span>
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="1">本次参与 1人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_add">追加</div>
+																<!--<div class="btn btn_buy_again">再次购买</div>-->
+
+														</div>
+
+												</li>
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				<div class="ui-progress">
+																						<span style="width:50%"></span>
+																				</div>
+																		</div>
+
+																		<div class="ui-row ui-txt-grey-6">
+																				<span class="total_participant" data-count="2800">总需2800人次</span>
+																				<span class="f_right lacking_participant" data-count="1800">还剩1800</span>
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="1">本次参与 1人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_add">追加</div>
+																<!--<div class="btn btn_buy_again">再次购买</div>-->
+
+														</div>
+
+												</li>
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				<div class="ui-progress">
+																						<span style="width:50%"></span>
+																				</div>
+																		</div>
+
+																		<div class="ui-row ui-txt-grey-6">
+																				<span class="total_participant" data-count="2800">总需2800人次</span>
+																				<span class="f_right lacking_participant" data-count="1800">还剩1800</span>
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="1">本次参与 1人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_add">追加</div>
+																<!--<div class="btn btn_buy_again">再次购买</div>-->
+
+														</div>
+
+												</li>
+
+										</ul>
+
+								</li>
+
+								<li>
+
+										<ul class="ui-list announced_end">
+
+												<li class="bg_white ui-all-whitespace ui-margin-b-20">
+
+														<div class="ui-border-b display-webkit-box list-container">
+
+																<div class="list-img">
+																		<div class="good_img"></div>
+																		<span class="ui-txt-center ui-txt-white ui-txt-bold
+																		special_offer_area ">十元专区</span>
+																</div>
+
+																<div class="list-info ui-txt-line-height-20 f14">
+
+																		<div class="ui-nowrap-multi f16 good_name">
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称商品名称商品名称商品名称商品名称
+																				商品名称
+																		</div>
+
+																		<div class="ui-row">
+																				本期期号：
+																				<span class="activity_no">4324234234</span>
+																		</div>
+
+																		<div class="ui-row">
+																				总需人数：
+																				<span class="total_participant" data-count="3000">3000</span>
+																		</div>
+
+																		<div class="ui-row ui-all-whitespace ui-margin-tb bg-ffefe7 f14 winner_info">
+
+																				<div class="ui-row">
+																						幸运之星：
+																						<span class="winner_name">梦想者1号</span>
+																				</div>
+
+																				<div class="ui-row">
+																						参与次数：
+																						<span class="attend_count" data-count="2">2人次</span>
+																				</div>
+
+																				<div class="ui-row">
+																						幸运号码：
+																						<span class="winning_no">34324324234</span>
+																				</div>
+
+																		</div>
+
+																</div>
+
+														</div>
+
+														<div class="ui-row ui-position-relative ui-txt-line-height-50">
+
+																<span class="attend_count" data-count="10">本次参与 10人次</span>
+
+																<span class="ui-txt-pink btn_detail">查看详情</span>
+
+																<div class="btn btn_buy_again">再次购买</div>
+
+														</div>
+
+												</li>
+
+										</ul>
+
+								</li>
+						</ul>
+
+				</div>
+
+		</section>
+
+</section>
+
+<script>
+
+		$(function () {
+
+				//滑动效果
+				var tab = new fz.Scroll('.ui-tab', {
+						role: 'tab',
+						autoplay: false
+				});
+
+				tab.on('scrollEnd', function (curPage) {
+						if (curPage == 0) {			//全部
+
+						}
+						if (curPage == 1) {			//进行中
+
+						}
+						if (curPage == 2) {			//已揭晓
+
+						}
+				});
+
+				//倒计时
+				$("ul.announced_all li").each(function () {
+						time_count_down($(this).find(".activity_count_down"));
+
+						$(this).find(".btn_detail").tap(function () {
+								location.href = "my_announced_record_info.html";
+						});
+				});
+
+
+		});
+
+</script>
+
+</body>
+</html>

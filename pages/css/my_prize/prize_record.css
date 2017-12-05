@@ -1,0 +1,38 @@
+
+.ui-list {
+	background-color: transparent;
+}
+
+.ui-list > li {
+	display: block;
+	margin-left: 0;
+}
+
+.ui-list > li .good_info .ui-list-img {
+	width: 100px;
+	height: 100px;
+}
+
+.ui-list > li .good_info .ui-list-info .prize_info {
+
+}
+
+.ui-list > li:first-child > .ui-border-t {
+	border-top: 1px solid #e0e0e0;
+}
+
+.ui-list > li .btn_list .btn_item {
+	/*width: 100px;*/
+	padding: 0 18px;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	float: right;
+	margin-right: 5px;
+	border-radius: 3px;
+}
+
+.ui-list > li .btn_list .btn_item.btn_prize_send {
+	color: #3ec674;
+	font-weight: bold;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>兑换梦想币</title>
+
+		<!--<script src="../../js/libs/jquery-2.1.1.min.js"></script>-->
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/integral/integral_exchange.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">兑换梦想币</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-position-relative ui-whitespace-10-25 bg-orange ui-txt-white ui-margin-b-20
+				ui-txt-line-height-30" style="padding-left: 50px;">
+
+						<i class="icon_info"></i>
+						1000积分=1梦想币，兑换以1000倍数为单位进行兑换，兑换后将自动转入梦想币余额内！
+
+				</div>
+
+				<div class="ui-whitespace-15-25 bg_white">
+
+						<div class="ui-row ui-txt-line-height-40 ui-txt-clr-ff6e2b">
+								<span class="icon ui-position-relative" style="top:3px;margin-right: 3px;">*</span>
+								当前积分
+								<span class="total_integral">50900</span>，
+								最多可兑换
+								<span class="exchanged_integral">5000</span>
+								积分
+						</div>
+
+						<div class="ui-row ui-txt-line-height-40 ui-margin-tb exchange_container">
+								<span>兑换积分</span>
+								<span>
+										<span class="bg-ffefe7 mxb_count">
+												<input class="ui-input ui-txt-center ui-txt-pink" maxlength="5"
+															 value="0" onkeyup="this.value=this.value.replace(/\D/g,'')">
+										</span>
+										x 1000
+								</span>
+						</div>
+
+						<div class="bg-pink ui-txt-white ui-txt-line-height-44 ui-border-radius-3 ui-margin-t-30
+						ui-margin-b ui-txt-center btn_exchange">
+								我要兑换
+						</div>
+
+				</div>
+
+		</section>
+
+</section>
+
+<script>
+
+		$(function () {
+				//我要兑换
+				$(".btn_exchange").tap(function () {
+						location.href = "../my/my_integral.html";
+				});
+		});
+
+</script>
+
+</body>
+</html>

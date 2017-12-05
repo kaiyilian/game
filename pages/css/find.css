@@ -1,0 +1,15 @@
+
+section.mxep_block .share_order {
+	display: -webkit-box;
+	padding-left: 15px;
+}
+
+section.mxep_block .share_order .ui-list-thumb {
+	width: 60px;
+	height: 60px;
+}
+
+section.mxep_block .func_list li .ui-list-thumb {
+	width: 60px;
+	height: 60px;
+}

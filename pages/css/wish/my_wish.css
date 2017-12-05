@@ -1,0 +1,43 @@
+
+section.mxep_block .wish_info .wish_item {
+	margin: 10px 0;
+}
+
+section.mxep_block .wish_info .wish_item input {
+	height: 50px;
+	background-color: #fffaf7;
+	padding-left: 20px;
+}
+
+section.mxep_block .wish_info .wish_item textarea {
+	height: 110px;
+	background-color: #fffaf7;
+	padding: 10px 10px 10px 20px;
+}
+
+section.mxep_block .wish_good_img_list {
+	/*float: left;*/
+	width: 100%;
+	display: -webkit-box;
+}
+
+section.mxep_block .wish_good_img_list .img_add {
+	width: 60px;
+	height: 60px;
+	background: url("../../image/wish/img_sent_takephoto@2x.png") no-repeat;
+	background-size: 100% 100%;
+	/*float: left;*/
+	margin-right: 15px;
+}
+
+section.mxep_block .wish_good_img_list .img_item {
+	width: 60px;
+	height: 60px;
+	/*float: left;*/
+	margin-right: 15px;
+}
+
+.btn_submit {
+	margin: 40px auto;
+	/*background-color: ;*/
+}

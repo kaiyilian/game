@@ -1,0 +1,339 @@
+
+.detail_container span {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.detail_container {
+    position: relative;
+    width: 80%;
+    margin: 0 10%;
+    padding: 8px 10px;
+    line-height: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    float: left;
+}
+
+.detail_container > .head {
+    position: relative;
+    height: 50px;
+    /*line-height: 50px;*/
+    margin-bottom: 20px;
+}
+
+.detail_container > .head .item {
+    position: relative;
+    line-height: 50px;
+    float: left;
+}
+
+.detail_container > .head .item span {
+    display: block;
+    float: left;
+}
+
+.detail_container > .head .item .txt {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.detail_container > .head .item .total_complete_degree {
+    position: relative;
+    width: 200px;
+    height: 24px;
+    line-height: 24px;
+    top: 13px;
+    border-radius: 20px;
+    background-color: #cbcdcc;
+}
+
+.detail_container > .head .item .total_complete_degree .completed_degree {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: #2273b4;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.detail_container > .head .btn_list {
+    margin: 8px 0;
+    float: right;
+}
+
+.detail_container > .head .btn_list .btn {
+    margin-right: 10px;
+    /*background-color: #2273b4;*/
+}
+
+.detail_container .content {
+    position: relative;
+    width: 100%;
+    float: left;
+    padding-right: 130px;
+}
+
+.detail_container .content .info_container {
+    position: relative;
+    width: 100%;
+    border: 1px solid #2273b4;
+    padding: 5px 8px;
+    float: left;
+}
+
+.detail_container .content .info_container .user_info {
+    position: relative;
+    width: 100%;
+    border: 1px solid #2273b4;
+    padding: 2px 5px 5px;
+    float: left;
+}
+
+.detail_container .content .info_container .user_info .head {
+    position: relative;
+    width: 100%;
+}
+
+.detail_container .content .info_container .user_info .head .user_name {
+    position: relative;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px dashed #2273b4;
+}
+
+.detail_container .content .info_container .user_info .head .row {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.detail_container .content .info_container .user_info .head .row span {
+    padding: 0 5px;
+    color: #2273b4;
+    font-weight: bold;
+}
+
+.detail_container .content .info_container .user_info .head .row span:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 14px;
+    top: 3px;
+    left: 0;
+    background-color: #2273b4;
+}
+
+.detail_container .content .info_container .user_info .content {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.detail_container .content .info_container .user_info .content .row {
+    position: relative;
+    width: 50%;
+    margin: 0;
+    float: left;
+    line-height: 24px;
+}
+
+.detail_container .content .info_container .work_experience {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.detail_container .content .info_container .work_experience .head {
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 2px solid #cbcdcc;
+}
+
+.detail_container .content .info_container .work_experience .head:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #2273b4;
+}
+
+.detail_container .content .info_container .work_experience .content {
+    position: relative;
+    width: 100%;
+    float: left;
+    min-height: 30px;
+}
+
+.detail_container .content .info_container
+.work_experience .content .work_experience_item {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    float: left;
+}
+
+.detail_container .content .info_container
+.work_experience .content .work_experience_item:not(:last-child) {
+    border-bottom: 1px solid #808080;
+}
+
+.detail_container .content .info_container
+.work_experience .content .work_experience_item .row {
+    position: relative;
+    width: 100%;
+    line-height: 30px;
+    float: left;
+    margin: 0;
+}
+
+.detail_container .content .info_container
+.work_experience .content .work_experience_item .row .time_container {
+    position: relative;
+    float: left;
+}
+
+.detail_container .content .info_container
+.work_experience .content .work_experience_item .row .company_name {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.detail_container .content .info_container
+.work_experience .content .work_experience_item .row .item {
+    margin-right: 15px;
+}
+
+.detail_container .content .info_container .education_experience {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.detail_container .content .info_container .education_experience .head {
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 2px solid #cbcdcc;
+}
+
+.detail_container .content .info_container .education_experience .head:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #2273b4;
+}
+
+.detail_container .content .info_container .education_experience .content {
+    position: relative;
+    width: 100%;
+    float: left;
+    min-height: 30px;
+}
+
+.detail_container .content .info_container
+.education_experience .content .education_experience_item {
+    position: relative;
+    width: 100%;
+    line-height: 30px;
+}
+
+.detail_container .content .info_container
+.education_experience .content .education_experience_item > span {
+    margin-right: 20px;
+}
+
+.detail_container .content .enclosure_container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.detail_container .content .enclosure_container .head {
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.detail_container .content .enclosure_container .content {
+    position: relative;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #2273b4;
+}
+
+.detail_container .content .enclosure_container .content .item {
+    position: relative;
+    width: 45%;
+    margin-right: 5%;
+    min-height: 60px;
+    border: 1px solid #808080;
+    margin-bottom: 10px;
+    padding: 3px;
+    /*310 /180*/
+}
+
+.detail_container .content .enclosure_container .content .item:nth-child(2n+1) {
+    clear: both;
+}
+
+.detail_container .content .enclosure_container .content .item img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.detail_container .content .leave_container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.detail_container .content .leave_container .head {
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.detail_container .content .leave_container .content {
+    position: relative;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #2273b4;
+}
+
+.detail_container .content .leave_container .content .row {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    line-height: 30px;
+}
+
+.detail_container .user_face_img {
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    width: 90px;
+    height: 105px;
+}

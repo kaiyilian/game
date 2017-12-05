@@ -1,0 +1,70 @@
+
+section.mxep_block.user_info_container {
+	background: url("../image/my/img_my_bg@2x.png") no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	width: 100%;
+	padding-top: 40px;
+}
+
+section.mxep_block.user_info_container .ui-icon-set {
+	position: absolute;
+	top: 10px;
+	left: 18px;
+}
+
+section.mxep_block.user_info_container .ui-icon-message {
+	position: absolute;
+	top: 3px;
+	right: 18px;
+	/*width: 32px;*/
+	/*height: 44px;*/
+	/*line-height: 44px;*/
+}
+
+section.mxep_block.user_info_container .ui-icon-message:before {
+	content: "";
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background: url("../image/my/ico_my_message@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+section.mxep_block.user_info_container .user_head_img img {
+	width: 80px;
+	height: 80px;
+	margin: auto;
+}
+
+section.mxep_block.user_info_container .user_name {
+	display: none;
+}
+
+section.mxep_block.user_info_container .login {
+	width: 100px;
+	border: 1px solid rgba(255,255,255,0.8);
+	border-radius: 5px;
+	line-height: 30px;
+	margin: 0 auto 10px;
+	color:#fff;
+}
+
+section.mxep_block.user_info_container .personal_info {
+	display: -webkit-box;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 5px 0;
+}
+
+section.mxep_block.user_info_container .personal_info .recharge:before {
+	background: url("../image/my/ico_my_chongzhi2@2x.png") no-repeat;
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;
+	margin: 3px auto;
+}
+
+.ui-list-link > li.contact_customer:after {
+	display: none;
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>首页</title>
+
+		<script src="../js/libs/jquery-2.1.1.min.js"></script>
+		<!--<script src="../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>-->
+		<!--frozenUI-->
+		<link href="../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<!--<script src="../plugins/frozenui-1.3.0/js/frozen.js"></script>-->
+		<!--swiper 轮播图-->
+		<link href="../plugins/Swiper-3.1.0/dist/css/swiper.min.css" rel="stylesheet">
+		<script src="../plugins/Swiper-3.1.0/dist/js/swiper.min.js"></script>
+		<!--文字上下轮播-->
+		<script src="../plugins/txt_scroll/js/scroll.js"></script>
+		<!--公共css-->
+		<link href="../css/font.css" rel="stylesheet">
+		<link href="../css/background.css" rel="stylesheet">
+		<link href="../css/common.css" rel="stylesheet">
+		<link href="../css/footer.css" rel="stylesheet">
+		<script src="../js/mxep.js"></script>
+		<!--本页面-->
+		<link href="../css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+		<i class="ui-icon-search" onclick="location.href='good_search/good_search.html'"></i>
+		<h1>
+				<i class="logo">
+						<img src="../image/index/img_index_logo@2x.png">
+				</i>
+		</h1>
+		<i class="icon_message"></i>
+</header>
+
+<footer class="ui-footer bg_white" style="border-top: 1px solid #e0e0e0;">
+
+		<div class="ui-row-flex ui-txt-center">
+				<style>
+						.tt {
+								background: url("../../assets/image/img_footer.png") no-repeat;
+								background-position: 5px 20px;
+						}
+				</style>
+				<div class="ui-col ui-txt-grey-4 active" data-href="index.html">
+						<i class="icon_img tt"></i>
+						<!--<i class="icon_img icon_img_1"></i>-->
+						<div class="ui-txt-line-height-24">首页</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="announced.html">
+						<i class="icon_img icon_img_2"></i>
+						<div class="ui-txt-line-height-24">揭晓</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="find.html">
+						<i class="icon_img icon_img_3"></i>
+						<div class="ui-txt-line-height-24">发现</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="shopping_cart.html">
+						<i class="icon_img icon_img_4"></i>
+						<div class="ui-txt-line-height-24">清单</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="my.html">
+						<i class="icon_img icon_img_5"></i>
+						<div class="ui-txt-line-height-24">我的</div>
+				</div>
+
+
+		</div>
+
+</footer>
+
+<section class="ui-container" style="float: left;width:100%;">
+
+		<section class="mxep_block bg_white">
+
+				<div class="swiper-container banner_img_list">
+						<div class="swiper-wrapper">
+
+								<div class="swiper-slide">
+                		<span>
+                		    <img id="a" src="../image/1.png"/>
+                		</span>
+								</div>
+
+								<div class="swiper-slide">
+                <span>
+                    <img id="fd" src="../image/2.png"/>
+                </span>
+								</div>
+
+								<div class="swiper-slide">
+                <span>
+                    <img id="d" src="../image/3.png"/>
+                </span>
+								</div>
+
+						</div>
+						<!-- 如果需要分页器 -->
+						<!--<div class="swiper-pagination"></div>-->
+						<!-- 如果需要导航按钮 -->
+						<!--<div class="swiper-button-prev"></div>-->
+						<!--<div class="swiper-button-next"></div>-->
+						<!-- 如果需要滚动条 -->
+						<!--<div class="swiper-scrollbar"></div>-->
+				</div>
+
+				<div class="ui-justify ui-whitespace">
+
+						<ul class="ui-row ui-txt-center ui-border-b f14 tab_bar_list">
+
+								<li class="ui-col ui-col-20 ui-txt-line-height-30"
+										data-href="category/good_category.html">
+										<div class="ui-icon">
+												<img src="../image/index/ico_index_sort@2x.png">
+										</div>
+										<div class="ui-txt-default">分类</div>
+								</li>
+
+								<li class="ui-col ui-col-20 ui-txt-line-height-30"
+										data-href="special_good/special_good.html">
+										<div class="ui-icon">
+												<img src="../image/index/ico_index_product@2x.png">
+										</div>
+										<div class="ui-txt-default">精选商品</div>
+								</li>
+
+								<li class="ui-col ui-col-20 ui-txt-line-height-30 ">
+										<div class="ui-icon">
+												<img src="../image/index/ico_index_dream@2x.png">
+										</div>
+										<div class="ui-txt-default">梦想转盘</div>
+								</li>
+
+								<li class="ui-col ui-col-20 ui-txt-line-height-30"
+										data-href="share/share_order_list.html">
+										<div class="ui-icon">
+												<img src="../image/index/ico_index_shaidan@2x.png">
+										</div>
+										<div class="ui-txt-default">晒单</div>
+								</li>
+
+								<li class="ui-col ui-col-20 ui-txt-line-height-30 "
+										data-href="sign/sign.html">
+										<div class="ui-icon">
+												<img src="../image/index/ico_index_signin@2x.png">
+										</div>
+										<div class="ui-txt-default">签到</div>
+								</li>
+						</ul>
+
+						<div class="ui-row  bonus_record_list_container">
+								<i class="icon">
+										<img src="../image/index/ico_index_speaker@2x.png">
+								</i>
+
+								<ul class="bonus_record_list ">
+
+										<li class="ui-nowrap ui-whitespace">
+												<span>恭喜</span>
+												<span class="user_nickname">“我是赌徒”</span>
+												<span>获得</span>
+												<span class="prize_name">
+														烦死了的风景独立思考放假了快速的减肥了多少
+														烦死了的风景独立思考放假了快速的减肥了多少
+												</span>
+										</li>
+
+										<li class="ui-nowrap ui-whitespace">
+												<span>恭喜</span>
+												<span class="user_nickname">“fdsaffs”</span>
+												<span>获得</span>
+												<span class="prize_name">
+														烦死了的风景独立思考放假了快速的减肥了多少
+														烦死了的风景独立思考放假了快速的减肥了多少
+												</span>
+										</li>
+
+								</ul>
+						</div>
+
+				</div>
+
+		</section>
+
+		<section class="mxep_block bg_white">
+
+				<div class="ui-row ui-whitespace ui-txt-line-height-50">
+
+						<h2 onclick="discount_good_list();">
+								<i class="icon_special_offer"></i>
+								<span class="ui-txt-bold">14点场</span>
+								<span class="ui-txt-muted f16">
+										<span class="">距开始</span>
+										<span class="time_count_down">09:23:11</span>
+								</span>
+								<span class="f_right f14" style="margin-right: 25px;color:#f75549;">
+										更多
+								</span>
+								<i class="ui-icon-arrow" style="position: absolute;right:15px;top:3px;color: #f75549;"></i>
+						</h2>
+
+				</div>
+
+				<ul class="ui-grid-trisect special_offer_good_list" style="padding-top: 0;">
+
+						<li data-id="1" onclick="discount_good_detail(this)">
+								<div class="ui-grid-item">
+										<div class="ui-grid-trisect-img">
+												<span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+										</div>
+										<div class="ui-txt-center f16 ui-txt-line-height-40">
+												<span class="deal_price" data-price="13">￥13</span>
+												<span class="marketed_price ui-txt-muted" data-price="66">￥66</span>
+										</div>
+								</div>
+						</li>
+
+						<li data-id="1" onclick="discount_good_detail(this)">
+								<div class="ui-grid-item">
+										<div class="ui-grid-trisect-img">
+												<span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+										</div>
+										<div class="ui-txt-center f16 ui-txt-line-height-40">
+												<span class="deal_price" data-price="13">￥13</span>
+												<span class="marketed_price ui-txt-muted" data-price="66">￥66</span>
+										</div>
+								</div>
+						</li>
+
+						<li data-id="1" onclick="discount_good_detail(this)">
+								<div class="ui-grid-item">
+										<div class="ui-grid-trisect-img">
+												<span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+										</div>
+										<div class="ui-txt-center f16 ui-txt-line-height-40">
+												<span class="deal_price" data-price="13">￥13</span>
+												<span class="marketed_price ui-txt-muted" data-price="66">￥66</span>
+										</div>
+								</div>
+						</li>
+
+				</ul>
+
+		</section>
+
+		<section class="mxep_block duobao_container">
+
+				<div class="ui-row ui-whitespace ui-txt-center ui-txt-line-height-50
+				bg_white announced_type_list">
+
+						<span class="ui-col ui-col-25 icon_img_1">
+								人气
+						</span>
+
+						<span class="ui-col ui-col-25 icon_img_2">
+								最新
+						</span>
+
+						<span class="ui-col ui-col-25 icon_img_3">
+								进度
+						</span>
+
+						<span class="ui-col ui-col-25 icon_img_4">
+								总需
+						</span>
+
+				</div>
+
+				<ul class="ui-grid-halve announced_good_list" style="padding-top: 0;">
+
+						<li class="" data-id="1">
+								<div class="bg_white ui-grid-item">
+
+										<div class="ui-grid-trisect-img">
+												<span class="good_img" style=""></span>
+												<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area ">十元专区</span>
+										</div>
+
+										<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+												商品民称商品民称商品民称商品民称商品民称
+												商品民称商品民称商品民称
+										</div>
+
+										<div class="good_process">
+												<div class="ui-row ui-txt-line-height-25 f14">
+														<span class="ui-txt-muted">揭晓进度</span>
+														<span class="ui-txt-red-1" data-process="50">50%</span>
+												</div>
+												<div class="ui-progress">
+														<span style="width:50%"></span>
+												</div>
+										</div>
+
+										<div class="icon_shopping_cart">
+												<img src="../image/ico_public_shoppingcart@2x.png">
+										</div>
+
+								</div>
+						</li>
+
+						<li class="" data-id="2">
+								<div class="bg_white ui-grid-item">
+
+										<div class="ui-grid-trisect-img">
+												<span class="good_img" style=""></span>
+										</div>
+
+										<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+												商品民称商品民称商品民称商品民称商品民称
+												商品民称商品民称商品民称
+										</div>
+
+										<div class="good_process">
+												<div class="ui-row ui-txt-line-height-25 f14">
+														<span class="ui-txt-muted">揭晓进度</span>
+														<span class="ui-txt-red-1" data-process="70">70%</span>
+												</div>
+												<div class="ui-progress">
+														<span style="width:70%"></span>
+												</div>
+										</div>
+
+										<div class="icon_shopping_cart">
+												<img src="../image/ico_public_shoppingcart@2x.png">
+										</div>
+
+								</div>
+						</li>
+
+						<li class="" data-id="3">
+								<div class="bg_white ui-grid-item">
+
+										<div class="ui-grid-trisect-img">
+												<span class="good_img" style=""></span>
+										</div>
+
+										<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+												商品民称商品民称商品民称商品民称商品民称
+												商品民称商品民称商品民称
+										</div>
+
+										<div class="good_process">
+												<div class="ui-row ui-txt-line-height-25 f14">
+														<span class="ui-txt-muted">揭晓进度</span>
+														<span class="ui-txt-red-1" data-process="50">50%</span>
+												</div>
+												<div class="ui-progress">
+														<span style="width:50%"></span>
+												</div>
+										</div>
+
+										<div class="icon_shopping_cart">
+												<img src="../image/ico_public_shoppingcart@2x.png">
+										</div>
+
+								</div>
+						</li>
+
+						<li class="" data-id="4">
+								<div class="bg_white ui-grid-item">
+
+										<div class="ui-grid-trisect-img">
+												<span class="good_img" style=""></span>
+												<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area ">
+														百元专区
+												</span>
+										</div>
+
+										<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+												商品民称商品民称商品民称商品民称商品民称
+												商品民称商品民称商品民称
+										</div>
+
+										<div class="good_process">
+												<div class="ui-row ui-txt-line-height-25 f14">
+														<span class="ui-txt-muted">揭晓进度</span>
+														<span class="ui-txt-red-1" data-process="50">50%</span>
+												</div>
+												<div class="ui-progress">
+														<span style="width:50%"></span>
+												</div>
+										</div>
+
+										<div class="icon_shopping_cart">
+												<img src="../image/ico_public_shoppingcart@2x.png">
+										</div>
+
+								</div>
+						</li>
+
+				</ul>
+
+		</section>
+
+</section>
+
+<script>
+
+		$(function () {
+				initSwiper();//初始化轮播图
+
+//				获奖信息 上下轮播
+				$(".bonus_record_list_container").myScroll({
+						speed: 60,  //滚动速度,值越大速度越慢
+						rowHeight: 30 //每行的高度
+				});
+
+				//进入分类 、精选商品、晒单。。。
+				$(".tab_bar_list").find("li").each(function () {
+						$(this).click(function () {
+
+								var href = $(this).attr("data-href");
+								if (href)
+										location.href = href;
+
+						});
+				});
+
+				//夺宝商品 类别click
+				$(".announced_type_list").find(".ui-col").each(function () {
+						$(this).click(function () {
+								//如果已经选中
+								if ($(this).hasClass("active")) {
+										$(this).removeClass("active");
+								}
+								else {
+										$(this).addClass("active").siblings(".ui-col").removeClass("active");
+								}
+						});
+				});
+
+				//夺宝商品 详情
+				$(".announced_good_list li").each(function () {
+						$(this).click(function () {
+								var id = $(this).attr("data-id");
+
+								location.href = "announced/duobao_info.html" +
+												"?good_id=1" +
+												"&announced_status=not_start" +
+												"&user_status=not_login";
+
+						});
+				});
+
+
+		});
+
+		//初始化轮播图
+		var initSwiper = function () {
+
+				var mySwiper = new Swiper('.banner_img_list', {
+						initialSlide: 1,//设定初始化时slide的索引。
+						direction: 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+						speed: 300,//滑动速度，即slider自动滑动开始到结束的时间（单位ms）
+						autoplay: 3000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
+						autoplayDisableOnInteraction: false,//用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+						grabCursor: true,//设置为true时，鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状。
+						setWrapperSize: true,//开启这个设定会在Wrapper上添加等于slides相加的宽高，在对flexbox布局的支持不是很好的浏览器中可能需要用到。
+						//上一个,下一个
+//						nextButton: '.swiper-button-next',
+//						prevButton: '.swiper-button-prev',
+						//pagination : '.swiper-pagination',
+						//prevSlideMessage: 'Previous slide',
+						//nextSlideMessage: 'Next slide',
+						//firstSlideMessage: 'This is the first slide',
+						//lastSlideMessage: 'This is the last slide',
+						//paginationBulletMessage:'Go to slide {{index}}',
+						slidesOffsetBefore: 0,//设定slide与左边框的预设偏移量（单位px）。
+						slidesOffsetAfter: 0,//设定slide与右边框的预设偏移量（单位px）。
+						freeMode: false,//默认为false   false：一次滑一个 true：滑到哪里算哪里
+						freeModeSticky: true,//使得freeMode也能自动贴合。 滑动模式下也可以贴合
+						//slidesPerView: 3,//一页 显示的个数
+						effect: 'slide',//slide的切换效果，默认为"slide"（位移切换），"fade"（淡入）"cube"（方块）"coverflow"（3d流）。
+						loop: true,
+						//// 如果需要分页器
+						//pagination: '.swiper-pagination',
+						//// 如果需要前进后退按钮
+						//nextButton: '.swiper-button-next',
+						//prevButton: '.swiper-button-prev',
+						//// 如果需要滚动条
+						//scrollbar: '.swiper-scrollbar',
+				})
+
+		};
+
+		//进入秒杀活动 列表
+		var discount_good_list = function () {
+				location.href = "discount/discount_good.html";
+		};
+
+
+		//进入秒杀活动 某个商品具体详情
+		var discount_good_detail = function (self) {
+				var id = $(self).attr("data-id");
+				location.href = "discount/discount_good_info.html" + "?id=" + id;
+		};
+
+</script>
+
+
+</body>
+</html>

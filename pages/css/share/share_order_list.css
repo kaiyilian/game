@@ -1,0 +1,62 @@
+.ui-header {
+	background-color: #FCFCFC;
+}
+
+.ui-header .icon_camera:before {
+	background: url("../../image/share_order/ico_share_takephoto@3x.png");
+	background-size: 100% 100%;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	width: 44px;
+	height: 44px;
+}
+
+section.mxep_block .share_order_list .share_order_item {
+	position: relative;
+	padding: 12px 15px;
+	margin-bottom: 20px;
+}
+
+/*section.mxep_block .share_order_list .share_order_item .ui-row {*/
+/*width: 100%;*/
+/*}*/
+section.mxep_block .share_order_list .share_order_item .user_info {
+	margin-bottom: 15px;
+}
+
+section.mxep_block .share_order_list .share_order_item .user_info .user_head_img {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+
+section.mxep_block .share_order_list .share_order_item .user_info .user_head_img img {
+	width: 100%;
+	height: 100%;
+}
+
+section.mxep_block .share_order_list .share_order_item .user_info .user_nickname {
+	margin-left: 10px;
+}
+
+section.mxep_block .share_order_list .share_order_item .user_info .share_time {
+
+}
+
+section.mxep_block .share_order_list .share_order_item .good_name {
+	width: 80%;
+}
+
+section.mxep_block .share_order_list .share_order_item .remark {
+	margin-top: 10px;
+}
+
+section.mxep_block .share_order_list .share_order_item .share_img_list {
+	padding: 10px 0 0;
+}
+
+section.mxep_block .share_order_list .share_order_item .share_img_list .ui-grid-trisect-img {
+	padding-top: 100%;
+}

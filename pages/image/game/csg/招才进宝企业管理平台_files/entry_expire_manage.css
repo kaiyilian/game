@@ -1,0 +1,8 @@
+
+.entry_expire_container .content table tbody tr.employee_item td.btn_operate {
+	width: 140px;
+}
+
+.entry_expire_container .content table tbody tr.employee_item td.btn_operate .btn {
+	margin-left: 8px;
+}

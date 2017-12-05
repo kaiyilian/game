@@ -1,0 +1,46 @@
+/* checkbox 颜色改变 */
+.ui-checkbox input:checked:before, .ui-checkbox-s input:checked:before {
+	color: #f75549;
+}
+
+header {
+	background-color: #f75549 !important;
+}
+
+.ui-header i {
+	color: #fff;
+}
+
+section.phone_bind_container section .mxep_block:first-child {
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+section.phone_bind_container section .ui-input {
+	height: 50px;
+}
+
+section.phone_bind_container section p {
+	position: relative;
+	line-height: 40px;
+	margin: 7px 12px;
+}
+
+section.phone_bind_container section .mxep_block:last-child p {
+	margin: 15px 0;
+}
+
+section.phone_bind_container section .mxep_block:last-child p a.user_agreement {
+	color: #f75549;
+}
+
+section.phone_bind_container section .ui-input .btn_countdown {
+	position: absolute;
+	right: 4px;
+	top: 0;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+
+

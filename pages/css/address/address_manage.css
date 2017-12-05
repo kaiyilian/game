@@ -1,0 +1,76 @@
+
+section.mxep_block .user_address_list:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: url("../../image/img_public_xinjian@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+section.mxep_block .user_address_list li {
+	position: relative;
+}
+
+section.mxep_block .user_address_list li .address_choose {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+}
+
+section.mxep_block .user_address_list li .address_choose.ui-icon-checked {
+	color: #fd7a44;
+}
+
+section.mxep_block .user_address_list li .icon_address_modify {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 4px;
+	bottom: 10px;
+	padding: 6px;
+}
+
+section.mxep_block .user_address_list li .icon_address_modify:before {
+	content: '';
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url("../../image/address/img_address_edit@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+}
+
+section.mxep_block .user_address_list li.active {
+	background-color: #fff4ee;
+}
+
+section.mxep_block .address_add {
+	position: relative;
+	color: #fd7a44;
+	margin-top: 40px;
+
+}
+
+section.mxep_block .address_add label {
+	position: relative;
+	display: block;
+	width: 130px;
+	margin: auto;
+	padding-left: 30px;
+}
+
+section.mxep_block .address_add label:before {
+	content: '';
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	background: url("../../image/address/img_address_add@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	left: 0;
+	top: 0;
+	margin: 5px;
+}

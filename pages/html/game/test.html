@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>幸运大转盘抽奖</title>
+		<style type="text/css">
+				/*reset*/
+				*{ padding:0; margin:0}
+				body{ height: 100%; width: 100%; font-size:12px; color:#333;}
+				ul{ list-style:none;}
+				/*demo*/
+				#box{ width:531px; height:531px; margin:50px auto;position:relative;
+						background:url(../../image/lottery/bg-lottery.png) no-repeat left top;}
+				#zhizhen{ width:174px; height:228px; position:absolute;
+						background:url(../../image/lottery/playbtn.png) no-repeat left top;
+						left:178.5px; z-index:999; cursor:pointer; top:132.5px;
+						transform-origin:87px 133px;}
+		</style>
+</head>
+<body>
+<!--幸运大转盘抽奖-->
+<div id="box">
+		<div id="zhizhen"></div>
+</div>
+</body>
+<script type="text/javascript">
+		window.onload=function(){
+				//幸运大转盘抽奖
+				//获得指针元素
+				var zhizhen=document.getElementById("zhizhen");
+				//存放间隔动画id，用来清除运动
+				var dbox=null;
+				//间隔动画所用时间，表示转动快慢
+				var dtime=1;
+				//角度，和css设置对应,初始为0
+				var deg=null;
+				//初始角度
+				var sdeg=0;
+				//由js设置默认角度
+				zhizhen.style.transform="rotate(" + sdeg + "deg)";
+				//变化增量
+				var cc=5;
+				//旋转基本圈数
+				var quan=6;
+				//多余角度
+				var odeg=null;
+				//停止时的角度
+				var stopdeg=null;
+				//区间奖项
+				var jiang=[
+						[1,51,"未中奖"], //未中奖
+						[52,102,"6等奖"],//6等奖
+						[103,153,"5等奖"],//5等奖
+						[154,203,"4等奖"],//4等奖
+						[204,251,"3等奖"],//3等奖
+						[252,307,"2等奖"],//2等奖
+						[307,360,"1等奖"]//1等奖
+				];
+				//可用次数
+				var cishu=6;
+				//奖项判定函数
+				function is(deg){
+						var res="未中奖";
+						for(var i=0;i<jiang.length;i++){
+								if(deg>=jiang[i][0] && deg<=jiang[i][1]){
+										res=jiang[i][2];
+								};
+						};
+						return res;
+				};
+				//是否在动画中
+				var able=false;
+				//概率
+				var gailv=[[938,"未中奖"],[18,"6等奖"],[14,"5等奖"],[12,"4等奖"],[8,"3等奖"],[6,"2等奖"],[4,"1等奖"]];
+				//开始到结束总时间
+				var xq=0;
+				//通过奖项设置额外角度的表现
+				function set(real){
+						var mindeg,maxdeg;
+						for(var i=0;i<jiang.length;i++){
+								if(real==jiang[i][2]){
+										mindeg=jiang[i][0];
+										maxdeg=jiang[i][1];
+								};
+						};
+						return mindeg+Math.floor(Math.random()*(maxdeg-mindeg+1));//生成min-max的随机数
+
+				};
+				//监听点击事件
+				zhizhen.onclick=function(){
+						if(!able){
+								if(cishu==0){//可用次数处理
+										alert("次数耗光，等待次啊次机会！");
+								}else{
+										cishu-=1;//次数减少
+										deg=sdeg;
+										cc=5;
+										xq=0;
+										var allarr=[];//长度1000，存放0-6 表示奖项
+										for(var i=0;i<gailv.length;i++){
+												for(var j=0;j<gailv[i][0];j++){
+														allarr.push(gailv[i][1]);
+												};
+										};
+										var real=allarr[Math.floor(Math.random()*1000)];
+										odeg=set(real);
+										stopdeg=quan*360+odeg;
+										alltime=stopdeg/cc*dtime;
+										dbox=setInterval(dong,dtime);
+								};
+						};
+
+				};
+				//大转盘转动函数
+				function dong(){
+						able=true;
+						deg+=cc;
+						if(deg>stopdeg){
+								clearInterval(dbox);
+								setTimeout(function(){
+										able=false;
+										alert(is(odeg));
+								},500)
+						}else{
+								if(deg%360==0){//判断第几圈
+										xq+=1;
+										if(xq==quan-1){//到最后一圈
+												cc=1;//增量变为1 变慢旋转
+										};
+										zhizhen.style.transform="rotate(" + deg + "deg)";
+								}else{
+										zhizhen.style.transform="rotate(" + deg + "deg)";
+								};
+						};
+				}
+
+		};
+</script>
+</html>

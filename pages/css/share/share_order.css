@@ -1,0 +1,40 @@
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+section.mxep_block .user_info_container .good_img {
+	width: 100px;
+	height: 100px;
+	margin: 10px 10px 10px 0;
+}
+
+section.mxep_block .user_info_container .user_info {
+	width: calc(100% - 110px);
+}
+
+section.mxep_block .share_order_img_list {
+	overflow-y: auto;
+}
+
+section.mxep_block .share_order_img_list .img_add {
+	width: 60px;
+	height: 60px;
+	background: url("../../image/wish/img_sent_takephoto@2x.png") no-repeat;
+	background-size: 100% 100%;
+	/*float: left;*/
+	margin-right: 15px;
+}
+
+section.mxep_block .share_order_img_list .img_item {
+	width: 60px;
+	height: 60px;
+	/*float: left;*/
+	margin-right: 15px;
+}
+
+.btn_submit {
+	margin: 40px auto;
+	/*background-color: ;*/
+}

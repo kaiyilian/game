@@ -1,0 +1,33 @@
+
+.icon_info:before {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0;
+	background: url("../../image/integral/ico_public_details@2x.png") no-repeat;
+	background-size: 100% 100%;
+	top: 10px;
+}
+
+.money_list li div {
+	color: #666;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-weight: 100;
+}
+
+.money_list li.active div {
+	color: #ff6e2b;
+	background-color: #ffefe7;
+	font-weight: bold;
+}
+
+.btn_pay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	line-height:36px;
+	width:100px;
+	border-radius: 3px;
+}

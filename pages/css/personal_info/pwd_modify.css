@@ -1,0 +1,24 @@
+
+section.mxep_block .ui-list li {
+	display: -webkit-box;
+}
+
+section.mxep_block .ui-list li span {
+	display: block;
+}
+
+section.mxep_block .ui-list li span.ui-txt {
+	width: 80px;
+}
+
+section.mxep_block .ui-list li span.ui-txt-info {
+	width: calc(100% - 80px);
+}
+
+section.mxep_block .ui-list li span.ui-txt-info input {
+	height: 36px;
+}
+
+section.mxep_block .btn_submit {
+	margin: 30px auto 0;
+}

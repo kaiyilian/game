@@ -1,0 +1,19 @@
+
+.ui-header {
+	background-color: #FCFCFC;
+}
+
+section.mxep_block .category_list li .ui-avatar {
+	background: none;
+	width: 30px;
+	height: 30px;
+	margin: 15px 15px 15px 0;
+}
+
+section.mxep_block .category_list li .ui-avatar span {
+
+}
+
+/*section.mxep_block .category_list li:not(:last-child) .ui-list-info {*/
+	/*border-bottom: 1px solid #e0e0e0;*/
+/*}*/

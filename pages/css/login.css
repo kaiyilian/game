@@ -1,0 +1,50 @@
+
+.ui-header {
+	background-color: #fd7a44;
+	color: #fff;
+}
+
+.ui-header i {
+	color: #fff;
+}
+
+section.mxep_block .user_login_info {
+	margin: 30px 10%;
+	width: 80%;
+}
+
+section.mxep_block .user_login_info .ui-row {
+	display: -webkit-box;
+}
+
+section.mxep_block .user_login_info .ui-row span {
+	display: block;
+}
+
+section.mxep_block .user_login_info .icon_phone:before {
+	background: url("../image/login/ico_login_phone@2x.png") no-repeat;
+	background-size: 100% 100%;
+	width: 26px;
+	height: 26px;
+	margin: 5px 3px;
+}
+
+section.mxep_block .user_login_info .user_account {
+	height: 36px;
+}
+
+section.mxep_block .user_login_info .icon_pwd:before {
+	background: url("../image/login/ico_login_code@2x.png") no-repeat;
+	background-size: 100% 100%;
+	width: 26px;
+	height: 26px;
+	margin: 5px 3px;
+}
+
+section.mxep_block .user_login_info .user_account_pwd {
+	height: 36px;
+}
+
+.btn_login, .btn_register {
+	margin: 10px auto;
+}

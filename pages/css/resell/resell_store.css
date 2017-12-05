@@ -1,0 +1,35 @@
+
+.ui-header {
+	background-color: #FCFCFC;
+}
+
+section.mxep_block .good_list {
+}
+
+section.mxep_block .good_list li {
+}
+
+section.mxep_block .good_list li .ui-list-img {
+	position: relative;
+	width: 100px;
+	height: 100px;
+
+}
+
+section.mxep_block .good_list li .ui-list-img .good_img {
+}
+
+section.mxep_block .good_list li .ui-list-info {
+}
+
+section.mxep_block .good_list li .ui-list-info .good_name {
+	height: 48px;
+}
+
+section.mxep_block .good_list li .ui-list-info .good_price {
+
+}
+
+section.mxep_block .good_list li .ui-list-info .btn_buy {
+	background-color: #fd7a44;
+}

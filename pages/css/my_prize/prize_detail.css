@@ -1,0 +1,125 @@
+
+section.mxep_block .prize_process_container .ui-list > li {
+	margin-left: 0;
+	position: relative;
+	padding-left: 40px;
+}
+
+section.mxep_block .prize_process_container .ui-list > li .icon {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #cccccc;
+	left: 13px;
+	top: 18px;
+}
+
+section.mxep_block .prize_process_container .ui-list > li:not(:first-child) .icon:before {
+	content: "";
+	width: 1px;
+	height: 18px;
+	background-color: #cccccc;
+	position: absolute;
+	top: -18px;
+	left: 6.5px;
+}
+
+section.mxep_block .prize_process_container .ui-list > li:not(:last-child) .icon:after {
+	content: "";
+	width: 1px;
+	height: 18px;
+	background-color: #cccccc;
+	position: absolute;
+	bottom: -18px;
+	left: 6.5px;
+}
+
+section.mxep_block .prize_process_container .ui-list > li .list_info {
+	width: 100%;
+	position: relative;
+}
+
+section.mxep_block .prize_process_container .ui-list > li .list_info .status_info .btn_list {
+}
+
+section.mxep_block .prize_process_container .ui-list > li .list_info .status_info .btn_list .btn_item {
+	line-height: 30px;
+	color: #fff;
+	border-radius: 3px;
+	float: left;
+	padding: 0 12px;
+	margin: 10px 5px 10px 0;
+
+}
+
+section.mxep_block .prize_process_container .ui-list > li .list_info .status_info .time {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+section.mxep_block .prize_process_container .ui-list > li .list_info .status_info .txt_prize_send {
+	color: #3ec674;
+}
+
+section.mxep_block .prize_process_container .ui-list > li.is_ok {
+	color: #3ec674;
+}
+
+section.mxep_block .prize_process_container .ui-list > li.is_ok .icon {
+
+	background-color: #3ec674;
+
+}
+
+section.mxep_block .prize_process_container .ui-list > li.is_ok:not(:first-child) .icon:before {
+
+	background-color: #3ec674;
+}
+
+section.mxep_block .prize_process_container .ui-list > li.is_ok:not(:last-child) .icon:after {
+
+	background-color: #3ec674;
+}
+
+section.mxep_block .prize_process_container .ui-list.default_process {
+	display: block;
+}
+section.mxep_block .prize_process_container .ui-list.resell_process {
+	display: none;
+}
+
+section.mxep_block .Alipay_account_container {
+	display: none;
+}
+
+section.mxep_block .user_address_container .user_address_info {
+	padding-left: 40px;
+	position: relative;
+}
+
+section.mxep_block .user_address_container .user_address_info:before {
+	content: "";
+	position: absolute;
+	top: 35px;
+	left: 8px;
+	width: 19px;
+	height: 26px;
+	background: url("../../image/ico_public_address@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+section.mxep_block .good_info_container .good_img {
+	width: 100px;
+	height: 100px;
+	margin: 10px 10px 10px 0;
+}
+
+section.mxep_block .good_info_container .good_img img {
+	width: 100%;
+	height: 100%;
+}
+
+section.mxep_block .good_info_container .good_info {
+	width: calc(100% - 110px);
+	padding-top: 15px;
+}

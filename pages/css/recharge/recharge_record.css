@@ -1,0 +1,27 @@
+
+.btn_recharge {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #666;
+	width: 80px;
+	text-align: center;
+}
+
+.recharge_record .recharge_time {
+	font-weight: 100;
+}
+
+.recharge_record .recharge_status {
+	color: #18b4ed;
+}
+
+.recharge_record .recharge_status.active {
+	color: #ff6e2b;
+}
+
+.recharge_count {
+	position: absolute;
+	right: 15px;
+	top: 35px;
+}

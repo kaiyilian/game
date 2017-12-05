@@ -1,0 +1,124 @@
+
+.ui-header {
+	background-color: #FCFCFC;
+}
+
+section.mxep_block .activity_rule {
+	background-color: #f27541;
+}
+
+section.mxep_block .activity_rule h1 {
+
+}
+
+section.mxep_block .activity_rule h5 {
+}
+
+section.mxep_block .activity_time_container .activity_time_list {
+	/*height: 80px;*/
+}
+
+section.mxep_block .activity_time_container .activity_time_list .swiper-slide {
+	padding: 10px 0 15px;
+}
+
+section.mxep_block .activity_time_container .activity_time_list .swiper-slide .item {
+	position: relative;
+	width: 65px;
+	height: 65px;
+	margin: auto;
+	padding: 10px 0;
+}
+
+section.mxep_block .activity_time_container .activity_time_list .swiper-slide.active .item {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #ff5265;
+}
+
+section.mxep_block .activity_time_container .activity_time_list .swiper-slide.active .item .activity_time {
+	color: #fff;
+}
+
+section.mxep_block .activity_time_container .activity_time_list .swiper-slide.active .item .activity_status {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+section.mxep_block .activity_time_container .activity_time_list .swiper-slide.active .item:after {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 15px;
+	background-color: #ff5265;
+	bottom: -15px;
+	left: 30px;
+}
+
+section.mxep_block .good_list {
+}
+
+section.mxep_block .good_list li {
+}
+
+section.mxep_block .good_list li .ui-list-img {
+	position: relative;
+	width: 100px;
+	height: 100px;
+
+}
+
+section.mxep_block .good_list li .ui-list-img .good_img {
+}
+
+section.mxep_block .good_list li .ui-list-img .icon_good_sold_out {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top: 0;
+	left: 0;
+	margin: 15px;
+	background: url("../../image/img_public_soldout@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+section.mxep_block .good_list li .ui-list-info {
+}
+
+section.mxep_block .good_list li .ui-list-info .good_name {
+	height: 48px;
+}
+
+section.mxep_block .good_list li .ui-list-info .good_price {
+
+}
+
+section.mxep_block .good_list li .ui-list-info .discount_number_of_people {
+	position: relative;
+	width: 100%;
+	/*height: 25px;*/
+	background-color: #dbdbdb;
+	color: #feaf91;
+	text-align: center;
+}
+
+section.mxep_block .good_list li .ui-list-info .discount_number_of_people .spn_item {
+	width: 100%;
+	height: 100%;
+	background-color: #ffefe7;
+	border: 1px solid #ffbc97;
+	color: #feaf91;
+	display: block;
+}
+
+section.mxep_block .good_list li .ui-list-info .discount_number_of_people .lack {
+	width: 50%;
+}
+
+section.mxep_block .good_list li .ui-list-info .btn_panic_buying {
+	background-color: #fd7a44;
+}
+
+section.mxep_block .good_list li.panic_buying_end .ui-list-info .btn_panic_buying {
+	background-color: #bfbfbf;
+}

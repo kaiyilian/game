@@ -1,0 +1,60 @@
+
+.ui-tab-nav li.current:after {
+	width: calc(100% - 20px);
+	left: 10px;
+}
+
+.ui-list {
+	background-color: transparent;
+}
+
+.ui-list > li {
+	display: block;
+	margin-left: 0;
+}
+
+.order_list .order_item .order_info {
+	/*padding: 10px 0;*/
+}
+
+.order_list .order_item .order_info .good_img {
+	width: 100px;
+	height: 100px;
+	margin: 10px 10px 10px 0;
+
+}
+
+.order_list .order_item .order_info .good_img span {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.order_list .order_item .order_info .good_info {
+	width: calc(100% - 110px);
+	padding-top: 15px;
+}
+
+.order_list .order_item .btn_list .btn {
+	position: relative;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	width: 46%;
+	margin-right: 4%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.order_list .order_item .btn_list .btn.btn_cancel {
+	background-color: #bbb;
+}
+
+.order_list .order_item .btn_list .btn.btn_del {
+	background-color: #bbb;
+}
+
+.order_list .order_item .btn_list .btn.btn_pay {
+	background-color: #ff6e2b;
+}

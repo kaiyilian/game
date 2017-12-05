@@ -1,0 +1,107 @@
+.ui-header {
+	background-color: #FCFCFC;
+}
+
+section.mxep_block .user_address_info {
+	padding: 10px 20px;
+}
+
+section.mxep_block .user_address_info:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: url("../../image/img_public_xinjian@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+section.mxep_block .user_address_info > .ui-row {
+	padding-left: 20px;
+}
+
+section.mxep_block .user_address_info .txt_default {
+	display: inline-block;
+	width: 30px;
+	height: 16px;
+	line-height: 16px;
+}
+
+section.mxep_block .user_address_info .user_address {
+	position: relative;
+}
+
+section.mxep_block .user_address_info .user_address:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 13px;
+	height: 16px;
+	background: url("../../image/ico_public_address@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+section.mxep_block .good-info {
+	display: -webkit-box;
+}
+
+section.mxep_block .good-info .good_img {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 10px 10px 10px 0;
+}
+
+section.mxep_block .good-info .good_img span {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+section.mxep_block .good-info .good_info {
+	-webkit-box-flex: 1;
+	/*-webkit-box-pack:center;*/
+	/*-webkit-box-orient:vertical;*/
+}
+
+section.mxep_block .good-info .good_info .good_name {
+}
+
+section.mxep_block .good-info .good_info .spinner {
+	width: 120px;
+	height: 36px;
+	margin-top: 10px;
+}
+
+section.mxep_block .good-info .good_info .spinner button {
+	width: 36px;
+}
+
+section.mxep_block .good-info .good_info .spinner input {
+	width: calc(100% - 72px);
+}
+
+section.mxep_block .discount_list {
+}
+
+section.mxep_block .discount_list > .ui-row {
+	position: relative;
+}
+
+section.mxep_block .discount_list .ui-row .ui-icon-arrow {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.ui-footer .btn_pay {
+	height: 36px;
+	line-height: 36px;
+	padding: 0 10px;
+	margin: 10px 0;
+	float: right;
+	border-radius: 3px;
+}

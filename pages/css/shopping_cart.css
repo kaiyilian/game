@@ -1,0 +1,138 @@
+
+section.mxep_block.not_shopping {
+	display: none;
+}
+
+section.mxep_block.not_shopping .icon_img img {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+section.mxep_block.not_shopping .btn_go {
+	width: 80px;
+	margin: 5px auto;
+}
+
+section.mxep_block.not_shopping .txt {
+	position: relative;
+	width: 145px;
+	margin: 0 auto;
+}
+
+section.mxep_block.not_shopping .txt:before {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.3);
+	left: 0;
+	top: 12px;
+}
+
+section.mxep_block.not_shopping .txt:after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.3);
+	right: 0;
+	top: 12px;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .ui-grid-trisect-img {
+	position: relative;
+	padding-top: 250px;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .ui-grid-trisect-img .good_img {
+	background-image: url(http://placeholder.qiniudn.com/190x284)
+}
+
+section.mxep_block.not_shopping .announced_good_list li .ui-grid-trisect-img .special_offer_area {
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	background: url("../image/index/img_index_lable@2x.png") no-repeat;
+	background-size: 100% 100%;
+	line-height: 40px;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .good_name {
+	padding: 0 10px;
+	height: 60px;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .announced_good_process {
+	padding: 0 10px 5px;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .announced_good_process .ui-progress {
+	position: relative;
+	width: 70%;
+	height: 15px;
+	border: 5px solid #fff;
+	border-left: 0;
+	border-right: 0;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .announced_good_process .ui-progress span {
+	background: #f75549;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .icon_shopping_cart {
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
+	width: 40px;
+	height: 40px;
+}
+
+section.mxep_block.not_shopping .announced_good_list li .icon_shopping_cart img {
+	width: 100%;
+	height: 100%;
+}
+
+section.mxep_block.already_shopping {
+	display: block;
+}
+
+section.mxep_block.already_shopping .shopping_cart_list li .ui-list-img {
+	width: 110px;
+	height: 110px;
+}
+
+section.mxep_block.already_shopping .shopping_cart_list li .ui-list-info .spinner {
+	float: none;
+	height: 30px;
+	width: 120px;
+	margin: 0;
+}
+
+section.mxep_block.already_shopping .shopping_cart_list li .ui-list-info .spinner button {
+	width: 30px;
+}
+
+section.mxep_block.already_shopping .shopping_cart_list li .ui-list-info .spinner input {
+	width: calc(100% - 60px);
+	color: #ff5265;
+}
+
+section.mxep_block.already_shopping .shopping_cart_list li .ui-list-info .spinner input.passive {
+	color: #666;
+}
+
+section.mxep_block.already_shopping .good_statistics {
+	position: fixed;
+	bottom: 60px;
+	left: 0;
+	width: 100%;
+}
+
+section.mxep_block.already_shopping .good_statistics .btn_calc {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	padding: 0 18px;
+	border-radius: 3px;
+}

@@ -1,0 +1,149 @@
+
+.container span {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+.container {
+}
+
+.container .content {
+}
+
+.container .content .Add_container {
+    position: relative;
+    width: 100%;
+    padding: 20px 20%;
+    background-color: #F3F3F4;
+    float: left;
+}
+
+.container .content .Add_container > .txt {
+    line-height: 34px;
+    width: 10%;
+    text-align: center;
+}
+
+.container .content .Add_container .name_add {
+    width: 70%;
+    margin: 0 10px;
+}
+
+.container .content .list {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    float: left;
+}
+
+.container .content .list .item {
+    position: relative;
+    width: 19%;
+    margin-right: 1%;
+    margin-bottom: 10px;
+    height: 42px;
+    /*line-height: 40px;*/
+    background-color: #F3F3F4;
+    border: 1px solid #F3F3F4;
+    border-radius: 3px;
+    padding: 0 60px 0 10px;
+}
+
+.container .content .list .item .name {
+    width: 98%;
+    heigth: 30px;
+    line-height: 30px;
+    position: relative;
+    top: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden; /* 超出部分不显示 */
+}
+
+.container .content .list .item .name input {
+    position: relative;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.container .content .list .item .operate {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 20px;
+}
+
+.container .content .list .item .operate span {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+.container .content .list .item .operate span:first-child {
+    margin-right: 10px;
+}
+
+.container .content .list .item .operate .btn_modify {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url("../../../image/icon_setting_modify.png") no-repeat;
+    background-size: 100% 100%;
+    margin-right: 10px;
+}
+
+.container .content .list .item .operate .btn_modify:hover {
+    background: url("../../../image/icon_setting_modify_active.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.container .content .list .item .operate .btn_del {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url("../../../image/icon_setting_del.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.container .content .list .item .operate .btn_del:hover {
+    background: url("../../../image/icon_setting_del_active.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.container .content .list .item .operate .btn_save {
+    background: url("../../../image/icon_setting_save.png") no-repeat;
+}
+
+.container .content .list .item .operate .btn_save:hover {
+    background: url("../../../image/icon_setting_save_active.png") no-repeat;
+}
+
+.container .content .list .item .operate .btn_cancel {
+    background: url("../../../image/icon_setting_cancel.png") no-repeat;
+}
+
+.container .content .list .item .operate .btn_cancel:hover {
+    background: url("../../../image/icon_setting_cancel_active.png") no-repeat;
+}
+
+@media screen and (max-width: 900px) {
+    .container .content .Add_container {
+        position: relative;
+        width: 100%;
+        padding: 20px 10%;
+        background-color: #F3F3F4;
+        float: left;
+    }
+
+}
+
+.positionModify .modal-body .form-group .col-xs-3 {
+    line-height: 34px;
+}

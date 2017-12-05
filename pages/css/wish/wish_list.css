@@ -1,0 +1,16 @@
+section.mxep_block .wish_list .wish_item .good_img_list .ui-col {
+	padding-right: 10px;
+}
+
+section.mxep_block .wish_list .wish_item .good_img_list .ui-col img {
+	/*width: 100px;*/
+	/*height: 100px;*/
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+section.mxep_block .btn_my_wish {
+	background-color: #ff6e2b;
+	margin: 30px auto 40px;
+}

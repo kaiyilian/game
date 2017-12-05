@@ -1,0 +1,222 @@
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.ui-header .ui-icon-search {
+	position: absolute;
+	left: 0;
+	color: #fff;
+}
+
+.ui-header {
+	background-color: #f75549;
+}
+
+.ui-header .logo img {
+	width: 100px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.ui-header .icon_message {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	width: 45px;
+	height: 45px;
+	background: url("../image/index/ico_index_message@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.mxep_block {
+	margin-bottom: 20px;
+}
+
+section.mxep_block .banner_img_list .swiper-wrapper {
+	width: 100%;
+	height: 200px;
+}
+
+section.mxep_block ul.tab_bar_list {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+section.mxep_block ul.tab_bar_list .ui-col .ui-icon {
+	width: 44px;
+	height: 44px;
+	/*line-height: 30px;*/
+	margin: auto;
+}
+
+section.mxep_block .bonus_record_list_container {
+	position: relative;
+	width: 100%;
+	height: 46px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section.mxep_block .bonus_record_list_container .icon {
+	position: relative;
+	width: 26px;
+	height: 22px;
+	float: left;
+	top: 4px;
+	left: 2px;
+}
+
+section.mxep_block .bonus_record_list_container .bonus_record_list {
+	position: relative;
+
+	/*height: 30px;*/
+	/*overflow: hidden;*/
+	/*padding-left: 10px;*/
+	float: left;
+	width: calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+
+}
+
+section.mxep_block .bonus_record_list_container .bonus_record_list li {
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+
+section.mxep_block .icon_special_offer {
+	position: relative;
+	display: block;
+	width: 65px;
+	height: 20px;
+	top: 15px;
+	background: url("../image/index/img_index_miaosha@2x.png") no-repeat;
+	background-size: 100% 100%;
+	float: left;
+	margin: 0 5px;
+}
+
+section.mxep_block .special_offer_good_list li .deal_price {
+	color: #f75549;
+}
+
+section.mxep_block .special_offer_good_list li .marketed_price {
+	position: relative;
+}
+
+section.mxep_block .special_offer_good_list li .marketed_price:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.5)
+}
+
+section.mxep_block .announced_type_list {
+	margin-bottom: 10px;
+}
+
+section.mxep_block .announced_type_list .ui-col {
+	/*padding-left: 20px;*/
+	position: relative;
+}
+
+section.mxep_block .announced_type_list .ui-col:before {
+	content: '';
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	top: 11px;
+	left: 1px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+section.mxep_block .announced_type_list .ui-col.icon_img_1:before {
+	background-image: url("../image/index/ico_index_popularity_default@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.icon_img_2:before {
+	background-image: url("../image/index/ico_index_last_default@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.icon_img_3:before {
+	background-image: url("../image/index/ico_index_schedule_default@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.icon_img_4:before {
+	background-image: url("../image/index/ico_index_demand_default@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.active.icon_img_1:before {
+	background-image: url("../image/index/ico_index_popularity@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.active.icon_img_2:before {
+	background-image: url("../image/index/ico_index_last@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.active.icon_img_3:before {
+	background-image: url("../image/index/ico_index_schedule@2x.png");
+}
+
+section.mxep_block .announced_type_list .ui-col.active.icon_img_4:before {
+	background-image: url("../image/index/ico_index_demand@2x.png");
+}
+
+section.mxep_block .announced_good_list li .ui-grid-trisect-img {
+	position: relative;
+}
+
+section.mxep_block .announced_good_list li .ui-grid-trisect-img .good_img {
+	background-image: url(http://placeholder.qiniudn.com/190x284)
+}
+
+section.mxep_block .announced_good_list li .ui-grid-trisect-img .special_offer_area {
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	background: url("../image/index/img_index_lable@2x.png") no-repeat;
+	background-size: 100% 100%;
+	line-height: 40px;
+}
+
+section.mxep_block .announced_good_list li .good_name {
+	padding: 0 10px;
+	height: 60px;
+}
+
+section.mxep_block .announced_good_list li .good_process {
+	padding: 0 10px 5px;
+}
+
+section.mxep_block .announced_good_list li .good_process .ui-progress {
+	position: relative;
+	width: 70%;
+	height: 15px;
+	border: 5px solid #fff;
+	border-left: 0;
+	border-right: 0;
+}
+
+section.mxep_block .announced_good_list li .good_process .ui-progress span {
+	background: #f75549;
+}
+
+section.mxep_block .announced_good_list li .icon_shopping_cart {
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
+	width: 40px;
+	height: 40px;
+}

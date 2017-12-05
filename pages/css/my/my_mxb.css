@@ -1,0 +1,53 @@
+
+.ui-icon-return {
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.btn_recharge {
+	position: absolute;
+	right: 15px;
+	bottom: 20px;
+	width: 100px;
+}
+
+.ui-tab-nav li.current {
+	color: #ff6e2b;
+	border-bottom: none;
+	position: relative;
+}
+
+.ui-tab-nav li.current:after {
+	content: "";
+	width: calc(100% - 100px);
+	height: 2px;
+	background-color: #ff6e2b;
+	left: 50px;
+	bottom: 0;
+	position: absolute;
+	display: block;
+}
+
+.mxb_income_record li {
+	position: relative;
+}
+
+.mxb_income_record li .mxb_income_count {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+
+.mxb_use_record li {
+	position: relative;
+}
+
+.mxb_use_record li .mxb_use_count {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+
+

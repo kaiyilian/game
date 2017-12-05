@@ -1,0 +1,17 @@
+
+.record_list tbody tr td.db_time {
+}
+
+.record_list tbody tr td .btn_search_no {
+	text-decoration: underline;
+	color: #18b4ed;
+}
+
+table thead th:after {
+	display: none;
+}
+
+table tbody tr td:after {
+	display: none;
+
+}

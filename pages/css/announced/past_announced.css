@@ -1,0 +1,41 @@
+.past-announced-css .bg_fd7a44 {
+	background-color: #fd7a44;
+}
+
+.past-announced-css .bg_fff4ee {
+	background-color: #fff4ee;
+}
+
+.past-announced-css .bg_f0f0f0 {
+	background-color: #f0f0f0;
+}
+
+.past-announced-css .clr_fd7a44 {
+	color: #fd7a44;
+}
+
+.past-announced-css section.mxep_block .ongoing_activity_no {
+	margin-right: 8px;
+}
+
+.past-announced-css section.mxep_block .past_announced_list .past_announced_item {
+}
+
+.past-announced-css section.mxep_block .past_announced_list .past_announced_item .winner_info {
+	display: -webkit-box;
+	/*height: 91px;*/
+}
+
+.past-announced-css section.mxep_block .past_announced_list .past_announced_item .winner_info .user_head_img {
+	-webkit-box-align: center;
+	display: -webkit-box;
+}
+
+.past-announced-css section.mxep_block .past_announced_list .past_announced_item .winner_info .user_head_img img {
+	width: 40px;
+	height: 40px;
+}
+
+.past-announced-css section.mxep_block .past_announced_list .past_announced_item .winner_info .prize_info {
+	padding-left: 10px;
+}

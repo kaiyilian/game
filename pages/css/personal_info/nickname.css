@@ -1,0 +1,13 @@
+
+.btn_save {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	line-height: 25px;
+	color: #666;
+}
+
+.user_nickname {
+	height: 50px;
+	padding: 0 20px;
+}

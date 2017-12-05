@@ -1,0 +1,39 @@
+/* checkbox 颜色改变 */
+.ui-checkbox input:checked:before, .ui-checkbox-s input:checked:before {
+	color: #f75549;
+}
+
+header {
+	background-color: #f75549 !important;
+}
+
+.ui-header i {
+	color: #fff;
+}
+
+section.register_container section .mxep_block:first-child {
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+section.register_container section .ui-input {
+	height: 50px;
+}
+
+section.register_container section p {
+	position: relative;
+	line-height: 40px;
+	margin: 7px 12px;
+}
+
+section.register_container section .mxep_block:last-child p {
+	margin: 15px 0;
+}
+
+section.register_container section .mxep_block:last-child p a.user_agreement {
+	color: #f75549;
+}
+
+
+
+

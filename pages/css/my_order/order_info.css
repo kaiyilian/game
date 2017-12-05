@@ -1,0 +1,73 @@
+
+.user_address_info {
+	padding-left: 40px;
+}
+
+.user_address_info:before {
+	content: "";
+	position: absolute;
+	width: 19px;
+	height: 25px;
+	top: 30px;
+	left: 8px;
+	background: url("../../image/ico_public_address@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+}
+
+.user_address_info:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	top: 0;
+	left: 0;
+	background: url("../../image/img_public_xinjian@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+}
+
+.user_address_info .user_name {
+	margin-right: 10px;
+}
+
+.good_list .good_item .good_img {
+	width: 100px;
+	height: 100px;
+	margin: 10px 10px 10px 0;
+
+}
+
+.good_list .good_item .good_img span {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.good_list .good_item .good_info {
+	width: calc(100% - 110px);
+	padding-top: 15px;
+}
+
+.ui-footer .btn_list .btn {
+	position: relative;
+	line-height: 36px;
+	top: 10px;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	width: 45%;
+	margin-left: 3%;
+}
+
+.ui-footer .btn_list .btn.btn_cancel {
+	background-color: #bbb;
+}
+
+.ui-footer .btn_list .btn.btn_del {
+	background-color: #bbb;
+}
+
+.ui-footer .btn_list .btn.btn_pay {
+	background-color: #ff6e2b;
+}

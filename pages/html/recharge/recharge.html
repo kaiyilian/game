@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>充值</title>
+
+		<!--<script src="../../js/libs/jquery-2.1.1.min.js"></script>-->
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/recharge/recharge.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">充值</h1>
+
+</header>
+
+<footer class="ui-footer bg_white">
+
+		<span class="ui-txt-line-height-56" style="margin-left:20px;">冲20 加送 1元</span>
+		<div class="ui-txt-center ui-txt-white bg-orange btn_pay">确认支付</div>
+
+</footer>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-position-relative ui-whitespace-10-25 bg-orange ui-txt-white
+				ui-txt-line-height-30" style="padding-left: 50px;">
+
+						<i class="icon_info"></i>
+						支付1元人民币后，系统将充值成1梦想币，即1元=1梦想币。梦想币可用于购买
+						平台商品(全价商品除外)，充值的款项无法退回。
+
+				</div>
+
+				<div class="ui-row">
+
+						<div class="ui-row ui-txt-line-height-50 ui-whitespace">
+								请选择充值金额
+						</div>
+
+						<div class="bg_white">
+
+								<ul class="ui-grid-trisect ui-txt-line-height-36 ui-txt-center money_list">
+
+										<li class="item active">
+												<div>20</div>
+										</li>
+
+										<li class="item">
+												<div>50</div>
+										</li>
+
+										<li class="item">
+												<div>100</div>
+										</li>
+
+										<li class="item">
+												<div>200</div>
+										</li>
+
+										<li class="item">
+												<div>500</div>
+										</li>
+
+										<li class="item btn_other">
+												<div>其他金额</div>
+										</li>
+
+								</ul>
+
+						</div>
+
+
+				</div>
+
+		</section>
+
+</section>
+<!--<div class="ui-input"></div>-->
+<script>
+
+		$(function () {
+
+				$(".money_list li").each(function () {
+
+						$(this).tap(function () {
+								$(this).addClass("active").siblings(".item").removeClass("active");
+
+								//点击选中 充值金额
+								if (!$(this).hasClass("btn_other")) {
+										$(this).siblings(".btn_other").html("<div>其他金额</div>");
+								}
+
+								//选择  其他金额
+								if ($(this).hasClass("btn_other")) {
+
+										var $npt = $("<input>").addClass("ui-input").addClass("other_money")
+														.attr("maxlength", "3")
+														.attr("placeholder", "其他金额")
+														.css({
+																"background": "transparent",
+																"text-align": "center",
+																"color": "#ff6e2b"
+														});
+										//禁止输入数字
+										$npt.keyup(function () {
+												this.value = this.value.replace(/\D/g, '')
+										});
+										//移除焦点 显示数字
+										$npt.blur(function () {
+												var val = $(this).val();
+												if (val) {
+														val = "<div>" + val + "</div>";
+												}
+												else {
+														val = "<div>其他金额</div>";
+														$(this).closest(".btn_other").removeClass("active");
+												}
+
+												$(this).closest(".btn_other").html(val);
+										});
+
+										if ($(this).find(".other_money").length == 0) {
+												$(this).find("div").html($npt);
+												$npt.focus();
+										}
+
+								}
+
+						});
+
+
+				});
+
+
+		});
+
+</script>
+
+</body>
+</html>

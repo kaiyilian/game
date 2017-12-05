@@ -1,0 +1,8 @@
+
+.ui-list {
+	background-color: inherit;
+}
+
+.ui-arrowlink:before {
+	right: 0;
+}

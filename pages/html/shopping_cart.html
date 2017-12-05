@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>购物清单</title>
+
+		<script src="../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--加减插件-->
+		<link href="../plugins/spinner/css/jquery.spinner.css" rel="stylesheet">
+		<script src="../plugins/spinner/js/jquery.spinner.js"></script>
+		<!--公共css-->
+		<link href="../css/common.css" rel="stylesheet">
+		<link href="../css/font.css" rel="stylesheet">
+		<link href="../css/background.css" rel="stylesheet">
+		<link href="../css/footer.css" rel="stylesheet">
+		<script src="../js/mxep.js"></script>
+		<!--本页面-->
+		<link href="../css/shopping_cart.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">购物清单</h1>
+
+</header>
+
+<footer class="ui-footer bg_white" style="border-top: 1px solid #e0e0e0;">
+
+		<div class="ui-row-flex ui-txt-center">
+
+				<div class="ui-col ui-txt-grey-4 " data-href="index.html">
+						<i class="icon_img icon_img_1"></i>
+						<div class="ui-txt-line-height-24">首页</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="announced.html">
+						<i class="icon_img icon_img_2"></i>
+						<div class="ui-txt-line-height-24">揭晓</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="find.html">
+						<i class="icon_img icon_img_3"></i>
+						<div class="ui-txt-line-height-24">发现</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 active" data-href="shopping_cart.html">
+						<i class="icon_img icon_img_4"></i>
+						<div class="ui-txt-line-height-24">清单</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="my.html">
+						<i class="icon_img icon_img_5"></i>
+						<div class="ui-txt-line-height-24">我的</div>
+				</div>
+
+
+		</div>
+
+</footer>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block not_shopping">
+
+				<div class="mxep_block pd-20-15 f14">
+
+						<div class="ui-margin-tb ui-txt-center icon_img">
+								<img src="../image/shopping_cart/img_list_default@2x.png">
+						</div>
+
+						<div class="ui-row ui-txt-center ui-txt-line-height-25">
+								您还没有清单哦！
+						</div>
+
+						<div class="bg-orange ui-txt-white ui-txt-line-height-30 ui-txt-center
+						 ui-border-radius-3 btn_go">
+								去逛逛
+						</div>
+
+				</div>
+
+				<div class="mxep_block ui-margin-b-20">
+
+						<div class="ui-row ui-txt-center ui-txt-line-height-25 txt">
+								热门推荐
+						</div>
+
+						<ul class="ui-grid-halve announced_good_list">
+
+								<li data-id="1">
+										<div class="bg_white ui-grid-item">
+
+												<div class="ui-grid-trisect-img">
+														<span class="good_img" style=""></span>
+														<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area">
+																十元专区
+														</span>
+												</div>
+
+												<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+														商品民称商品民称商品民称商品民称商品民称
+														商品民称商品民称商品民称
+												</div>
+
+												<div class="announced_good_process">
+														<div class="ui-row ui-txt-line-height-25 f14">
+																<span class="ui-txt-muted">揭晓进度</span>
+																<span class="ui-txt-red-1" data-process="50">50%</span>
+														</div>
+
+														<div class="ui-progress">
+																<span style="width:50%"></span>
+														</div>
+												</div>
+
+												<div class="icon_shopping_cart">
+														<img src="../image/ico_public_shoppingcart@2x.png">
+												</div>
+
+										</div>
+								</li>
+
+								<li data-id="1">
+										<div class="bg_white ui-grid-item">
+
+												<div class="ui-grid-trisect-img">
+														<span class="good_img" style=""></span>
+														<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area">
+																十元专区
+														</span>
+												</div>
+
+												<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+														商品民称商品民称商品民称商品民称商品民称
+														商品民称商品民称商品民称
+												</div>
+
+												<div class="announced_good_process">
+														<div class="ui-row ui-txt-line-height-25 f14">
+																<span class="ui-txt-muted">揭晓进度</span>
+																<span class="ui-txt-red-1" data-process="50">50%</span>
+														</div>
+
+														<div class="ui-progress">
+																<span style="width:50%"></span>
+														</div>
+												</div>
+
+												<div class="icon_shopping_cart">
+														<img src="../image/ico_public_shoppingcart@2x.png">
+												</div>
+
+										</div>
+								</li>
+
+								<li data-id="1">
+										<div class="bg_white ui-grid-item">
+
+												<div class="ui-grid-trisect-img">
+														<span class="good_img" style=""></span>
+														<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area">
+																十元专区
+														</span>
+												</div>
+
+												<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+														商品民称商品民称商品民称商品民称商品民称
+														商品民称商品民称商品民称
+												</div>
+
+												<div class="announced_good_process">
+														<div class="ui-row ui-txt-line-height-25 f14">
+																<span class="ui-txt-muted">揭晓进度</span>
+																<span class="ui-txt-red-1" data-process="50">50%</span>
+														</div>
+
+														<div class="ui-progress">
+																<span style="width:50%"></span>
+														</div>
+												</div>
+
+												<div class="icon_shopping_cart">
+														<img src="../image/ico_public_shoppingcart@2x.png">
+												</div>
+
+										</div>
+								</li>
+
+								<li data-id="1">
+										<div class="bg_white ui-grid-item">
+
+												<div class="ui-grid-trisect-img">
+														<span class="good_img" style=""></span>
+														<span class="ui-txt-center f18 ui-txt-white ui-txt-bold special_offer_area">
+																十元专区
+														</span>
+												</div>
+
+												<div class="ui-txt-line-height-30 ui-nowrap-multi ui-whitespace good_name">
+														商品民称商品民称商品民称商品民称商品民称
+														商品民称商品民称商品民称
+												</div>
+
+												<div class="announced_good_process">
+														<div class="ui-row ui-txt-line-height-25 f14">
+																<span class="ui-txt-muted">揭晓进度</span>
+																<span class="ui-txt-red-1" data-process="50">50%</span>
+														</div>
+
+														<div class="ui-progress">
+																<span style="width:50%"></span>
+														</div>
+												</div>
+
+												<div class="icon_shopping_cart">
+														<img src="../image/ico_public_shoppingcart@2x.png">
+												</div>
+
+										</div>
+								</li>
+
+						</ul>
+
+				</div>
+
+		</section>
+
+		<section class="mxep_block already_shopping">
+
+				<ul class="ui-list shopping_cart_list">
+
+						<li class="ui-border-b">
+								<div class="ui-list-img">
+										<span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+								</div>
+
+								<div class="ui-list-info">
+
+										<div class="ui-nowrap-multi ui-txt-line-height-25 good_name">
+												商品名称商品名称商品名称商品名称商品名称
+												商品名称商品名称商品名称商品名称商品名称
+										</div>
+
+										<div class="ui-row margin-tb-5 f14 ui-txt-grey-6 ui-txt-line-height-20 attend_count"
+												 data-surplus_count="33">
+												总需
+												<span class="total_attend_count">5800</span>
+												人次，剩余
+												<span class="surplus_attend_count">134</span>
+										</div>
+
+										<input class="good_count" disabled>
+
+								</div>
+
+						</li>
+
+						<li class="">
+								<div class="ui-list-img">
+										<span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+								</div>
+
+								<div class="ui-list-info">
+
+										<div class="ui-nowrap-multi ui-txt-line-height-25 good_name">
+												商品名称商品名称商品名称商品名称商品名称
+												商品名称商品名称商品名称商品名称商品名称
+										</div>
+
+										<div class="ui-row margin-tb-5 f14 ui-txt-grey-6 ui-txt-line-height-20 attend_count"
+												 data-surplus_count="12">
+												总需
+												<span class="total_attend_count">5800</span>
+												人次，剩余
+												<span class="surplus_attend_count">12</span>
+										</div>
+
+										<input class="good_count" >
+
+								</div>
+
+						</li>
+
+				</ul>
+
+				<div class="bg_white ui-row pd-5-15 good_statistics">
+
+						<div class="ui-row ui-txt-line-height-30">
+
+								共
+								<span class="total_count">3</span>
+								件商品，
+								总计
+								<span class="ui-txt-pink f18 ui-txt-bold total_price" data-count="188">
+										188梦想币
+								</span>
+
+						</div>
+
+						<div class="ui-row f12 ui-txt-grey-6 ui-txt-line-height-20">
+								夺宝有风险，参加须谨慎
+						</div>
+
+						<div class="bg-orange ui-txt-white ui-txt-line-height-30 btn_calc">
+								结算
+						</div>
+
+				</div>
+
+		</section>
+
+</section>
+
+<script>
+		$(function () {
+
+				//去逛逛
+				$(".btn_go").tap(function () {
+						location.href = "announced.html";
+				});
+
+				//查看 揭晓商品 详情
+				$("ul.announced_good_list > li").each(function () {
+						$(this).tap(function () {
+								var id = $(this).attr("data-id");
+
+								location.href = "announced/announced_info.html?id=" + id;
+						});
+				});
+
+				//购物车 商品数量初始化
+				$("ul.shopping_cart_list li").each(function () {
+
+						//剩余数量
+						var max = $(this).find(".attend_count").attr("data-surplus_count");
+
+						$(this).find(".good_count").spinner({
+								min: 1,
+								max: max,
+								blur:function(e){
+									console.log(12);
+			                        console.log($(e.target).val());
+			                    },
+			                    add:function(e){
+			                    	console.log("add");
+			                    },
+						})
+
+				});
+
+				//商品结算
+				$(".btn_calc").tap(function () {
+						location.href = "shopping_cart/shopping_cart_calc.html"
+				});
+		});
+
+</script>
+
+</body>
+</html>

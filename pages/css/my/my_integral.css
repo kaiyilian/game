@@ -1,0 +1,77 @@
+
+
+
+.ui-icon-return {
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.icon-rule {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.icon-rule:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 0;
+	top: 0;
+	background: url("../../image/integral/ico_public_details@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.btn_exchange_mxb {
+	position: absolute;
+	right: 15px;
+	bottom: 20px;
+	width: 100px;
+}
+
+
+.ui-tab-nav li.current {
+	color: #ff6e2b;
+	border-bottom: none;
+	position: relative;
+}
+
+.ui-tab-nav li.current:after {
+	content: "";
+	width: calc(100% - 100px);
+	height: 2px;
+	background-color: #ff6e2b;
+	left: 50px;
+	bottom: 0;
+	position: absolute;
+	display: block;
+}
+
+.income_record li {
+	position: relative;
+}
+
+.income_record li .income_count {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+
+.use_record li {
+	position: relative;
+}
+
+.use_record li .use_count {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+
+
+
+
+

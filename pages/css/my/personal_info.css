@@ -1,0 +1,33 @@
+
+section.mxep_block .user_head_img {
+	margin-right: 20px;
+}
+
+section.mxep_block .user_head_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.user_head_img_container.ui-arrowlink:before {
+	color: #fff;
+}
+
+.ui-list-link > li {
+	display: block;
+}
+
+.ui-list-link > li:first-child .f_right {
+	margin-right: 20px;
+}
+
+.ui-list-link > li:first-child:after {
+	display: none;
+}
+
+.ui-list-link > li .f_right {
+	margin-right: 40px;
+}
+
+.user_phone {
+	margin-right: 20px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>发现</title>
+
+		<script src="../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../css/font.css" rel="stylesheet">
+		<link href="../css/background.css" rel="stylesheet">
+		<link href="../css/common.css" rel="stylesheet">
+		<link href="../css/footer.css" rel="stylesheet">
+		<script src="../js/mxep.js"></script>
+		<!--本页面-->
+		<link href="../css/find.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+		<h1 class="ui-txt-default name">发现</h1>
+</header>
+
+<footer class="ui-footer bg_white">
+
+		<div class="ui-row-flex ui-txt-center">
+
+				<div class="ui-col ui-txt-grey-4 " data-href="index.html">
+						<i class="icon_img icon_img_1"></i>
+						<div class="ui-txt-line-height-24">首页</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="announced.html">
+						<i class="icon_img icon_img_2"></i>
+						<div class="ui-txt-line-height-24">揭晓</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 active" data-href="find.html">
+						<i class="icon_img icon_img_3"></i>
+						<div class="ui-txt-line-height-24">发现</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="shopping_cart.html">
+						<i class="icon_img icon_img_4"></i>
+						<div class="ui-txt-line-height-24">清单</div>
+				</div>
+
+				<div class="ui-col ui-txt-grey-4 " data-href="my.html">
+						<i class="icon_img icon_img_5"></i>
+						<div class="ui-txt-line-height-24">我的</div>
+				</div>
+
+
+		</div>
+
+</footer>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-arrowlink ui-margin-b-20 bg_white share_order">
+						<div class="ui-list-thumb">
+								<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+						</div>
+						<div class="ui-list-info">
+								<div class="ui-nowrap ui-txt-line-height-30">晒单分享</div>
+								<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+						</div>
+				</div>
+
+				<ul class="ui-list ui-list-link ui-margin-b-20 func_list">
+
+						<li class="ui-border-t" data-href="game/ysz.html">
+								<div class="ui-list-thumb">
+										<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+								</div>
+								<div class="ui-list-info">
+										<div class="ui-nowrap ui-txt-line-height-30">摇色子</div>
+										<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="game/csg1.html">
+								<div class="ui-list-thumb">
+										<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+								</div>
+								<div class="ui-list-info">
+										<div class="ui-nowrap ui-txt-line-height-30">猜水果</div>
+										<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="game/dzp.html">
+								<div class="ui-list-thumb">
+										<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+								</div>
+								<div class="ui-list-info">
+										<div class="ui-nowrap ui-txt-line-height-30">梦想转盘</div>
+										<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="resell/resell_store.html">
+								<div class="ui-list-thumb">
+										<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+								</div>
+								<div class="ui-list-info">
+										<div class="ui-nowrap ui-txt-line-height-30">转卖商城</div>
+										<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">运气好的不要不要的，想不中都难！</div>
+								</div>
+						</li>
+
+						<li class="ui-border-t" data-href="wish/wish_list.html">
+								<div class="ui-list-thumb">
+										<span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+								</div>
+								<div class="ui-list-info">
+										<div class="ui-nowrap ui-txt-line-height-30">心愿单</div>
+										<div class="ui-txt-info ui-txt-line-height-20 f14 ui-txt-muted">
+												讲出你梦想中的商品
+										</div>
+								</div>
+						</li>
+
+				</ul>
+
+		</section>
+
+
+</section>
+
+
+<script>
+
+		$(function () {
+
+				$(".func_list > li").each(function () {
+
+						$(this).tap(function () {
+
+								var href = $(this).data("href");
+								if (href)
+										location.href = href;
+
+						});
+
+				});
+
+				//晒单分享
+				$(".share_order").tap(function () {
+						location.href = "share/share_order.html";
+				});
+		});
+
+
+</script>
+
+
+</body>
+</html>

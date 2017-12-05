@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>晒单分享</title>
+
+		<!--<script src="../../js/libs/jquery-2.1.1.min.js"></script>-->
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--<script src="../../js/libs/touch.js"></script>-->
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/share/share_order_list.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();" style="color:#333;"></i>
+		<h1 class="ui-txt-default name">晒单分享</h1>
+		<i class="ico_img icon_camera"></i>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="share_order_list">
+
+						<div class="bg_white share_order_item">
+
+								<div class="ui-row ui-txt-line-height-50 user_info">
+
+										<span class="user_head_img f_left">
+												<img src="../../image/34.png">
+										</span>
+
+										<span class="user_nickname">会飞的雨</span>
+
+										<span class="ui-txt-muted f12 f_right share_time">2016-02-12 21:00</span>
+
+								</div>
+
+								<div class="ui-row ui-nowrap ui-txt-grey-4 ui-txt-line-height-20 f14 good_name">
+										平板電腦8.4寸 平板電腦8.4寸 平板電腦8.4寸 平板電腦8.4寸
+										平板電腦8.4寸 平板電腦8.4寸
+								</div>
+
+								<div class="ui-row ui-txt-grey-4 ui-txt-line-height-20 f14">
+										<span>期号：</span>
+										<span class="activity_no">14343232423</span>
+								</div>
+
+								<div class="ui-row ui-txt-grey-6 ui-txt-line-height-20 f14 remark">
+										哈哈，一不小心抽到了。。
+								</div>
+
+								<div class="ui-row">
+
+										<ul class="ui-grid-trisect share_img_list">
+												<li>
+														<div class="ui-grid-trisect-img">
+																<img src="http://placeholder.qiniudn.com/190x284">
+														</div>
+												</li>
+
+												<li>
+														<div class="ui-grid-trisect-img">
+																<img src="http://placeholder.qiniudn.com/190x284">
+														</div>
+												</li>
+
+												<li>
+														<div class="ui-grid-trisect-img">
+																<img src="http://placeholder.qiniudn.com/190x284">
+														</div>
+												</li>
+
+										</ul>
+
+								</div>
+
+						</div>
+
+						<div class="bg_white share_order_item">
+
+								<div class="ui-row ui-txt-line-height-50 user_info">
+
+										<span class="user_head_img f_left">
+												<img src="../../image/34.png">
+										</span>
+
+										<span class="user_nickname">会飞的雨</span>
+
+										<span class="ui-txt-muted f12 f_right share_time">2016-02-12 21:00</span>
+
+								</div>
+
+								<div class="ui-row ui-nowrap ui-txt-grey-4 ui-txt-line-height-20 f14 good_name">平板電腦 8.4寸</div>
+
+								<div class="ui-row ui-txt-grey-4 ui-txt-line-height-20 f14">
+										<span>期号：</span>
+										<span class="activity_no">14343232423</span>
+								</div>
+
+								<div class="ui-row ui-txt-grey-6 ui-txt-line-height-20 f14 remark">
+										哈哈，一不小心抽到了一不小心抽到了一不小心抽到了一不小心抽到了一不小心抽到了
+										一不小心抽到了一不小心抽到了。。
+								</div>
+
+								<div class="ui-row">
+
+										<ul class="ui-grid-trisect share_img_list">
+												<li>
+														<div class="ui-grid-trisect-img">
+																<img src="http://placeholder.qiniudn.com/190x284">
+														</div>
+												</li>
+
+												<li>
+														<div class="ui-grid-trisect-img">
+																<img src="http://placeholder.qiniudn.com/190x284">
+														</div>
+												</li>
+
+												<li>
+														<div class="ui-grid-trisect-img">
+																<img src="http://placeholder.qiniudn.com/190x284">
+														</div>
+												</li>
+
+										</ul>
+
+								</div>
+
+						</div>
+
+				</div>
+
+		</section>
+
+</section>
+
+<script type="text/javascript">
+
+		$(function () {
+
+				//查看订单详情
+				$(".share_order_list .share_order_item").each(function () {
+
+						$(this).tap(function () {
+								location.href = "share_order_detail.html";
+						});
+
+				});
+		});
+
+</script>
+
+</body>
+</html>

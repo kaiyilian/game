@@ -1,0 +1,45 @@
+
+section.mxep_block .icon_info {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0;
+	background: url("../../image/integral/ico_public_details@2x.png") no-repeat;
+	background-size: 100% 100%;
+	top: 20px;
+}
+
+section.mxep_block .good_info_container {
+}
+
+section.mxep_block .good_info_container .ui-row .good_img {
+	width: 100px;
+	height: 100px;
+	margin: 10px 10px 10px 0;
+}
+
+section.mxep_block .good_info_container .ui-row .good_img img {
+	width: 100%;
+	height: 100%;
+}
+
+section.mxep_block .good_info_container .ui-row .good_name {
+	width: calc(100% - 110px);
+	height: 50px;
+}
+
+section.mxep_block .alipay_container .ui-row input {
+	height: 30px;
+	text-align: right;
+	font-size: 14px;
+}
+
+.resell_method {
+	width: 133px;
+	overflow: hidden;
+}
+
+.resell_method select {
+	border: 0;
+}

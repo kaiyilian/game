@@ -1,0 +1,184 @@
+/* 去除 input[type='search'] 自带的 删除按钮 */
+::-webkit-search-cancel-button {
+	display: none;
+}
+
+.ui-header-positive {
+	background-color: #fffadf;
+	padding: 0;
+	/*height: 55px;*/
+}
+
+.ui-header-positive i {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.ui-header-positive .ui-searchbar-wrap {
+	height: 100%;
+}
+
+.ui-header-positive .ui-searchbar-wrap .ui-searchbar {
+	height: 35px;
+}
+
+.ui-header-positive .ui-searchbar-wrap .ui-searchbar input {
+	color: #bbb;
+}
+
+.ui-searchbar-wrap .ui-searchbar-cancel {
+	color: #bbb;
+}
+
+.ui-header-positive .ui-searchbar-wrap .icon_shopping_cart {
+	display: none;
+	margin: 0 12px 0 10px;
+}
+
+.ui-header-positive .ui-searchbar-wrap .icon_shopping_cart:before {
+	content: '';
+	position: relative;
+	width: 44px;
+	height: 44px;
+	display: block;
+	background: url("../../image/img_details_shopping@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.ui-header-positive .ui-searchbar-wrap .icon_shopping_cart .shopping_cart_good_count {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	top: 2px;
+	right: 10px;
+	border-radius: 50%;
+	padding: 0;
+}
+
+section.mxep_block {
+	background-color: #fff;
+	padding: 20px 18px 0;
+}
+
+section.mxep_block .icon_hot {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url("../../image/search/ico_search_hot@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	float: left;
+	margin: 3px;
+}
+
+section.mxep_block .icon_lately {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url("../../image/search/ico_search_history@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	float: left;
+	margin: 3px;
+}
+
+section.mxep_block .ui-label-list {
+	margin: 0;
+	padding: 12px 0 0;
+}
+
+section.mxep_block .ui-label-list label {
+	height: 25px;
+	line-height: 25px;
+	background-color: #eff3f6;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-label:before {
+		border: 0;
+	}
+}
+
+section.mxep_block .history_none {
+	display: none;
+}
+
+section.mxep_block .clear_history {
+	width: 130px;
+	margin: 10px auto;
+}
+
+section.mxep_block .clear_history .icon_clear {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url("../../image/search/ico_search_hot@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	float: left;
+	margin: 3px;
+}
+
+section.good_search_result {
+	padding: 0;
+	display: none;
+}
+
+section.good_search_result .good_search_result_txt {
+	background-color: #fff4ee;
+}
+
+section.good_search_result .good_list li .ui-list-img {
+	width: 100px;
+	height: 100px;
+}
+
+section.good_search_result .good_list li .ui-list-img .special_offer_area {
+	background: url("../../image/index/img_index_lable@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 66px;
+	height: 30px;
+	line-height: 30px;
+}
+
+section.good_search_result .good_list li .ui-list-info {
+	display: block;
+}
+
+section.good_search_result .good_list li .ui-list-info .good_name {
+	position: relative;
+	height: 50px;
+	line-height: 25px;
+	margin: 5px 0;
+}
+
+section.good_search_result .good_list li .ui-list-info .good_crowd-funding_process {
+	position: relative;
+	width: 70%;
+	height: 40px;
+	padding: 5px 0;
+}
+
+section.good_search_result .good_list li .ui-list-info .good_crowd-funding_process .ui-progress {
+
+	margin: 3px 0;
+}
+
+section.good_search_result .good_list li .ui-list-info .good_crowd-funding_process .good_crowd-funding_count {
+	line-height: 20px;
+}
+
+section.good_search_result .good_list li .ui-list-info .icon_shopping_cart:before {
+	background: url("../../image/ico_public_shoppingcart@2x.png");
+	background-size: 100% 100%;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+

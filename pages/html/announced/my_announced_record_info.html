@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>夺宝详情</title>
+
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--<script src="../../js/mxep.js"></script>-->
+		<!--本页面-->
+		<link href="../../css/announced/my_announced_record_info.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">夺宝详情</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-position-relative ui-whitespace-10-25 bg-orange ui-txt-white
+				ui-txt-line-height-30">
+
+						<div class="good_name">
+								商品名称商品名称商品名称商品名称商品名称
+								商品名称商品名称商品名称商品名称
+								商品名称商品名称商品名称
+						</div>
+
+						<div class="ui-row">
+								本期期号：
+								<span class="activity_no">3243242342342</span>
+						</div>
+
+				</div>
+
+				<div class="ui-row">
+
+						<div class="ui-row ui-txt-line-height-50 ui-whitespace f14 ui-txt-bold">
+								我已参与
+								<span class="attend_count" data-count="5">5人次</span>
+								，以下是所有夺宝记录
+						</div>
+
+						<div class="bg_white ui-all-whitespace">
+
+								<table class="ui-table ui-txt-line-height-40 f14 record_list">
+										<thead class="ui-border-b">
+										<tr>
+												<th>夺宝时间</th>
+												<th>参与人次</th>
+												<th>操作</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+												<td class="db_time">
+														2016-03-12 12:11:38
+												</td>
+												<td class="attend_count" data-count="1">
+														<span class="ui-txt-clr-ff6e2b">1</span>
+														人次
+												</td>
+												<td class="operate">
+														<span class="btn_search_no">查看号码</span>
+												</td>
+										</tr>
+										<tr>
+												<td class="db_time">
+														2016-03-12 12:11:38
+												</td>
+												<td class="attend_count" data-count="1">
+														<span class="ui-txt-clr-ff6e2b">1</span>
+														人次
+												</td>
+												<td class="operate">
+														<span class="btn_search_no">查看号码</span>
+												</td>
+										</tr>
+										<tr>
+												<td class="db_time">
+														2016-03-12 12:11:38
+												</td>
+												<td class="attend_count" data-count="1">
+														<span class="ui-txt-clr-ff6e2b">1</span>
+														人次
+												</td>
+												<td class="operate">
+														<span class="btn_search_no">查看号码</span>
+												</td>
+										</tr>
+
+										</tbody>
+								</table>
+						</div>
+
+
+				</div>
+
+		</section>
+
+</section>
+
+<div class="ui-dialog">
+		<div class="ui-dialog-cnt">
+				<div class="ui-dialog-bd">
+						<div>
+								<h4>标题</h4>
+								<div>内容</div>
+						</div>
+				</div>
+				<div class="ui-dialog-ft ui-btn-group">
+						<button type="button" data-role="button" class="select" id="dialogButton<%=i%>">关闭</button>
+				</div>
+		</div>
+</div>
+
+<script>
+
+		$(function () {
+
+				$(".record_list tbody tr").each(function () {
+
+						//查看 参加的号码
+						$(this).find(".btn_search_no").tap(function () {
+
+								var dia = $.dialog({
+										title: '',
+										content: '2334324132，13434324324',
+										button: ["关闭"]
+								});
+
+//								dia.on("dialog:action", function (e) {
+//										console.log(e.index)
+//								});
+//								dia.on("dialog:hide", function (e) {
+//										console.log("dialog hide")
+//								});
+
+						});
+
+				});
+
+		});
+
+</script>
+
+</body>
+</html>

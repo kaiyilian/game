@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>我的心愿</title>
+
+		<script src="../../js/libs/jquery-2.1.1.min.js"></script>
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--<script src="../../js/libs/touch.js"></script>-->
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<!--本页面-->
+		<link href="../../css/wish/my_wish.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">我的心愿</h1>
+
+</header>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="ui-all-whitespace bg_white ui-margin-b-20 wish_info">
+
+						<div class="ui-border-radius-3 wish_item">
+								<input type="text" name="" value="" class="ui-input" placeholder="输入心愿商品名称">
+						</div>
+
+						<div class="ui-border-radius-3 wish_item">
+								<input type="text" name="" value="" class="ui-input" placeholder="商品链接地址(选填)">
+						</div>
+
+						<div class="ui-border-radius-3 wish_item">
+								<textarea class="ui-textarea ui-txt-line-height-30"
+													placeholder="描述商品规格、颜色及要求(100字以内)" maxlength="100"></textarea>
+						</div>
+
+				</div>
+
+				<div class="bg_white ui-all-whitespace wish_good_img_list">
+						<div class="img_add" onclick="imgModalShow()"></div>
+				</div>
+
+				<div class="ui-txt-line-height-44 ui-txt-center ui-txt-white ui-width-8 bg-orange
+				ui-border-radius-3 btn_submit">提交</div>
+
+		</section>
+
+</section>
+
+<script type="text/javascript">
+
+		//点击弹出选择框
+		var imgModalShow = function () {
+
+				if ($(".wish_good_img_list").find(".img_upload").length > 0) {
+						$(".wish_good_img_list").find(".img_upload").remove();
+				}
+
+				var $input = $("<input>").addClass("img_upload").hide();
+				$input.attr("type", "file");
+				$input.change(function () {
+						ChooseImg(this);
+				});
+
+				$input.click();
+
+
+		};
+		//选择图片
+		var ChooseImg = function (self) {
+				if (self.files) {
+						for (var i = 0; i < self.files.length; i++) {
+								var file = self.files[i];
+								//判断是否是图片格式
+								if (/\.(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG|BMP)$/.test(file.name)) {
+
+										if (file.size > 2 * 1024 * 1024) {
+
+												alert('您所选择的档案大小超过了上传上限 2M！\n不允许您上传喔！');
+
+										}
+										else {
+//												UploadImg(file.name, file);
+												var url = null;
+												if (window.createObjectURL != undefined) {
+														url = window.createObjectURL(file)
+												} else if (window.URL != undefined) {
+														url = window.URL.createObjectURL(file)
+												} else if (window.webkitURL != undefined) {
+														url = window.webkitURL.createObjectURL(file)
+												}
+
+//												alert(url)
+												var $div = $("<div>").addClass("img_item");
+												$div.css("background", "url(" + url + ") no-repeat");
+												$div.css("background-size", "100% 100%");
+												$(".wish_good_img_list").append($div);
+
+										}
+								}
+								else {
+										alert("请上传图片");
+
+								}
+						}
+				}
+		};
+		//调用接口 上传文件
+		var UploadImg = function (filename, fileContent) {
+				var formData = new FormData();
+				var userid = sessionStorage.userid;//用户id
+				formData.append(filename, fileContent);//图片文件
+				formData.append(userid, sessionStorage.userid);//用户id
+				$.ajax({
+						type: "POST",
+						url: "/Upload/UploadImg", //FileUploads
+						data: formData,
+						processData: false,
+						contentType: false,
+						success: function (result) {
+								//alert(result)
+								var file = eval("(" + result + ")");
+								var fileid = file.FileId;//
+								var fileurl = file.FileURL;
+								//alert(fileurl)
+
+								var img = "<img fileid='" + fileid + "' src='" + fileurl + "' />";
+								if (current_img == "logo") {
+										$("#clogo").html(img);
+								}
+								if (current_img == "picurl") {
+										$("#cpicture").html(img);
+								}
+
+						},
+						error: function (msg) {
+								//alert(msg.status)
+								if (confirm("系统故障,请重新登陆")) {
+										location.href = "/Login.html";
+								}
+						}
+				});
+		};
+
+
+</script>
+
+</body>
+</html>

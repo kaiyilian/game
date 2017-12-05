@@ -1,0 +1,55 @@
+
+section.mxep_block .announced_good_list li .ui-grid-trisect-img {
+	position: relative;
+}
+
+section.mxep_block .announced_good_list li .ui-grid-trisect-img .good_img {
+	background-image: url(http://placeholder.qiniudn.com/190x284)
+}
+
+section.mxep_block .announced_good_list li .ui-grid-trisect-img .special_offer_area {
+	position: absolute;
+	display: block;
+	width: 120px;
+	height: 40px;
+	top: 0;
+	left: 0;
+	background: url("../image/index/img_index_lable@2x.png") no-repeat;
+	background-size: 100% 100%;
+	line-height: 40px;
+	z-index: 2;
+}
+
+section.mxep_block .announced_good_list li .info {
+	padding: 5px 8px;
+}
+
+section.mxep_block .announced_good_list li .good_name {
+	padding: 0 8px;
+}
+
+section.mxep_block .announced_good_list li .ico_img:before {
+	background: url("../image/announced/ico_announced_time@3x.png") no-repeat;
+	background-size: 100% 100%;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 6px;
+}
+
+section.mxep_block .announced_good_list li .count_down {
+	display: block;
+}
+
+section.mxep_block .announced_good_list li .activity_result {
+	padding: 5px 8px;
+	background-color: #fff4ee;
+}
+
+section.mxep_block .announced_good_list li .activity_result .ui-row {
+	display: -webkit-box;
+}
+
+section.mxep_block .announced_good_list li .activity_result .ui-row span {
+	display: block;
+}

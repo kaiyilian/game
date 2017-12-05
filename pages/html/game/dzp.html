@@ -1,0 +1,260 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>抽奖</title>
+
+    <!--<script src="../../js/libs/jquery-2.1.1.min.js"></script>-->
+    <!--<script src="../../js/libs/zepto.min.js"></script>-->
+    <!--<script src="lottery/js/zepto.min.js"></script>-->
+    <script src="lottery/js/zepto.min.js"></script>
+    <script src="../../js/libs/kinerLottery.js"></script>
+    <!--frozenUI-->
+    <link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+    <script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+    <!--公共css-->
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/font.css" rel="stylesheet">
+    <link href="../../css/background.css" rel="stylesheet">
+    <!--<script src="../../js/map.js"></script>-->
+    <!--大转盘-->
+    <link href="../../css/game/kinerLottery.css" rel="stylesheet">
+    <!--<script src="../../js/libs/kinerLottery.js"></script>-->
+
+</head>
+
+<body>
+
+<style>
+
+    .bg_fbba03 {
+        background-color: #fbba03;
+    }
+
+    .bg_fdeee6 {
+        background-color: #fdeee6;
+    }
+
+    .bg_fd7b44 {
+        background-color: #fd7a44;
+    }
+
+    .ui-icon-return {
+        color: #fff;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+    .ui-icon-share {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        color: #fff;
+    }
+
+    .box .inner {
+        background: url(../../image/game/dzp/lotteryBtn.png) no-repeat;
+        background-size: auto 100px;
+    }
+
+    .my_dream_pieces {
+        background-color: #fbba03;
+        padding: 8px 12px;
+        border-radius: 30px;
+        width: 150px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .prize_record_list .winner_name,
+    .prize_record_list .prize_name {
+        color: #fd7a44;
+    }
+
+    .game_rule_txt {
+        /*display: block;*/
+        width: 100px;
+        padding: 5px 12px;
+        text-align: center;
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+
+    .game_rule_list {
+        color: #666666;
+    }
+</style>
+
+<section class="ui-container ui-content">
+
+    <section class="mxep_block bg_fdeee6">
+
+        <div class="ui-whitespace-15-25 ui-position-relative bg-fd7a44 ui-txt-white">
+
+            <i class="ui-icon-return" onclick="history.back();"></i>
+            <i class="ui-icon-share"></i>
+
+            <div class="ui-txt-center ui-margin-b-30">梦想转盘</div>
+
+            <div id="box" class="box">
+                <div class="outer KinerLottery KinerLotteryContent">
+                    <img src="../../image/game/dzp/lotteryContent.png">
+                </div>
+                <div class="inner KinerLotteryBtn start">
+                    <!--<img src="../../image/game/dzp/lotteryBtn.png">-->
+                </div>
+            </div>
+
+            <div class="my_dream_pieces">
+                我的梦想碎片
+            </div>
+
+        </div>
+
+        <div class="pd-10-15 ui-position-relative ">
+
+            <div class="prize_record_list_container">
+                <div class="txt ui-txt-line-height-40 ui-txt-center bg_fbba03 ui-txt-white">近期中奖记录</div>
+
+                <ul class="prize_record_list ui-txt-line-height-36 ui-txt-center bg_white">
+
+                    <li class="ui-border-b">
+                        <span>恭喜</span>
+                        <span class="winner_name">XXXXX</span>
+                        <span>获得</span>
+                        <span class="prize_name">食用油一瓶</span>
+                    </li>
+
+                    <li class="ui-border-b">
+                        <span>恭喜</span>
+                        <span class="winner_name">XXXXX</span>
+                        <span>获得</span>
+                        <span class="prize_name">食用油一瓶</span>
+                    </li>
+
+                    <li class="ui-border-b">
+                        <span>恭喜</span>
+                        <span class="winner_name">XXXXX</span>
+                        <span>获得</span>
+                        <span class="prize_name">食用油一瓶</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="pd-10-15 ui-position-relative ">
+
+            <div class="txt game_rule_txt bg_fd7b44 ui-txt-white">
+                游戏规则
+            </div>
+
+            <ul class=" game_rule_list ui-txt-line-height-24 f14">
+
+                <li>
+                    1.每次抽奖消耗500积分。
+                </li>
+
+                <li>
+                    2.用户平台，每天可以2次免费抽奖。
+                </li>
+
+                <li>
+                    3.中的积分，梦想币，立即充值到您的账户。
+                </li>
+
+                <li>
+                    4.获得一定的商品碎片，可以兑换实物商品，兑换后请与平台联系。
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </section>
+
+</section>
+
+
+<script>
+
+    /**
+     * 根据转盘旋转角度判断获得什么奖品
+     * @param deg
+     * @returns {*}
+     */
+    var whichAward = function (deg) {
+
+        if ((deg > 330 && deg <= 360) || (deg > 0 && deg <= 30)) { //10M流量
+            return "三网通流量 10M";
+        } else if ((deg > 30 && deg <= 90)) { //IPhone 7
+            return "iPhone7";
+        } else if (deg > 90 && deg <= 150) { //30M流量
+            return "三网通流量 30M";
+        } else if (deg > 150 && deg <= 210) { //5元话费
+            return "话费5元";
+        } else if (deg > 210 && deg <= 270) { //IPad mini 4
+            return "ipad mini4";
+        } else if (deg > 270 && deg <= 330) { //20元话费
+            return "话费20元";
+        }
+
+    }
+
+
+    var KinerLottery = new KinerLottery({
+        rotateNum: 8, //转盘转动圈数
+        body: "#box", //大转盘整体的选择符或zepto对象
+        direction: 0, //0为顺时针转动,1为逆时针转动
+
+        disabledHandler: function (key) {
+
+            switch (key) {
+                case "noStart":
+                    alert("活动尚未开始");
+                    break;
+                case "completed":
+                    alert("活动已结束");
+                    break;
+            }
+
+        }, //禁止抽奖时回调
+
+        clickCallback: function () {
+
+            //此处访问接口获取奖品
+            function random() {
+                return Math.floor(Math.random() * 360);
+            }
+
+
+            this.goKinerLottery(random());
+
+        }, //点击抽奖按钮,再次回调中实现访问后台获取抽奖结果,拿到抽奖结果后显示抽奖画面
+
+        KinerLotteryHandler: function (deg) {
+
+            alert("恭喜您获得:" + whichAward(deg));
+
+
+        } //抽奖结束回调
+    });
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+.duobao-info-css .bg_fd7a44 {
+	background-color: #fd7a44;
+}
+
+.duobao-info-css .bg_fff4ee {
+	background-color: #fff4ee;
+}
+
+.duobao-info-css .bg_f0f0f0 {
+	background-color: #f0f0f0;
+}
+
+.duobao-info-css .clr_fd7a44 {
+	color: #fd7a44;
+}
+
+.duobao-info-css section.mxep_block .ui-icon-return {
+	position: absolute;
+	background-color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	left: 10px;
+	top: 10px;
+	z-index: 2;
+	color: #333;
+}
+
+.duobao-info-css section.mxep_block .ui-icon-return:before {
+	position: relative;
+	top: -1px;
+	left: 2px;
+}
+
+.duobao-info-css section.mxep_block .ui-icon-shoppingCart {
+	position: absolute;
+	border-radius: 50%;
+	right: 52px;
+	top: 2px;
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+}
+
+.duobao-info-css section.mxep_block .ui-icon-shoppingCart:before {
+	content: "";
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("../../image/img_details_shopping@2x.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.duobao-info-css section.mxep_block .ui-icon-share {
+	position: absolute;
+	border-radius: 50%;
+	right: 10px;
+	top: 5px;
+	z-index: 2;
+}
+
+.duobao-info-css section.mxep_block .announced_status_container {
+}
+
+.duobao-info-css section.mxep_block .announced_status_container > .ui-row {
+	display: none;
+
+}
+
+.duobao-info-css section.mxep_block .announced_status_container .announced_not_start_info {
+	/*display: block;*/
+}
+
+.duobao-info-css section.mxep_block .announced_status_container .announced_not_start_info
+.ui-row.announced_process_container .ui-progress {
+	height: 6px;
+	border-radius: 8px;
+}
+
+.duobao-info-css section.mxep_block .user_status_container .user_status {
+	background-color: #f0f0f0;
+	border-radius: 3px;
+	line-height: 30px;
+	margin: 10px auto;
+	display: none;
+}
+
+.duobao-info-css section.mxep_block .user_status_container .ui-row.not_login {
+	text-align: center;
+	/*display: block;*/
+}
+
+.duobao-info-css section.mxep_block .user_status_container .ui-row.not_login .clr_login {
+	display: -webkit-inline-box;
+	float: none;
+	color: #ff6e2b;
+	text-decoration: underline;
+}
+
+.duobao-info-css section.mxep_block .user_status_container .ui-row.not_attend {
+	/*display: block;*/
+	text-align: center;
+}
+
+.duobao-info-css section.mxep_block .user_status_container .ui-row.attended {
+	display: block;
+}
+
+.duobao-info-css section.mxep_block.buy_full_price_container .btn_full_purchase {
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	padding: 3px 12px;
+}
+
+.duobao-info-css section.mxep_block .other_list li .ui-avatar {
+	background: none;
+	width: 30px;
+	height: 30px;
+}
+
+.duobao-info-css section.mxep_block .attend_record_list li .ui-avatar {
+	width: 45px;
+	height: 45px;
+	position: relative;
+	overflow: inherit;
+}
+
+.duobao-info-css section.mxep_block .attend_record_list li:not(:last-child) .ui-avatar:after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 20px;
+	background-color: #bbb;
+	left: 22px;
+	bottom: -20px;
+}
+
+.duobao-info-css section.mxep_block.announced_operate {
+}
+
+.duobao-info-css section.mxep_block.announced_operate > .ui-row {
+	display: none;
+}
+
+.duobao-info-css section.mxep_block.announced_operate .announced_not_start {
+	/*display: block;*/
+}
+
+.duobao-info-css section.mxep_block.announced_operate .announced_not_start .btn_buy,
+.duobao-info-css section.mxep_block.announced_operate .announced_not_start .btn_join_list {
+	width: 40%;
+	margin: 0 5%;
+	padding: 8px 0;
+	text-align: center;
+}
+
+.duobao-info-css section.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+.duobao-info-css section.modal .modal-container {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+	width: 100%;
+	/*padding: 0 10px;*/
+}
+
+.duobao-info-css section.modal .modal-container .modal-header {
+	position: relative;
+}
+
+.duobao-info-css section.modal .modal-container .modal-header .ui-icon-close {
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body {
+	padding: 10px 0;
+}
+
+.duobao-info-css section.modal .modal-container .modal-footer {
+	padding: 10px 0;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body .attend_count_list {
+	display: -webkit-box;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body .attend_count_list .item {
+	background-color: #f5f5f5;
+	width: 23%;
+	margin-right: 2%;
+	line-height: 36px;
+	text-align: center;
+	display: block;
+	border-radius: 3px;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body .attend_count_list .item.active {
+	background-color: #fff4ee;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body .ui-row .spinner {
+	margin: 0;
+	height: 36px;
+	width: 120px;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body .ui-row .spinner button {
+	width: 36px;
+}
+
+.duobao-info-css section.modal .modal-container .modal-body .ui-row .spinner input {
+	width: calc(100% - 72px);
+}
+

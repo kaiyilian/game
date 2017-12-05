@@ -1,0 +1,202 @@
+body {
+	margin: 0;
+	font-size: 16px;
+}
+
+.bg_fd7a44 {
+	background-color: #fd7a44;
+}
+
+.icon_line {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+}
+
+.icon_line .txt {
+	line-height: 53px;
+}
+
+.ui-icon-return {
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.ui-icon-share {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	color: #fff;
+}
+
+.integral_container {
+	width: 160px;
+	/*height: 40px;*/
+	line-height: 32px;
+	background-color: rgba(0, 0, 0, 0.2);
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 3px;
+}
+
+#lottery {
+	position: relative;
+	width: 320px;
+	height: 320px;
+	margin: 15px auto;
+	background: url(../../image/game/csg/backdrop.png) no-repeat;
+	background-size: 100% 100%;
+	padding: 8px;
+}
+
+#lottery .row {
+	width: 100%;
+	height: 20%;
+}
+
+#lottery .row span {
+	width: 20%;
+	height: 100%;
+	float: left;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	text-align: center;
+}
+
+#lottery .row:not(:first-child):not(:last-child) span:last-child {
+	float: right;
+
+}
+
+#lottery img {
+	width: 100%;
+	height: 100%;
+}
+
+.begin {
+	position: absolute;
+	width: 60%;
+	height: 60%;
+	left: 20%;
+	top: 20%;
+	color: #fff;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	text-align: center;
+}
+
+#lottery .lottery-unit.active {
+}
+
+.row_1 {
+	width: 90%;
+	margin: auto;
+	background-color: #fe6222;
+	padding: 5px 8px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.row_1 .choose_fruit {
+}
+
+.row_1 .choose_fruit .ui-col {
+}
+
+.row_1 .choose_fruit .ui-col .txt {
+	font-size: 0.8em;
+}
+
+.row_1 .choose_fruit .ui-col img {
+	width: 60%;
+	/*height: 80px;*/
+	display: block;
+	margin: auto;
+}
+
+.row_1 .choose_fruit .ui-col .item {
+	width: 80%;
+	background-color: #ca0b0e;
+	border-radius: 30px;
+	margin: 10px auto 0;
+	line-height: 24px;
+}
+
+.row_2 {
+	position: relative;
+	width: 300px;
+	margin: 20px auto 10px;
+	background-color: rgba(0, 0, 0, 0.2);
+	line-height: 40px;
+	overflow: inherit;
+}
+
+.row_2 span {
+	display: block;
+}
+
+.row_2 span.bet_base {
+	width: 150px;
+	height: 40px;
+}
+
+.row_2 span.bet_base input {
+	color: #fff;
+}
+
+.row_2 .multiples_container {
+	display: -webkit-box !important;
+	position: relative;
+	width: 55px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	padding: 0 18px 0 10px;
+}
+
+.row_2 .multiples_container .multiples {
+	width: 22px;
+}
+
+.row_2 .multiples_container .multiples_count {
+	position: absolute;
+	top: -10px;
+	right: 4px;
+}
+
+.row_2 .choose_multiples {
+	position: relative;
+	width: 35px;
+	height: 40px;
+	overflow: inherit;
+}
+
+.row_2 .choose_multiples ul.multiples_list {
+	position: absolute;
+	top: -120px;
+	width: 35px;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.btn_list {
+
+}
+
+.btn_list .item {
+	width: 100px;
+	margin: 0 auto;
+	border-radius: 30px;
+	background-color: #888888;
+	text-align: center;
+	line-height: 36px;
+}
+
+.btn_list .item.active {
+	background-color: #f14d0c;
+}

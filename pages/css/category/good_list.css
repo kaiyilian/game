@@ -1,0 +1,86 @@
+.ui-header {
+	background-color: #FCFCFC;
+}
+
+.ui-header .icon_shopping_cart:before {
+	background: url("../../image/img_details_shopping@2x.png");
+	background-size: 100% 100%;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	width: 44px;
+	height: 44px;
+}
+
+.ui-header .icon_shopping_cart .shopping_cart_good_count {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	top: 2px;
+	right: 15px;
+	border-radius: 50%;
+	padding: 0;
+}
+
+section.good_list_container {
+	padding: 0;
+	/*display: none;*/
+}
+
+section.good_list_container .good_list_txt {
+	background-color: #fff4ee;
+}
+
+section.good_list_container .good_list li .ui-list-img {
+	width: 100px;
+	height: 100px;
+}
+
+section.good_list_container .good_list li .ui-list-img .special_offer_area {
+	background: url("../../image/index/img_index_lable@2x.png") no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 66px;
+	height: 30px;
+	line-height: 30px;
+}
+
+section.good_list_container .good_list li .ui-list-info {
+	display: block;
+}
+
+section.good_list_container .good_list li .ui-list-info .good_name {
+	position: relative;
+	height: 50px;
+	line-height: 25px;
+	margin: 5px 0;
+}
+
+section.good_list_container .good_list li .ui-list-info .good_crowd-funding_process {
+	position: relative;
+	width: 70%;
+	height: 40px;
+	padding: 5px 0;
+}
+
+section.good_list_container .good_list li .ui-list-info .good_crowd-funding_process .ui-progress {
+
+	margin: 3px 0;
+}
+
+section.good_list_container .good_list li .ui-list-info .good_crowd-funding_process .good_crowd-funding_count {
+	line-height: 20px;
+}
+
+section.good_list_container .good_list li .ui-list-info .icon_shopping_cart:before {
+	background: url("../../image/ico_public_shoppingcart@2x.png");
+	background-size: 100% 100%;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>订单详情</title>
+
+		<!--<script src="../../js/libs/jquery-2.1.1.min.js"></script>-->
+		<script src="../../plugins/frozenui-1.3.0/lib/zepto.min.js"></script>
+		<!--frozenUI-->
+		<link href="../../plugins/frozenui-1.3.0/css/frozen.css" rel="stylesheet">
+		<script src="../../plugins/frozenui-1.3.0/js/frozen.js"></script>
+		<!--公共css-->
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/font.css" rel="stylesheet">
+		<link href="../../css/background.css" rel="stylesheet">
+		<script src="../../js/mxep.js"></script>
+		<!--本页面-->
+		<link href="../../css/my_order/order_info.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<header class="ui-header ui-header-positive ui-border-b">
+
+		<i class="ui-icon-return" onclick="history.back();"></i>
+		<h1 class="ui-txt-default name">订单详情</h1>
+
+</header>
+
+<footer class="ui-footer bg_white">
+
+		<div class="btn_list display-webkit-box">
+
+				<div class="btn btn_cancel">订单取消</div>
+
+				<div class="btn btn_pay">立即付款</div>
+
+		</div>
+
+</footer>
+
+<section class="ui-container ui-content">
+
+		<section class="mxep_block">
+
+				<div class="bg-orange ui-all-whitespace ui-margin-b-20  ui-txt-white ">
+
+						<div class="order_status ui-txt-line-height-36 f18">待付款</div>
+						<div class="ui-row ui-txt-line-height-25 f14">
+								<span class="time_count_down" data-time="2016-09-25 00:00:00"></span>
+								支付时间结束后，订单将会被取消，请尽快完成支付！
+						</div>
+
+				</div>
+
+				<div class="bg_white ui-all-whitespace ui-margin-b-20 ui-position-relative user_address_info">
+
+						<div class="ui-row ui-txt-line-height-40">
+								<span class="user_name">发撒发生的</span>
+								<span class="user_phone">13123435678</span>
+						</div>
+
+						<div class="ui-row f14 ui-txt-muted ui-txt-line-height-20 user_address">
+								发撒发生的发撒发生的发撒发生的发撒发生的发撒发生的
+						</div>
+
+				</div>
+
+				<div class="bg_white ui-whitespace ui-margin-b-20 good_info_container">
+
+						<div class="ui-row ui-txt-line-height-40">商品信息</div>
+
+						<div class="ui-border-t good_list">
+
+								<div class="good_item display-webkit-box">
+
+										<div class="good_img">
+												<span style="background-image: url(http://placeholder.qiniudn.com/190x284)"></span>
+										</div>
+
+										<div class="good_info">
+
+												<div class="ui-nowrap-multi good_name">
+														商品名称商品名称商品名称商品名称
+														商品名称商品名称
+												</div>
+
+												<div class="ui-row ui-txt-line-height-30 ui-margin-t">
+														<span class="good_price" data-price="333">￥333.00</span>
+														<span class="f_right good_count" data-count="12">x12</span>
+												</div>
+
+										</div>
+
+								</div>
+
+								<div class="good_item display-webkit-box">
+
+										<div class="good_img">
+												<span style="background-image: url(http://placeholder.qiniudn.com/190x284)"></span>
+										</div>
+
+										<div class="good_info">
+
+												<div class="ui-nowrap-multi good_name">
+														商品名称商品名称商品名称商品名称
+														商品名称商品名称
+												</div>
+
+												<div class="ui-row ui-txt-line-height-30 ui-margin-t">
+														<span class="good_price" data-price="333">￥333.00</span>
+														<span class="f_right good_count" data-count="12">x12</span>
+												</div>
+
+										</div>
+
+								</div>
+
+						</div>
+
+				</div>
+
+				<div class="bg_white ui-whitespace ui-margin-b-20 ui-txt-line-height-40">
+
+						<div class="ui-row ui-border-b">
+								<span>应付总额</span>
+								<span class="f_right real_pay" data-price="7000">￥7000</span>
+						</div>
+
+						<div class="ui-row">
+								<span>商品总价</span>
+								<span class="f_right ui-txt-grey-6 total_price" data-price="7000">￥7000</span>
+						</div>
+
+				</div>
+
+				<div class="bg_white ui-whitespace ui-margin-b-20 ui-txt-line-height-30">
+
+						<div class="ui-row">
+								<span>订单编号：</span>
+								<span class="order_no">314324324</span>
+						</div>
+
+						<div class="ui-row">
+								<span>下单时间：</span>
+								<span class="order_time">2015-02-12 11:11:32</span>
+						</div>
+
+				</div>
+
+		</section>
+
+</section>
+
+<script>
+		$(function () {
+
+				//倒计时
+				time_count_down($(".time_count_down"));
+		});
+
+</script>
+
+</body>
+</html>
